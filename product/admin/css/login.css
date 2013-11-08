@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+body {background:url('../images/login/bg_login_page.jpg') center top repeat;}
+.wrapper {width:1000px;margin:0 auto;padding:20px 0 0 0;}
+.wrapper .loginPanel {position:relative;width:447px;height:250px;margin:180px auto 0;padding:68px 0 0 44px;background:url('../images/login/bg_login.png') 0 0 no-repeat;}
+.wrapper .loginPanel input {position:absolute;}
+.wrapper .loginPanel .txt {left:43px;width:275px;height:26px;padding:0 0 0 10px;border:1px solid #a7a7a7;background-color:#fff;line-height:26px;}
+.wrapper .loginPanel .id {top:138px;background:url('../images/login/txt_id.gif') 10px 50% no-repeat;}
+.wrapper .loginPanel .id_on {background:none;}
+.wrapper .loginPanel .pw {top:181px;background:url('../images/login/txt_pw.gif') 10px 50% no-repeat;}
+.wrapper .loginPanel .pw_on {background:none;}
+.wrapper .loginPanel .btn {left:343px;top:138px;}

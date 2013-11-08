@@ -1,0 +1,89 @@
+@charset "utf-8";
+* {font-size:12px;}
+header {height:48px;width:100%;padding:20px 0 0 0;background:#53534d;border-bottom:1px solid #6f6754;}
+header h1 {margin:0 0 0 23px;}
+
+.container {width:1000px;height:100%;}
+.container aside {float:left;width:117px;padding:0 0 0 21px;background:#f3f3f3;border-right:1px solid #6f6754;color:#6f6754;}
+.container .workArea {float:left;width:838px;padding:25px 0 0 23px;}
+
+.container aside h2 {width:98px;margin:25px 0;font-weight:bold;border-bottom:1px solid #6f6754;}
+.container aside dl {margin:0 0 25px 0;font-size:12px;}
+.container aside dl dt {margin:0 0 5px 0;font-weight:bold;}
+.container aside dl dd {line-height:18px;}
+.container aside dl dd a {color:#6f6754;}
+.container aside dl dd .on {color:#ff7800;}
+.container aside dl dd a:hover {color:#ff7800;}
+
+.container .workArea h3 {font-size:14px;font-weight:bold;color:#6f6754;}
+.container .workArea h3 span {margin:0 4px 0 0;color:#a19b8e;}
+.container .workArea h3 em {margin:0 0 0 5px;color:#9e998d;font-size:12px;}
+.companyFrm {width:719px;height:98px;margin:24px 0 0 0;padding:0 0 0 98px;background:#ececec;border:1px solid #6f6754;line-height:98px;}
+.companyFrm select {width:138px;height:18px;border:1px solid #abadb3;vertical-align:middle;}
+.companyFrm .txt {width:307px;height:16px;padding:0 5px;background:#fff;border:1px solid #abadb3;line-height:16px;}
+.companyFrm input {vertical-align:middle;}
+.companyFrm .btn {width:72px;height:18px;background:#ff7800;border:0 none;line-height:18px;color:#fff;text-align:center;}
+.result {margin:18px 0 0 0;}
+.result table {table-layout:fixed;border-collapse:collapse;color:#6f6754;}
+.result table th {height:34px;background:#e7e7e7;border:1px solid #6f6754;font-weight:normal;}
+.result table td {height:28px;border:1px solid #6f6754;text-align:center;}
+
+.newPassWord {margin:24px 0 0 0;}
+.newPassWord table {table-layout:fixed;border-collapse:collapse;color:#6f6754;}
+.newPassWord table thead th {height:34px;background:#e7e7e7;border:1px solid #6f6754;font-weight:normal;}
+.newPassWord table tbody td {height:28px;border:1px solid #6f6754;text-align:center;}
+.newPassWord table tbody th {height:28px;padding-left:14px;text-align:left;font-weight:normal;background:#e7e7e7;border:1px solid #6f6754;}
+.newPassWord table tbody .issueLog {height:112px;padding-left:14px;vertical-align:middle;text-align:left;}
+.newPassWord table tbody td .btn {display:inline-block;width:64px;height:20px;line-height:20px;color:#fff;font-size:12px;text-align:center;}
+.newPassWord table tbody td .newIssue {background:#ff7800;}
+.newPassWord table tbody td .reIssue {background:#e24a63;}
+
+.news {margin:25px 0 0 0;}
+.news table {table-layout:fixed;border-collapse:collapse;color:#6f6754;}
+.news table th {height:34px;background:#e7e7e7;border:1px solid #6f6754;font-weight:normal;}
+.news table td {height:28px;border:1px solid #6f6754;text-align:center;}
+.news table .running td {background:#eeeee4;font-weight:bold;}
+.news table .num .orderNum {display:inline-block;width:39px;height:16px;background:#fff;color:#53534d;border:1px solid #c5c5c5;font-weight:normal;text-align:center;}
+.news .btnArea {margin:9px 0 0 0;text-align:right;}
+.news .btnArea a {display:inline-block;}
+.news .btnArea .regist {width:64px;height:30px;background:#ff7800;color:#fff;font-size:12px;line-height:30px;text-align:center;}
+.news .btnArea .sort {width:64px;height:30px;background:#e24a63;color:#fff;font-size:12px;line-height:30px;text-align:center;}
+
+.createNews {width:905px;margin:24px 0 0 0;padding:17px 19px 21px 22px;border:1px solid #6f6754;}
+.createNews dl {clear:both;margin:0 0 12px 0;color:#6f6754;}
+.createNews dl dt {float:left;width:55px;}
+.createNews dl dd {float:right;width:850px;}
+.createNews dl dd .txt {width:838px;height:16px;padding:0 5px;line-height:16px;border:1px solid #abadb3;}
+.createNews dl dd .allTxt {width:838px;height:67px;padding:5px;border:1px solid #abadb3;}
+.createNews dl dd label {margin:0 6px 0 0;}
+.createNews dl dd label input {margin:-2px 4px 0 0;vertical-align:middle;}
+.createNews dl dd .thumb {width:397px;height:16px;padding:0 5px;line-height:16px;border:1px solid #abadb3;}
+.createNews dl dd a.btn {display:inline-block;width:64px;height:20px;color:#fff;font-size:12px;line-height:20px;text-align:center;}
+.createNews dl dd a.find {background:#ff7800;}
+.createNews dl dd a.upload {background:#e24a63;}
+.createNews dl .thumbArea {margin:7px 0 0 0;}
+.createNews .editor dt {overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+.createNews .btnArea {width:850px;padding:0 0 0 55px;text-align:center;}
+.createNews .btnArea .regist {width:84px;height:30px;background:#ff7800;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
+.createNews .btnArea .modify {width:84px;height:30px;background:#e24a63;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
+.createNews .btnArea .cancel {display:inline-block;width:84px;height:30px;background:#8e8e8e;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
+
+.createProduct {width:905px;margin:24px 0 0 0;padding:17px 19px 21px 22px;border:1px solid #6f6754;}
+.createProduct dl {clear:both;margin:0 0 12px 0;color:#6f6754;}
+.createProduct dl dt {float:left;width:75px;letter-spacing:-1px;}
+.createProduct dl dd {float:right;width:830px;}
+.createProduct dl dd .txt {width:818px;height:16px;padding:0 5px;line-height:16px;border:1px solid #abadb3;}
+.createProduct dl dd .allTxt {width:818px;height:67px;padding:5px;border:1px solid #abadb3;}
+.createProduct dl dd label {margin:0 6px 0 0;}
+.createProduct dl dd label input {margin:-2px 4px 0 0;vertical-align:middle;}
+.createProduct dl dd .thumb {width:377px;height:16px;padding:0 5px;line-height:16px;border:1px solid #abadb3;}
+.createProduct dl dd .dnLink {text-align:center;}
+.createProduct dl dd a.btn {display:inline-block;width:64px;height:20px;color:#fff;font-size:12px;line-height:20px;text-align:center;}
+.createProduct dl dd a.find {background:#ff7800;}
+.createProduct dl dd a.upload {background:#e24a63;}
+.createProduct dl .thumbArea {margin:7px 0 0 0;}
+.createProduct dl .multiple {margin:7px 0 0 0;}
+.createProduct .btnArea {width:850px;padding:0 0 0 55px;text-align:center;}
+.createProduct .btnArea .regist {width:84px;height:30px;background:#ff7800;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
+.createProduct .btnArea .modify {width:84px;height:30px;background:#e24a63;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
+.createProduct .btnArea .cancel {display:inline-block;width:84px;height:30px;background:#8e8e8e;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
