@@ -28,10 +28,13 @@ $(function(){
 		}
 	});
 	var sortValidate = function(){
-		var sortData = $(".productSort .orderNum").val();
 		var sortList = $(".productSort .orderNum");
 		var sortRange = $(".productSort .orderNum").length;
-		console.log(sortData);
+		var sortData = $(".productSort .orderNum").map(function(){
+			return this.value;
+		}).get().join(", ");
+		var dataArray = new Array(sortData);
+		console.log(dataArray);
 	};
 	$(".btnArea .sort").click(function(){
 		sortValidate();	
