@@ -40,7 +40,7 @@
 					<fieldset>
 						<dl class="fix">
 							<dt>게임구분</dt>
-							<dd>
+							<dd class="gameType">
 								<label><input type="radio" name="game" />온라인</label>
 								<label><input type="radio" name="game" />모바일</label>
 							</dd>
@@ -48,27 +48,27 @@
 						<dl class="fix">
 							<dt>게시여부</dt>
 							<dd>
-								<label><input type="radio" name="publish" />미게시</label>
+								<label><input type="radio" name="publish" checked="checked" />미게시</label>
 								<label><input type="radio" name="publish" />게시</label>
 							</dd>
 						</dl>
 						<dl class="fix">
 							<dt>제품명</dt>
-							<dd><input type="text" class="txt" /></dd>
+							<dd><input type="text" class="txt title" maxlength="50" /></dd>
 						</dl>
 						<dl class="fix">
 							<dt>제품소개</dt>
-							<dd><textarea class="allTxt"></textarea></dd>
+							<dd><textarea class="allTxt" maxlength="150"></textarea></dd>
 						</dl>
 						<dl class="fix">
 							<dt>썸네일</dt>
 							<dd>
-								<input type="text" class="thumb" />
+								<input type="text" class="thumb thumbNail" />
 								<a href="#" class="btn find">찾아보기</a>
 								<a href="#" class="btn upload">UPLOAD</a>
 							</dd>
 						</dl>
-						<dl class="fix">
+						<dl class="multi fix">
 							<dt>멀티미디어</dt>
 							<dd>
 								<input type="text" class="thumb dnLink" value="스크린샷 업로드 또는 유투브 url 직접 입력" />
@@ -108,15 +108,15 @@
 						</dl>
 						<dl class="fix">
 							<dt>제품소개서<br />다운로드</dt>
-							<dd><input type="text" class="txt dnLink single" value="URL 입력" /></dd>
+							<dd class="guide_1"><input type="text" class="txt dnLink single" value="URL 입력" /></dd>
 						</dl>
 						<dl class="fix">
 							<dt>게임가이드<br />다운로드</dt>
-							<dd><input type="text" class="txt dnLink single" value="URL 입력" /></dd>
+							<dd class="guide_2"><input type="text" class="txt dnLink single" value="URL 입력" /></dd>
 						</dl>
 						<dl class="fix">
 							<dt>클라이언트<br />다운로드</dt>
-							<dd><input type="text" class="txt dnLink single" value="URL 입력" /></dd>
+							<dd class="client"><input type="text" class="txt dnLink single" value="URL 입력" /></dd>
 						</dl>
 						<div class="btnArea">
 							<input type="button" value="등록" class="regist" />

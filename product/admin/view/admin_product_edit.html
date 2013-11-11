@@ -40,7 +40,7 @@
 					<fieldset>
 						<dl class="fix">
 							<dt>게임구분</dt>
-							<dd>
+							<dd class="type">
 								<label><input type="radio" name="game" />온라인</label>
 								<label><input type="radio" name="game" />모바일</label>
 							</dd>
@@ -54,11 +54,11 @@
 						</dl>
 						<dl class="fix">
 							<dt>제품명</dt>
-							<dd><input type="text" class="txt" /></dd>
+							<dd><input type="text" class="txt title" maxlength="50" /></dd>
 						</dl>
 						<dl class="fix">
 							<dt>제품소개</dt>
-							<dd><textarea class="allTxt"></textarea></dd>
+							<dd><textarea class="allTxt" maxlength="150"></textarea></dd>
 						</dl>
 						<dl class="fix">
 							<dt>썸네일</dt>
@@ -68,7 +68,7 @@
 								<a href="#" class="btn upload">UPLOAD</a>
 							</dd>
 						</dl>
-						<dl class="fix">
+						<dl class="multi fix">
 							<dt>멀티미디어</dt>
 							<dd>
 								<input type="text" class="thumb dnLink" value="스크린샷 업로드 또는 유투브 url 직접 입력" />
