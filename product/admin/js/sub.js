@@ -1,28 +1,31 @@
 $(function(){
-	$("aside").css("height",$(window).height()-69);
-	$(window).resize(function(){
-		$("aside").css("height",$(window).height()-69);
-	});
-	$(".companyFrm .btn").click(function(){
-		var frmStr = $(".companyFrm .txt").val();
-		if(frmStr==''){
-			alert("내용을 입력하세요");
-		} else {
-			return false;
-		}
-	});
+	/* 통채로 수정 */
+	var windowHeight = $(window).height();
+	var workHeight = $(".workArea").height();
+	if (workHeight>windowHeight){
+		$("aside").css("height",workHeight+120);
+		$(window).resize(function(){
+			if (workHeight < $(window).height()) {
+				$("aside").css("height",$(window).height()-69);
+			} else if (workHeight > $(window).height()) {
+				$("aside").css("height",workHeight+120);
+			}
+		});
+	} else if (workHeight<windowHeight) {
+		$("aside").css("height",windowHeight-69);
+		$(window).resize(function(){
+			$("aside").css("height",$(window).height()-69);
+		});
+	}
+	/* //통채로 수정 */
 	var btnAreaWidth = $(".news table").css("width");
 	$(".news .btnArea").css("width",btnAreaWidth);
 
-	var msg1 = "URL 입력";
-	var msg2 = "스크린샷 업로드 또는 유투브 url 직접 입력"
-	$(".dnLink").on("focusin",function(){
-		$(this).val("").css("text-align","left");
+	$(".thumb, .txt").on("focusin",function(){
+		$(this).parent("dd").addClass("on");
 	}).on("focusout",function(){
-		if($(this).val()=='' && $(this).hasClass("thumb")){
-			$(this).val(msg2).css("text-align","center");
-		} else if ($(this).val()=='' && $(this).hasClass("single")){
-			$(this).val(msg1).css("text-align","center");
+		if($(this).val()==''){
+			$(this).parent("dd").removeClass("on");
 		} else {
 			return false;
 		}
@@ -104,10 +107,10 @@ $(function(){
 		var titleStr = $(".createProduct .title");
 		var allTxt = $(".createProduct .allTxt");
 		var thumbNail = $(".createProduct .thumbNail");
-		var thumb = $(".createProduct .multiple input");
-		var guide_1 = $(".createProduct .guide_1");
-		var guide_2 = $(".createProduct .guide_2");
-		var client = $(".createProduct .client");
+		var thumb = $(".createProduct .only input");
+		var guide_1 = $(".createProduct .guide_1 input");
+		var guide_2 = $(".createProduct .guide_2 input");
+		var client = $(".createProduct .client input");
 		if (gameType.length!=1){
 			alert("게임 구분을 지정하세요");
 			return false;
@@ -123,22 +126,29 @@ $(function(){
 			alert("썸네일을 입력하세요");
 			$(thumbNail).focus();
 			return false;
-		} else if (thumb.val()==msg2 || thumb.val().length<=0){
-			alert("멀티미디어 파일을 입력하세요");
-			$(".createProduct .multiple input").focus();
-			return false;
-		} else if (guide_1.val()==msg1 || guide_1.val().length<=0){
+		} else if (thumb.val().length<=0){
+			alert("스크린샷 업로드 또는 유투브 url을 입력하세요");
+			$(thumb).focus();
+			return false;	
+		} else if (guide_1.val().length<=0){
 			alert("제품소개서 url을 입력하세요");
 			$(guide_1).focus();
 			return false;
-		} else if (guide_2.val()==msg1 || guide_2.val().length<=0){
+		} else if (guide_2.val().length<=0){
 			alert("게임가이드 url을 입력하세요");
 			$(guide_2).focus();
 			return false;
-		} else if (clinet.val()==msg1 || clinet.val().length<=0){
+		} else if (client.val().length<=0){
 			alert("클라이언트 url을 입력하세요");
-			$(clinet).focus();
+			$(client).focus();
 			return false;
 		}
 	});
+	$(".companyFrm .btn").click(function(){
+		if ($(".companyFrm .txt").val()==''){
+			alert("회사명을 입력하세요");
+			$(".companyFrm .txt").focus();
+			return false;
+		}
+	})
 });
