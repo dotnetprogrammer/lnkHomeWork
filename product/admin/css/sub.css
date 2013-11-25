@@ -22,7 +22,8 @@ header h1 {margin:0 0 0 23px;}
 .companyFrm select {width:138px;height:18px;border:1px solid #abadb3;vertical-align:middle;}
 .companyFrm .txt {width:307px;height:16px;padding:0 5px;background:#fff;border:1px solid #abadb3;line-height:16px;}
 .companyFrm input {vertical-align:middle;}
-.companyFrm .btn {width:72px;height:18px;background:#ff7800;border:0 none;line-height:18px;color:#fff;text-align:center;}
+.companyFrm .btn {width:72px;height:18px;background:#ff7800;border:0 none;line-height:18px;color:#fff;text-align:center;cursor:pointer;}
+.companyFrm .allbtn {width:72px;height:18px;background:#e24a63;border:0 none;line-height:18px;color:#fff;text-align:center;cursor:pointer;}
 .result {margin:18px 0 0 0;}
 .result table {table-layout:fixed;border-collapse:collapse;color:#6f6754;}
 .result table th {height:34px;background:#e7e7e7;border:1px solid #6f6754;font-weight:normal;}
@@ -47,24 +48,24 @@ header h1 {margin:0 0 0 23px;}
 .news .btnArea {margin:9px 0 0 0;text-align:right;}
 .news .btnArea a {display:inline-block;}
 .news .btnArea .regist {width:64px;height:30px;background:#ff7800;color:#fff;font-size:12px;line-height:30px;text-align:center;}
-.news .btnArea .sort {width:64px;height:30px;background:#e24a63;color:#fff;font-size:12px;line-height:30px;text-align:center;}
+.news .btnArea .sort {width:64px;height:30px;background:#e24a63;color:#fff;font-size:12px;line-height:30px;text-align:center;border:0 none}
 
-.createNews {width:905px;margin:24px 0 0 0;padding:17px 19px 21px 22px;border:1px solid #6f6754;}
+.createNews {width:930px;margin:24px 0 0 0;padding:17px 19px 21px 22px;border:1px solid #6f6754;}
 .createNews dl {clear:both;margin:0 0 12px 0;color:#6f6754;}
 .createNews dl dt {float:left;width:55px;}
-.createNews dl dd {float:right;position:relative;width:850px;}
+.createNews dl dd {float:right;position:relative;width:875px;}
 .createNews dl dd .txt {width:838px;height:16px;padding:0 5px;line-height:16px;border:1px solid #abadb3;}
 .createNews dl dd .allTxtNews {width:838px;height:67px;padding:5px;border:1px solid #abadb3;}
 .createNews dl dd label {margin:0 6px 0 0;}
 .createNews dl dd label input {margin:-2px 4px 0 0;vertical-align:middle;}
 .createNews dl dd .thumb {width:397px;height:16px;padding:0 5px;line-height:16px;border:1px solid #abadb3;}
-.createNews dl dd a.btn {display:inline-block;width:64px;height:20px;color:#fff;font-size:12px;line-height:20px;text-align:center;}
-.createNews dl dd a.find {background:#ff7800;}
-.createNews dl dd a.upload {background:#e24a63;}
+.createNews dl dd .btn {display:inline-block;width:64px;height:20px;color:#fff;font-size:12px;line-height:20px;text-align:center;}
+.createNews dl dd .find {vertical-align:bottom;}
+.createNews dl dd .upload {background:#e24a63;cursor:pointer;border:0 none;}
 .createNews dl .thumbArea {margin:7px 0 0 0;}
 .createNews .editor dt {overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
 .createNews .btnArea {width:850px;padding:0 0 0 55px;text-align:center;}
-.createNews .btnArea .regist {width:84px;height:30px;background:#ff7800;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
+.createNews .btnArea .regist {width:84px;height:30px;background:#ff7800;color:#fff;line-height:30px;border:0 none;vertical-align:middle;cursor:pointer;}
 .createNews .btnArea .modify {width:84px;height:30px;background:#e24a63;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
 .createNews .btnArea .cancel {display:inline-block;width:84px;height:30px;background:#8e8e8e;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
 
@@ -78,9 +79,9 @@ header h1 {margin:0 0 0 23px;}
 .createProduct dl dd label input {margin:-2px 4px 0 0;vertical-align:middle;}
 .createProduct dl dd .thumb {position:relative;width:377px;height:16px;padding:0 5px;line-height:16px;border:1px solid #abadb3;}
 .createProduct dl dd .dnLink {text-align:center;}
-.createProduct dl dd a.btn {display:inline-block;width:64px;height:20px;color:#fff;font-size:12px;line-height:20px;text-align:center;}
-.createProduct dl dd a.find {background:#ff7800;}
-.createProduct dl dd a.upload {background:#e24a63;}
+.createProduct dl dd .btn {display:inline-block;width:64px;height:20px;color:#fff;font-size:12px;line-height:20px;text-align:center;}
+.createProduct dl dd .find {vertical-align:bottom;}
+.createProduct dl dd .upload {background:#e24a63;border:0 none;cursor:pointer;}
 .createProduct dl .thumbArea {margin:7px 0 0 0;}
 .createProduct dl .multiple {margin:7px 0 0 0;}
 .createProduct .multi dd span {position:absolute;top:2px;left:81px;}
@@ -88,6 +89,6 @@ header h1 {margin:0 0 0 23px;}
 .createProduct dl dd .url {position:absolute;top:2px;left:353px;}
 .createProduct dl .on .url {display:none;}
 .createProduct .btnArea {width:850px;padding:0 0 0 55px;text-align:center;}
-.createProduct .btnArea .regist {width:84px;height:30px;background:#ff7800;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
+.createProduct .btnArea .regist {width:84px;height:30px;background:#ff7800;color:#fff;line-height:30px;border:0 none;vertical-align:middle;cursor:pointer;}
 .createProduct .btnArea .modify {width:84px;height:30px;background:#e24a63;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}
 .createProduct .btnArea .cancel {display:inline-block;width:84px;height:30px;background:#8e8e8e;color:#fff;line-height:30px;border:0 none;vertical-align:middle;}

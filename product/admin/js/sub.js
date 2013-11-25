@@ -30,6 +30,26 @@ $(function(){
 			return false;
 		}
 	});	
+	/* 2013-11-22 추가 */
+	$(window).load(function(){
+		$(".thumb, .txt").each(function(){
+			var thisVal = $(this).val();
+			if ($(this).val().length > 0){
+				$(this).parent("dd").addClass("on");
+			}
+		});
+	});
+	$(".thumb").keyup(function(){
+		if ($(this).val().length == 0){ //(window.event.keyCode == 8)
+			$(this).parent("dd").next(".thumbArea").remove();
+		} else {
+
+		}
+	});
+	$(".upload").click(function(){
+		$(this).parent("dd").addClass("on");
+	});
+	/* //2013-11-22 추가 */
 	$(".title").keyup(function(){
 		chkBytes("title");
 	});
