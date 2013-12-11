@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<title>우편번호 찾기</title>
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	<!--[if lte IE 8]><script src="../js/html5.js"></script><![endif]-->
+	<script src="../select2/select2.js"></script>
+	<link rel="stylesheet" href="../css/common.css" type="text/css"/>
+	<!-- <link rel="stylesheet" href="../css/add_redgem.css" type="text/css"/> -->
+	<link rel="stylesheet" href="../select2/select2.css" type="text/css"/>
+	<script>
+		$(function(){
+			$("#Good").select2();
+			$("#Good_1").select2();
+			$("#Good_2").select2();
+			$(".typeTab li a").click(function(e){
+				var node = $(this).attr("class");
+				var chgNode = $(".typeTab");
+				var frm = $(".wrap");
+				switch(node) {
+					case "street":
+						chgNode.removeClass();
+						chgNode.addClass("typeTab type1");
+						frm.hide();
+						$("#street").show();
+						break;
+					case "lot":
+						chgNode.removeClass();
+						chgNode.addClass("typeTab type2");
+						frm.hide();
+						$("#lot").show();
+						break;
+					case "build":
+						chgNode.removeClass();
+						chgNode.addClass("typeTab type3");
+						frm.hide();
+						$("#build").show();
+						break;
+				}
+				e.preventDefault();
+			});
+			$(".findBtn").click(function(){
+				if($(this).hasClass("byStreet")){
+					chkFrm("street");
+				} else if ($(this).hasClass("byLot")){
+					chkFrm("lot");
+				} else if ($(this).hasClass("byBuild")){
+					chkFrm("build");
+				}
+			});
+			function chkFrm(frmType){
+				switch(frmType){
+					case "street":
+						if ($("#street .field_1 select option:selected").val() == "all"){
+							alert("시/도를 선택하세요");
+							$("#street .field_1 select").focus();
+						} else if (!$("#street .field_3 input").val()){
+							alert("도로명을 입력해 주세요");
+							$("#street .field_3 input").focus();
+						} else if (!$("#street .field_4 input").val()){
+							alert("건물번호를 입력해 주세요");
+							$("#street .field_4 input").focus();
+						}
+						break;
+					case "lot":
+						if ($("#lot .field_1 select option:selected").val() == "all"){
+							alert("시/도를 선택하세요");
+							$("#lot .field_1 select").focus();
+						} else if (!$("#lot .field_3 input").val()){
+							alert("동/면/읍을 입력해 주세요");
+							$("#lot .field_3 input").focus();
+						} else if (!$("#lot .field_4 input").val()){
+							alert("지번을 입력해 주세요");
+							$("#lot .field_4 input").focus();
+						}
+						break;
+					case "build":
+						if ($("#build .field_1 select option:selected").val() == "all"){
+							alert("시/도를 선택하세요");
+							$("#build .field_1 select").focus();
+						} else if (!$("#build .field_3 input").val()){
+							alert("건물명을 입력해 주세요");
+							$("#build .field_3 input").focus();
+						}
+						break;
+				}
+			}
+			//실제 개발 붙이면서 검색버튼 눌렀을 때 결과과 완성되고 콜백 함수로 아래 함수 호출해 줘야 함. 혹시나 있을지 모르는 함수 호이스팅을 막고자 변수로 만듦.. 주석처리 해제해야 함.
+			//var setResultArea = (function(){
+				var resultLength = $(".viewZipResult table tbody tr").length;
+				if(resultLength > 5){
+					$(".viewZipResult").css("overflow-y","scroll");
+					$(".viewZipResult table").css("width","405");
+				} else {
+					$(".viewZipResult table").css("width","422");
+				}
+			//});
+		});
+	</script>
+</head>
+
+<body class="zipFinder redgem">
+	<header>
+		<h1>우편번호 찾기</h1>
+	</header>
+	<section class="setZipInfo">
+		<ul class="typeTab type1">
+			<li><a href="#" class="street">도로주소로 검색</a></li>
+			<li><a href="#" class="lot">지번주소로 검색</a></li>
+			<li><a href="#" class="build">건물명으로 검색</a></li>
+		</ul>
+		<div id="street" class="wrap">
+			<h2><img src="../images/h2_street.gif" alt="도로명으로 검색하세요." /></h2>
+			<p class="ex">예) [서울시 강남구 언주로 540]일 경우 다음과 같이 입력해 주세요.<br /><strong>언주로 (도로명)  540 (건물번호) 입력</strong></p>
+			<div class="frm">
+				<fieldset>
+					<dl class="field_1">
+						<dt><img src="../images/txt_add_1.gif" alt="시/도" /></dt>
+						<dd>
+							<select>
+								<option value="all">전체</option>
+								<option>서울</option>
+								<option>대전</option>
+								<option>부산</option>
+							</select>
+						</dd>
+					</dl>
+					<dl class="field_2">
+						<dt><img src="../images/txt_add_2.gif" alt="시/군/구" /></dt>
+						<dd>
+							<select id="Good" style="width:94px;">
+							</select>
+						</dd>
+					</dl>
+					<dl class="field_3">
+						<dt><img src="../images/txt_add_3.gif" alt="도로명" /></dt>
+						<dd><input type="text" class="txtInput" /></dd>
+					</dl>
+					<dl class="field_4">
+						<dt><img src="../images/txt_add_4.gif" alt="건물명" /></dt>
+						<dd><input type="text" class="txtInput" /></dd>
+					</dl>
+					<input type="button" class="findBtn byStreet" value="검색" />
+				</fieldset>
+			</div>
+		</div>
+		<div id="lot" class="wrap" style="display:none;">
+			<h2><img src="../images/h2_lot.gif" alt="동/리와 지번으로 검색하세요." /></h2>
+			<p class="ex">예) [서울시 강남구 역심동 689-3번지]일 경우 다음과 같이 입력해 주세요.<br /><strong>역삼동 (동명)  689-3 (번지)</strong></p>
+			<div class="frm">
+				<fieldset>
+					<dl class="field_1">
+						<dt><img src="../images/txt_add_1.gif" alt="시/도" /></dt>
+						<dd>
+							<select>
+								<option value="all">전체</option>
+								<option>서울</option>
+								<option>대전</option>
+								<option>부산</option>
+							</select>
+						</dd>
+					</dl>
+					<dl class="field_2">
+						<dt><img src="../images/txt_add_2.gif" alt="시/군/구" /></dt>
+						<dd>
+							<select id="Good_1" style="width:94px;">
+							</select>
+						</dd>
+					</dl>
+					<dl class="field_3">
+						<dt><img src="../images/txt_add_3_1.gif" alt="동(읍/면)" /></dt>
+						<dd><input type="text" class="txtInput" /></dd>
+					</dl>
+					<dl class="field_4">
+						<dt><img src="../images/txt_add_4_1.gif" alt="지번" /></dt>
+						<dd><input type="text" class="txtInput" /></dd>
+					</dl>
+					<input type="button" class="findBtn byLot" value="검색" />
+				</fieldset>
+			</div>
+		</div>
+		<div id="build" class="wrap" style="display:none;">
+			<h2><img src="../images/h2_build.gif" alt="건물명으로 검색하세요." /></h2>
+			<p class="ex">예) [서울시 강남구 코원타워]일 경우 다음과 같이 입력해 주세요.<br /><strong>코원타워 (건물명)</strong></p>
+			<div class="frm">
+				<fieldset>
+					<dl class="field_1">
+						<dt><img src="../images/txt_add_1.gif" alt="시/도" /></dt>
+						<dd>
+							<select>
+								<option value="all">전체</option>
+								<option>서울</option>
+								<option>대전</option>
+								<option>부산</option>
+							</select>
+						</dd>
+					</dl>
+					<dl class="field_2">
+						<dt><img src="../images/txt_add_2.gif" alt="시/군/구" /></dt>
+						<dd>
+							<select id="Good_2" style="width:94px;">
+							</select>
+						</dd>
+					</dl>
+					<dl class="field_3">
+						<dt><img src="../images/txt_add_3_2.gif" alt="건물명" /></dt>
+						<dd><input type="text" class="txtInput" /></dd>
+					</dl>
+					<input type="button" class="findBtn byBuild" value="검색" />
+				</fieldset>
+			</div>
+		</div>
+		<p class="note">* 주소가 검색되지 않는 경우 안전행정부 <a href="#">도로명주소 안내시스템</a>에서 확인하시기<br />바랍니다.</p>
+	</section>
+	<section class="viewZipResult">
+		<table>
+			<colgroup>
+				<col width="140" />
+				<col width="266" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th class="cell_1">우편번호</th>
+					<th class="cell_2">주소</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="cell_3">135-917</td>
+					<td class="cell_4">
+						<a href="#">서울시 강남구 언주로 540(역삼동, 코원타워)</a><br />서울시 강남구 역삼동 689-3
+					</td>
+				</tr>
+				<tr>
+					<td class="cell_3">135-917</td>
+					<td class="cell_4">
+						<a href="#">서울시 강남구 언주로 540(역삼동, 코원타워)</a><br />서울시 강남구 역삼동 689-3
+					</td>
+				</tr>
+				<tr>
+					<td class="cell_3">135-917</td>
+					<td class="cell_4">
+						<a href="#">서울시 강남구 언주로 540(역삼동, 코원타워)</a><br />서울시 강남구 역삼동 689-3
+					</td>
+				</tr>
+				<tr>
+					<td class="cell_3">135-917</td>
+					<td class="cell_4">
+						<a href="#">서울시 강남구 언주로 540(역삼동, 코원타워)</a><br />서울시 강남구 역삼동 689-3
+					</td>
+				</tr>
+				<tr>
+					<td class="cell_3">135-917</td>
+					<td class="cell_4">
+						<a href="#">서울시 강남구 언주로 540(역삼동, 코원타워)</a><br />서울시 강남구 역삼동 689-3
+					</td>
+				</tr>
+				<tr>
+					<td class="cell_3">135-917</td>
+					<td class="cell_4">
+						<a href="#">서울시 강남구 언주로 540(역삼동, 코원타워)</a><br />서울시 강남구 역삼동 689-3
+					</td>
+				</tr>
+				<tr>
+					<td class="cell_3">135-917</td>
+					<td class="cell_4">
+						<a href="#">서울시 강남구 언주로 540(역삼동, 코원타워)</a><br />서울시 강남구 역삼동 689-3
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</body>
+</html>

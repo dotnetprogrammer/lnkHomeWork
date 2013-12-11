@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body { color:#666; font-size:12px; line-height:1em; font-family:'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;}
+body.safari { font-family:Helvetica; }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,button,p,blockquote,th,td { margin:0; padding:0; -webkit-text-size-adjust:none;}
+img,fieldset{border:0}
+ul,ol,li{list-style:none;}
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
+hr {display:none;}
+a {color:inherit;}
+a, a:link {color:#333; text-decoration:none;}
+em,i,address {font-style:normal; font-weight:normal;}
+legend,caption {display:none; clear:both;}
+input,textarea,select,button,table{ font-size:inherit;font-family:inherit;line-height:inherit; *font-size:100%; }
+textarea, input {outline-color:-moz-use-text-color; outline-style:none; outline-width:medium;}
+textarea { resize:none; }
+label { cursor:pointer; }
+a:visited { color:#333; }
+a:hover, a:active { color:#333; text-decoration:none; }
+.hide { position:absolute ;top:0; left:-9999px; width:0; height:0; font-size:0; overflow:hidden; visibility:hidden; line-height:0; }
+
+input[type="button"], input[type="text"],input[type="image"],input[type="submit"] { -webkit-appearance:none; -webkit-border-radius:0;}
+input:checked[type="checkbox"]{ background-color:#fff; -webkit-appearance:checkbox; }
+
+button, input[type="reset"], input[type="button"], input[type="submit"] { line-height:normal !important; }
+
+article, aside, canvas, details, embed, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { display: inline; }
+
+.fix:after { content:""; height:0; display:block; visibility:hidden; clear:both; }
+* html .f_clear { height:1px; }
+.fix { display:block; min-height:1px; }
+
+.zipFinder {width:500px;height:850px;}
+
+.setZipInfo .typeTab {width:422px;height:35px;overflow:hidden;background-image:url('../images/tab_set.gif');background-repeat:no-repeat;}
+.setZipInfo .typeTab li {float:left;width:142px;height:35px;margin:0 -1px;}
+.setZipInfo .typeTab li a {display:block;width:142px;height:35px;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+.setZipInfo .type1 {background-position:0 0;}
+.setZipInfo .type2 {background-position:0 -35px;}
+.setZipInfo .type3 {background-position:0 -70px;}
+.setZipInfo .wrap {width:390px;height:243px;padding:22px 15px 0;background:#f0f0f0;border:1px solid #d6d5d5;border-top:0 none;}
+.setZipInfo .wrap .ex {width:367px;margin:8px auto 5px;color:#6b6a6a;font-size:11px;font-weight:bold;line-height:18px;}
+.setZipInfo .wrap .ex strong {font-weight:normal;padding:0 0 0 20px;}
+
+.setZipInfo .wrap .frm {position:relative;width:347px;height:126px;margin:0 auto;padding:20px 0 0 20px;background:#fff;}
+.setZipInfo .wrap .frm dl {overflow:hidden;float:left;width:172px;margin:0 0 20px 0;}
+.setZipInfo .wrap .frm dl dt {float:left;}
+.setZipInfo .wrap .frm dl dt img {vertical-align:middle;}
+.setZipInfo .wrap .frm dl dd {float:left;}
+.setZipInfo .wrap .frm dl dd select {width:94px;height:20px;vertical-align:middle;}
+.setZipInfo .wrap .frm dl dd .txtInput {width:87px;height:18px;padding:0 0 0 5px;vertical-align:middle;border-top:1px solid #c5c5c5;border-left:1px solid #c5c5c5;border-bottom:1px solid #e9e9e9;border-right:1px solid #e9e9e9;line-height:18px;}
+.setZipInfo .wrap .frm .findBtn {position:absolute;bottom:11px;left:140px;display:block;width:88px;height:33px;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;background-color:transparent;border:0 none;cursor:pointer;background-repeat:no-repeat;}
+.setZipInfo .note {height:40px;padding:10px 30px 0 30px;line-height:14px;font-size:11px;color:#9f9c9c;letter-spacing:-1px;}
+
+.viewZipResult {width:422px;height:304px;margin:0 auto;/*overflow-y:scroll;*/}
+.viewZipResult table {/*width:405px;*/border-collapse:collapse;}
+.viewZipResult table th {height:25px;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+.viewZipResult table .cell_1 {background:#ececec url('../images/txt_th_zip.gif') center top no-repeat}
+.viewZipResult table .cell_2 {background:#ececec url('../images/txt_th_add.gif') center top no-repeat}
+.viewZipResult table td {height:56px;color:#777;line-height:1.2em;}
+.viewZipResult table td a {color:#777;}
+.viewZipResult table .cell_3 {text-align:center;background:url('../images/bg_result_td.gif') 0 bottom no-repeat;}
+.viewZipResult table .cell_4 {background:url('../images/bg_result_td.gif') -140px bottom no-repeat;}
+
+/* service customize redgem */
+.redgem header {width:500px;height:87px;}
+.redgem header h1 {width:500px;height:87px;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;background:url('../images/h1_redgem.jpg') 0 0 no-repeat;}
+.redgem .setZipInfo {width:422px;margin:50px auto 0;}
+.redgem .setZipInfo .wrap .ex strong {color:#08a59a;}
+.redgem .setZipInfo .wrap .frm .findBtn {background-image:url('../images/btn_srch_redgem.jpg');}
+.redgem .setZipInfo .note a {color:#08a59a;text-decoration:underline;}
