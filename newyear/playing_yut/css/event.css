@@ -1,0 +1,91 @@
+@charset "utf-8";
+/*reset*/
+body,div,p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,ol,table,tr,th,td,caption,form,fieldset,input,select,textarea,blockquote,address{margin:0;padding:0;}
+img,fieldset,iframe{border:0 none;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;}
+address,em{font-style:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+/*base*/
+body{font-family: "돋움", Dotum, "굴림", Gulim, AppleGothic, Arial, Sans-serif;font-size: 12px;line-height:1.4em;color:#333;background:#fff;}
+ul,ol,li{list-style:none;line-height:100%;}
+a{text-decoration:none;color:#333;}
+a:hover, a:focus, a:active, a:visited{text-decoration:underline;color:#333;}
+caption,legend{position:absolute;top:-5000px;text-indent:-5000px;visibility:hidden;width:0;height:0;font-size:0;line-height:0;}
+ul:after{content:" ";display:block;clear:both;}
+textarea {resize: vertical;}
+img{vertical-align:middle;}
+hr{display:none;}
+section{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0}
+
+/* float clear */
+.fix{zoom:1;}.fix:after{content:".";display:block;font-size:0;height:0px;line-height:0;clear:both;}
+
+header {width:100%;height:116px;background:url('../images/bg_header_repeat.gif') 0 0 repeat-x;}
+header .inner {position:relative;width:1000px;height:116px;background:url('../images/bg_header_inner.jpg') 0 0 no-repeat;}
+header .inner .menu {position:absolute;top:25px;left:215px;height:67px;}
+header .inner .menu li {float:left;margin:0 0 0 39px;padding:14px 0 0 41px;background:url('../images/bg_menu.gif') 0 0 no-repeat;}
+header .inner .menu li a {display:block;width:102px;height:41px;overflow:hidden;background-repeat:no-repeat;background-image:url('../images/tab_set_main.gif');overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+header .inner .menu .mn_1 {margin:0;}
+header .inner .menu .mn_3 {padding:14px 0 0 35px;}
+header .inner .menu .mn_1 a {background-position:0 0;}
+header .inner .menu .mn_1 .on {background-position:0 -44px;}
+header .inner .menu .mn_2 a {background-position:-110px 0;}
+header .inner .menu .mn_2 .on {background-position:-110px -44px;}
+header .inner .menu .mn_3 a {width:115px;background-position:-224px 0;}
+header .inner .menu .mn_3 .on {background-position:-224px -44px;}
+header .inner .lgoin {position:absolute;top:59px;right:113px;display:block;width:103px;height:29px;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+header .inner .daumLogin {position:absolute;top:59px;right:10px;display:block;width:100px;height:29px;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+header .inner .goHome {position:absolute;top:27px;right:48px;display:block;width:137px;height:21px;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+
+section {width:100%;height:1516px;background:url('../images/bg_section.jpg') center 0 no-repeat;}
+section .playTop {width:1000px;height:409px;margin:0 auto;}
+section .playTop h3 {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+section .playTop p {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+section .playArea {position:relative;width:892px;height:860px;margin:0 auto;padding:55px 53px 54px 55px;background:url('../images/bg_play_area.jpg') 0 0 no-repeat;}
+section .playArea .playBrd {position:relative;width:892px;height:860px;}
+section .playArea .playBrd span {position:absolute;display:block;}
+section .playArea .playBrd span em {display:block;width:100%;height:100%;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+section .playArea .playBrd .pos_0 {bottom:0;right:0;}
+section .playArea .playBrd .pos_1 {bottom:157px;right:12px;}
+section .playArea .playBrd .pos_2 {bottom:317px;right:12px;}
+section .playArea .playBrd .pos_3 {bottom:477px;right:12px;}
+section .playArea .playBrd .pos_4 {top:152px;right:12px;}
+section .playArea .playBrd .pos_5 {top:0;right:0;}
+section .playArea .playBrd .pos_6 {top:10px;right:170px;}
+section .playArea .playBrd .pos_7 {top:10px;right:330px;}
+section .playArea .playBrd .pos_8 {top:10px;right:490px;}
+section .playArea .playBrd .pos_9 {top:10px;left:172px;}
+section .playArea .playBrd .pos_10 {top:0;left:0;}
+section .playArea .playBrd .pos_11 {top:152px;left:11px;}
+section .playArea .playBrd .pos_12 {bottom:477px;left:11px;}
+section .playArea .playBrd .pos_13 {bottom:317px;left:11px;}
+section .playArea .playBrd .pos_14 {bottom:157px;left:11px;}
+section .playArea .playBrd .pos_15 {bottom:0;left:0;}
+section .playArea .playBrd .pos_16 {bottom:11px;left:172px;}
+section .playArea .playBrd .pos_17 {bottom:11px;right:490px;}
+section .playArea .playBrd .pos_18 {bottom:11px;right:330px;}
+section .playArea .playBrd .pos_19 {bottom:11px;right:170px;}
+
+section .playArea .playBrd .item_0 {width:92px;height:92px;}
+section .playArea .playBrd .item_0 em {background:url('../images/item_start.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_1 {width:71px;height:71px;}
+section .playArea .playBrd .item_1 em {background:url('../images/item_1.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_1 .on {background:url('../images/item_1.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_2 {width:71px;height:71px;}
+section .playArea .playBrd .item_2 em {background:url('../images/item_2.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_2 .on {background:url('../images/item_2.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_3 {width:71px;height:71px;}
+section .playArea .playBrd .item_3 em {background:url('../images/item_3.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_3 .on {background:url('../images/item_3.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_4 {width:71px;height:71px;}
+section .playArea .playBrd .item_4 em {background:url('../images/item_4.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_4 .on {background:url('../images/item_4.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_5 {width:71px;height:71px;}
+section .playArea .playBrd .item_5 em {background:url('../images/item_5.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_6 {width:92px;height:92px;}
+section .playArea .playBrd .item_6 em {background:url('../images/item_6_v2.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_7 {width:92px;height:92px;}
+section .playArea .playBrd .item_7 em {background:url('../images/item_7.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_8 {width:92px;height:92px;}
+section .playArea .playBrd .item_8 em {background:url('../images/item_8.png') 0 0 no-repeat;}
