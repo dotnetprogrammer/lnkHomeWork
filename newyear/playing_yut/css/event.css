@@ -71,21 +71,25 @@ section .playArea .playBrd .item_0 {width:92px;height:92px;}
 section .playArea .playBrd .item_0 em {background:url('../images/item_start.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_1 {width:71px;height:71px;}
 section .playArea .playBrd .item_1 em {background:url('../images/item_1.png') 0 0 no-repeat;}
-section .playArea .playBrd .item_1 .on {background:url('../images/item_1.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_1 .on {background:url('../images/item_1_on.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_2 {width:71px;height:71px;}
 section .playArea .playBrd .item_2 em {background:url('../images/item_2.png') 0 0 no-repeat;}
-section .playArea .playBrd .item_2 .on {background:url('../images/item_2.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_2 .on {background:url('../images/item_2_on.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_3 {width:71px;height:71px;}
 section .playArea .playBrd .item_3 em {background:url('../images/item_3.png') 0 0 no-repeat;}
-section .playArea .playBrd .item_3 .on {background:url('../images/item_3.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_3 .on {background:url('../images/item_3_on.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_4 {width:71px;height:71px;}
 section .playArea .playBrd .item_4 em {background:url('../images/item_4.png') 0 0 no-repeat;}
-section .playArea .playBrd .item_4 .on {background:url('../images/item_4.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_4 .on {background:url('../images/item_4_on.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_5 {width:71px;height:71px;}
 section .playArea .playBrd .item_5 em {background:url('../images/item_5.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_5 .on {background:url('../images/item_5_on.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_6 {width:92px;height:92px;}
 section .playArea .playBrd .item_6 em {background:url('../images/item_6_v2.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_6 .on {background:url('../images/item_6_v2_on.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_7 {width:92px;height:92px;}
 section .playArea .playBrd .item_7 em {background:url('../images/item_7.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_7 .on {background:url('../images/item_7_on.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_8 {width:92px;height:92px;}
 section .playArea .playBrd .item_8 em {background:url('../images/item_8.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_8 .on {background:url('../images/item_8_on.png') 0 0 no-repeat;}
