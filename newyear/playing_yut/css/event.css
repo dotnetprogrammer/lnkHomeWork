@@ -43,7 +43,7 @@ section .playTop {width:1000px;height:409px;margin:0 auto;}
 section .playTop h3 {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
 section .playTop p {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
 section .playArea {position:relative;width:892px;height:860px;margin:0 auto;padding:55px 53px 54px 55px;background:url('../images/bg_play_area.jpg') 0 0 no-repeat;}
-section .playArea .playBrd {position:relative;width:892px;height:860px;}
+section .playArea .playBrd {position:relative;width:759px;height:725px;padding:135px 0 0 133px;}
 section .playArea .playBrd span {position:absolute;display:block;}
 section .playArea .playBrd span em {display:block;width:100%;height:100%;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
 section .playArea .playBrd .pos_0 {bottom:0;right:0;}
@@ -93,3 +93,42 @@ section .playArea .playBrd .item_7 .on {background:url('../images/item_7_on.png'
 section .playArea .playBrd .item_8 {width:92px;height:92px;}
 section .playArea .playBrd .item_8 em {background:url('../images/item_8.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_8 .on {background:url('../images/item_8_on.png') 0 0 no-repeat;}
+
+section .playArea .playBrd .indicator {width:90px;height:90px;}
+section .playArea .playBrd .indicator em {background:url('../images/img_indicator.png') 0 0 no-repeat;}
+section .playArea .playBrd .indicator_0 {bottom:-1px;right:-1px;}
+section .playArea .playBrd .indicator_1 {bottom:146px;right:1px;}
+section .playArea .playBrd .indicator_2 {bottom:306px;right:1px;}
+section .playArea .playBrd .indicator_3 {bottom:466px;right:1px;}
+section .playArea .playBrd .indicator_4 {top:142px;right:1px;}
+section .playArea .playBrd .indicator_5 {top:3px;right:-1px;}
+section .playArea .playBrd .indicator_6 {top:3px;right:160px;}
+section .playArea .playBrd .indicator_7 {top:3px;right:320px;}
+section .playArea .playBrd .indicator_8 {top:3px;right:480px;}
+section .playArea .playBrd .indicator_9 {top:3px;left:172px;}
+section .playArea .playBrd .indicator_10 {top:3px;left:3px;}
+section .playArea .playBrd .indicator_11 {top:142px;left:3px;}
+section .playArea .playBrd .indicator_12 {bottom:466px;left:3px;}
+section .playArea .playBrd .indicator_13 {bottom:306px;left:3px;}
+section .playArea .playBrd .indicator_14 {bottom:146px;left:3px;}
+section .playArea .playBrd .indicator_15 {bottom:-1px;left:3px;}
+section .playArea .playBrd .indicator_16 {bottom:-1px;left:172px;}
+section .playArea .playBrd .indicator_17 {bottom:-1px;right:480px;}
+section .playArea .playBrd .indicator_18 {bottom:-1px;right:320px;}
+section .playArea .playBrd .indicator_19 {bottom:-1px;right:160px;}
+
+section .playArea .playBrd .playPanel {width:635px;height:591px;}
+section .playArea .playBrd .playPanel span {display:inline;position:relative;}
+section .playArea .playBrd .playPanel .playInfo {height:115px;}
+section .playArea .playBrd .playPanel .playInfo .count_1 {float:left;width:236px;height:115px;margin:0 3px 0 0;background:url('../images/bg_count_1.jpg') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .playInfo .count_2 {float:left;width:236px;height:115px;margin:0 3px 0 0;background:url('../images/bg_count_2.jpg') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .playInfo .btns {float:left;}
+section .playArea .playBrd .playPanel .playInfo .btns li {width:157px;height:37px;margin:1px 0 0 0;}
+section .playArea .playBrd .playPanel .playInfo .btns .howTo {margin:0;}
+section .playArea .playBrd .playPanel .playInfo .btns li a {display:block;width:100%;height:100%;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+section .playArea .playBrd .playPanel .playInfo .btns .howTo a {background:url('../images/btn_set_off.jpg') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .playInfo .btns .howTo .on {background:url('../images/btn_set_on.jpg') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .playInfo .btns .view_1 a {background:url('../images/btn_set_off.jpg') 0 -38px no-repeat;}
+section .playArea .playBrd .playPanel .playInfo .btns .view_1 .on {background:url('../images/btn_set_on.jpg') 0 -38px no-repeat;}
+section .playArea .playBrd .playPanel .playInfo .btns .view_2 a {background:url('../images/btn_set_off.jpg') 0 -77px no-repeat;}
+section .playArea .playBrd .playPanel .playInfo .btns .view_2 .on {background:url('../images/btn_set_on.jpg') 0 -77px no-repeat;}
