@@ -94,9 +94,9 @@ section .playArea .playBrd .item_8 {width:92px;height:92px;}
 section .playArea .playBrd .item_8 em {background:url('../images/item_8.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_8 .on {background:url('../images/item_8_on.png') 0 0 no-repeat;}
 
-section .playArea .playBrd .indicator {width:90px;height:90px;}
+section .playArea .playBrd .indicator {width:90px;height:90px;bottom:-1px;right:-1px;}
 section .playArea .playBrd .indicator em {background:url('../images/img_indicator.png') 0 0 no-repeat;}
-section .playArea .playBrd .indicator_0 {bottom:-1px;right:-1px;}
+/*section .playArea .playBrd .indicator_0 {bottom:-1px;right:-1px;}*/
 section .playArea .playBrd .indicator_1 {bottom:146px;right:1px;}
 section .playArea .playBrd .indicator_2 {bottom:306px;right:1px;}
 section .playArea .playBrd .indicator_3 {bottom:466px;right:1px;}
@@ -132,3 +132,32 @@ section .playArea .playBrd .playPanel .playInfo .btns .view_1 a {background:url(
 section .playArea .playBrd .playPanel .playInfo .btns .view_1 .on {background:url('../images/btn_set_on.jpg') 0 -38px no-repeat;}
 section .playArea .playBrd .playPanel .playInfo .btns .view_2 a {background:url('../images/btn_set_off.jpg') 0 -77px no-repeat;}
 section .playArea .playBrd .playPanel .playInfo .btns .view_2 .on {background:url('../images/btn_set_on.jpg') 0 -77px no-repeat;}
+section .playArea .playBrd .playPanel .before {width:635px;height:61px;padding:86px 0 0 0;text-align:center;}
+
+section .playArea .playBrd .playPanel .animal {position:absolute;top:397px;left:133px;width:635px;height:214px;}
+section .playArea .playBrd .playPanel .animal li {float:left;width:110px;height:214px;margin:0 18px 0 3px;}
+section .playArea .playBrd .playPanel .animal .char_3 {width:115px;margin:0 10px 0 3px;}
+section .playArea .playBrd .playPanel .animal .char_4 {margin:0 0 0 3px;}
+section .playArea .playBrd .playPanel .animal li em {display:block;width:100%;height:100%;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+section .playArea .playBrd .playPanel .animal .char_0 em {background:url('../images/img_char_0_off.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_1 em {background:url('../images/img_char_1_off.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_2 em {background:url('../images/img_char_2_off.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_3 em {background:url('../images/img_char_3_off.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_4 em {background:url('../images/img_char_4_off.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_0 .on {background:url('../images/img_char_0_on_txt.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_1 .on {background:url('../images/img_char_1_on_txt.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_2 .on {background:url('../images/img_char_2_on_txt.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_3 .on {background:url('../images/img_char_3_on_txt.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_4 .on {background:url('../images/img_char_4_on_txt.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_0 .get {background:url('../images/img_char_0_on.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_1 .get {background:url('../images/img_char_1_on.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_2 .get {background:url('../images/img_char_2_on.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_3 .get {background:url('../images/img_char_3_on.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .animal .char_4 .get {background:url('../images/img_char_4_on.png') 0 0 no-repeat;}
+
+section .playArea .playBrd .playPanel .action {position:absolute;top:632px;left:132px;width:635px;height:100px;text-align:center;}
+section .playArea .playBrd .playPanel .action a {display:inline-block;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+section .playArea .playBrd .playPanel .action .play {width:354px;height:92px;background:url('../images/btn_play.png') 0 0 no-repeat;display:inline-block;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;border:0 none;vertical-align:top;}
+section .playArea .playBrd .playPanel .action .reload {width:354px;height:92px;background:url('../images/btn_play.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .action .cancel {width:246px;height:92px;background:url('../images/btn_end.png') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .action .cancel:hover {background:url('../images/btn_end_on.png') 0 0 no-repeat;}

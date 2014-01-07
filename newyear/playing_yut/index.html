@@ -10,6 +10,59 @@
 		<!-- <link rel="shortcut icon" href="img/icon.ico" /> -->
 		<!--[if lte IE 8]><script src="./js/html5.js"></script><![endif]-->
 		<script src="./js/jquery-1.7.1.min.js"></script>
+		<script>
+			$(function(){			
+				var stop=true;
+				var yutVal = 0;
+				var rollingCount = 0;
+				$(".play").click(function(e){
+					lunch();
+					$(this).attr("disabled","disabled");
+					e.preventDefault();
+					yutVal = Math.floor(Math.random()*4);
+					moveIndi(yutVal+1);
+				});
+				
+				/* //test code*/
+				function rolling(idx,cnt){
+					var animals = $(".animal ul li");
+					animals.eq(idx).children("em").addClass("on");
+					animals.eq(idx).children("em").parent("li").siblings().children("em").removeClass("on");
+            
+            		if(rollingCount < 4) {
+    				  window.setTimeout(function(){
+      				  rollingCount++;
+    						rolling(idx+1>=cnt?0:idx+1,cnt);
+    					},480);
+  					} else {
+  					  window.setTimeout(function(){
+      				  rollStop(yutVal);
+    					},800);
+  					  rollingCount = 0;
+  					}
+				}
+				function lunch(){
+					var cnt = $(".animal ul li").length;
+					$(".animal ul li em").removeClass("on");
+					$(".animal ul li em").removeClass("get");
+					rolling(0,cnt);
+				}
+				function rollStop(num){
+          			$(".animal ul li em").removeAttr("class");
+					$(".animal ul li:eq("+num+") em").addClass("get");
+					$(".play").removeAttr("disabled");
+				}
+				function moveIndi(num){
+					window.setTimeout(function(){
+						$(".indicator").addClass("indicator_"+num);
+						var classLayer = $(".indicator").attr("class").split(" ")[1];
+						var classNum = $(".indicator").attr("class").split(" ").length;
+						var moveIndi = classLayer.split("_")[1];
+						console.log(classNum);
+					},3300);
+				}
+			});
+		</script>
         <link href="./css/html5Reset.css" type="text/css" rel="stylesheet" />
 		<link href="./css/event.css" type="text/css" rel="stylesheet" />
 	</head>
@@ -62,7 +115,7 @@
 					<span class="item_1 pos_18"><em>투지의 비약</em></span>
 					<span class="item_5 pos_19"><em>꽝</em></span>
 					<!-- 바둑알 정의, indicator_0 부터 19까지, _n의 숫자와 pos_n의 숫자를 매치시켜 현위치 파악할 예정 -->
-					<span class="indicator indicator_15"><em>바둑알</em></span>
+					<span class="indicator"><em>바둑알</em></span>
 					<!-- 각종 게임 요소 정의 -->
 					<div class="playPanel">
 						<div class="playInfo">
@@ -74,11 +127,27 @@
 								<li class="view_2"><a href="#">보상 아이템 보기</a></li>
 							</ul>
 						</div>
-						<div class="playResult">
+						<!-- 로그인 전 메시지 출력 -->
+						<div class="before">
+							<img src="./images/txt_before_login.png" alt="로그인 하시면 윷놀이 이벤트에 참여 하실 수 있습니다." />
 						</div>
+						<!-- //로그인 전 메시지 출력 -->
+						<!-- 윷 결과 출력 -->
+						<div class="playResult" style="display:none;">
+						</div>
+						<!-- //윷 결과 출력 -->
 						<div class="animal">
+							<ul>
+								<li class="char_0"><em class="">도</em></li>
+								<li class="char_1"><em class="">개</em></li>
+								<li class="char_2"><em class="">걸</em></li>
+								<li class="char_3"><em class="">윷</em></li>
+								<li class="char_4"><em class="">모</em></li>
+							</ul>
 						</div>
 						<div class="action">
+							<button class="play">윷 던지기</button>
+							<a href="#" class="cancel">그만하기</a>
 						</div>
 					</div>
 					<!-- //각종 게임 요소 정의 -->
