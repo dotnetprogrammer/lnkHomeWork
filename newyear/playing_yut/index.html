@@ -10,58 +10,7 @@
 		<!-- <link rel="shortcut icon" href="img/icon.ico" /> -->
 		<!--[if lte IE 8]><script src="./js/html5.js"></script><![endif]-->
 		<script src="./js/jquery-1.7.1.min.js"></script>
-		<script>
-			$(function(){
-				var stop=true;
-				var yutVal = 0;
-				var rollingCount = 0;
-				$(".play").click(function(e){
-					lunch();
-					$(this).attr("disabled","disabled");
-					e.preventDefault();
-					yutVal = Math.floor(Math.random()*4); //테스트용 임시 난수 생성
-					moveVal = Math.floor(Math.random()*19); //테스트용 임시 난수 생성
-					moveIndi(moveVal);
-				});
-				
-				function rolling(idx,cnt){
-					var animals = $(".animal ul li");
-					animals.eq(idx).children("em").addClass("on");
-					animals.eq(idx).children("em").parent("li").siblings().children("em").removeClass("on");
-            
-            		if(rollingCount < 4) {
-    				  window.setTimeout(function(){
-      				  rollingCount++;
-    						rolling(idx+1>=cnt?0:idx+1,cnt);
-    					},480);
-  					} else {
-  					  window.setTimeout(function(){
-      				  rollStop(yutVal);
-    					},800);
-  					  rollingCount = 0;
-  					}
-				}
-				function lunch(){
-					var cnt = $(".animal ul li").length;
-					$(".animal ul li em").removeClass("on");
-					$(".animal ul li em").removeClass("get");
-					rolling(0,cnt);
-				}
-				function rollStop(num){
-          			$(".animal ul li em").removeAttr("class");
-					$(".animal ul li:eq("+num+") em").addClass("get");
-					$(".play").removeAttr("disabled");
-				}
-				function moveIndi(num){
-					window.setTimeout(function(){
-						$(".indicator em").css("opacity","0");
-						$(".indicator").removeAttr("class").addClass("indicator indicator_"+num).children("em").animate({opacity:1},1000, function(){
-							$(".playBrd .pos_"+num+" em").addClass("on");
-						});
-					},3300);
-				}
-			});
-		</script>
+		<script type="text/javascript" src="./js/playing_yut.js"></script>
         <link href="./css/html5Reset.css" type="text/css" rel="stylesheet" />
 		<link href="./css/event.css" type="text/css" rel="stylesheet" />
 	</head>
@@ -127,12 +76,12 @@
 							</ul>
 						</div>
 						<!-- 로그인 전 메시지 출력 -->
-						<div class="before">
+						<div class="before" style="display:none;">
 							<img src="./images/txt_before_login.png" alt="로그인 하시면 윷놀이 이벤트에 참여 하실 수 있습니다." />
 						</div>
 						<!-- //로그인 전 메시지 출력 -->
 						<!-- 윷 결과 출력 -->
-						<div class="playResult" style="display:none;">
+						<div class="playResult">
 						</div>
 						<!-- //윷 결과 출력 -->
 						<div class="animal">

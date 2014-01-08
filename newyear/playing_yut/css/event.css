@@ -105,14 +105,14 @@ section .playArea .playBrd .indicator_5 {top:3px;right:-1px;}
 section .playArea .playBrd .indicator_6 {top:3px;right:160px;}
 section .playArea .playBrd .indicator_7 {top:3px;right:320px;}
 section .playArea .playBrd .indicator_8 {top:3px;right:480px;}
-section .playArea .playBrd .indicator_9 {top:3px;left:172px;}
+section .playArea .playBrd .indicator_9 {top:3px;left:162px;}
 section .playArea .playBrd .indicator_10 {top:3px;left:3px;}
 section .playArea .playBrd .indicator_11 {top:142px;left:3px;}
 section .playArea .playBrd .indicator_12 {bottom:466px;left:3px;}
 section .playArea .playBrd .indicator_13 {bottom:306px;left:3px;}
 section .playArea .playBrd .indicator_14 {bottom:146px;left:3px;}
 section .playArea .playBrd .indicator_15 {bottom:-1px;left:3px;}
-section .playArea .playBrd .indicator_16 {bottom:-1px;left:172px;}
+section .playArea .playBrd .indicator_16 {bottom:-1px;left:162px;}
 section .playArea .playBrd .indicator_17 {bottom:-1px;right:480px;}
 section .playArea .playBrd .indicator_18 {bottom:-1px;right:320px;}
 section .playArea .playBrd .indicator_19 {bottom:-1px;right:160px;}
@@ -132,6 +132,7 @@ section .playArea .playBrd .playPanel .playInfo .btns .view_1 a {background:url(
 section .playArea .playBrd .playPanel .playInfo .btns .view_1 .on {background:url('../images/btn_set_on.jpg') 0 -38px no-repeat;}
 section .playArea .playBrd .playPanel .playInfo .btns .view_2 a {background:url('../images/btn_set_off.jpg') 0 -77px no-repeat;}
 section .playArea .playBrd .playPanel .playInfo .btns .view_2 .on {background:url('../images/btn_set_on.jpg') 0 -77px no-repeat;}
+
 section .playArea .playBrd .playPanel .before {width:635px;height:61px;padding:86px 0 0 0;text-align:center;}
 
 section .playArea .playBrd .playPanel .animal {position:absolute;top:397px;left:133px;width:635px;height:214px;}
@@ -161,3 +162,5 @@ section .playArea .playBrd .playPanel .action .play {width:354px;height:92px;bac
 section .playArea .playBrd .playPanel .action .reload {width:354px;height:92px;background:url('../images/btn_play.png') 0 0 no-repeat;}
 section .playArea .playBrd .playPanel .action .cancel {width:246px;height:92px;background:url('../images/btn_end.png') 0 0 no-repeat;}
 section .playArea .playBrd .playPanel .action .cancel:hover {background:url('../images/btn_end_on.png') 0 0 no-repeat;}
+
+section .playArea .playBrd .playPanel .playResult {width:620px;height:145px;padding:40px 0 0 0;text-align:center;}
