@@ -83,7 +83,7 @@ section .playArea .playBrd .item_4 em {background:url('../images/item_4.png') 0 
 section .playArea .playBrd .item_4 .on {background:url('../images/item_4_on.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_5 {width:71px;height:71px;}
 section .playArea .playBrd .item_5 em {background:url('../images/item_5.png') 0 0 no-repeat;}
-section .playArea .playBrd .item_5 .on {background:url('../images/item_5_on.png') 0 0 no-repeat;}
+section .playArea .playBrd .item_5 .on {background:url('../images/item_5.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_6 {width:92px;height:92px;}
 section .playArea .playBrd .item_6 em {background:url('../images/item_6_v2.png') 0 0 no-repeat;}
 section .playArea .playBrd .item_6 .on {background:url('../images/item_6_v2_on.png') 0 0 no-repeat;}
