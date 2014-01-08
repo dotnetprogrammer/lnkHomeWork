@@ -11,7 +11,7 @@
 		<!--[if lte IE 8]><script src="./js/html5.js"></script><![endif]-->
 		<script src="./js/jquery-1.7.1.min.js"></script>
 		<script>
-			$(function(){			
+			$(function(){
 				var stop=true;
 				var yutVal = 0;
 				var rollingCount = 0;
@@ -24,7 +24,6 @@
 					moveIndi(moveVal);
 				});
 				
-				/* //test code*/
 				function rolling(idx,cnt){
 					var animals = $(".animal ul li");
 					animals.eq(idx).children("em").addClass("on");
@@ -55,13 +54,10 @@
 				}
 				function moveIndi(num){
 					window.setTimeout(function(){
-						$(".indicator").removeAttr("class").addClass("indicator indicator_"+num);
-						/*var classLayer = $(".indicator").attr("class").split(" ")[1];
-						var classNum = $(".indicator").attr("class").split(" ").length;
-						var moveIndi = classLayer.split("_")[1];
-						console.log(classNum);*/
-						var items = $(".playBrd>span");
-						$(".playBrd .pos_"+num+" em").addClass("on");
+						$(".indicator em").css("opacity","0");
+						$(".indicator").removeAttr("class").addClass("indicator indicator_"+num).children("em").animate({opacity:1},1000, function(){
+							$(".playBrd .pos_"+num+" em").addClass("on");
+						});
 					},3300);
 				}
 			});

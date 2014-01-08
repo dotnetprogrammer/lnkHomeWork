@@ -96,7 +96,7 @@ section .playArea .playBrd .item_8 .on {background:url('../images/item_8_on.png'
 
 section .playArea .playBrd .indicator {width:90px;height:90px;bottom:-1px;right:-1px;}
 section .playArea .playBrd .indicator em {background:url('../images/img_indicator.png') 0 0 no-repeat;}
-/*section .playArea .playBrd .indicator_0 {bottom:-1px;right:-1px;}*/
+section .playArea .playBrd .indicator_0 {bottom:-1px;right:-1px;}
 section .playArea .playBrd .indicator_1 {bottom:146px;right:1px;}
 section .playArea .playBrd .indicator_2 {bottom:306px;right:1px;}
 section .playArea .playBrd .indicator_3 {bottom:466px;right:1px;}
