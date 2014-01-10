@@ -67,8 +67,16 @@
 					<!-- 각종 게임 요소 정의 -->
 					<div class="playPanel">
 						<div class="playInfo">
-							<div class="count_1"></div>
-							<div class="count_2"></div>
+							<div class="count_1">
+								<img src="./images/img_num_0.png" alt="0" />
+								<img src="./images/img_num_0.png" alt="0" />
+								<img src="./images/img_num_0.png" alt="0" />
+							</div>
+							<div class="count_2">
+								<img src="./images/img_num_0.png" alt="0" />
+								<img src="./images/img_num_0.png" alt="0" />
+								<img src="./images/img_num_0.png" alt="0" />
+							</div>
 							<ul class="btns">
 								<li class="howTo"><a href="#">참여방법</a></li>
 								<li class="view_1"><a href="#">참여 내역 보기</a></li>
@@ -99,7 +107,8 @@
 						<!-- 레이어 -->
 						<div id="layerWrap">
 							<a href="#" class="cls">레이어 닫기</a>
-							<div class="getItem">
+							<!-- 아이템 받기 레이어 -->
+							<div class="getItem" style="display:none">
 								<h4>아이템 받기</h4>
 								<!-- 개발용 샘플 영역 -->
 								<div class="itemReceipt">
@@ -112,33 +121,33 @@
 											</colgroup>
 											<tr>
 												<td><img src="./images/img_item_0.gif" alt="티야의 선물" /></td>
-												<td>티야의 선물</td>
-												<td><strong></strong>개</td>
+												<td class="title">티야의 선물</td>
+												<td><strong>00</strong>개</td>
 											</tr>
 											<tr>
 												<td><img src="./images/img_item_1.gif" alt="쿠이아의 선물" /></td>
-												<td>쿠이아의 선물</td>
-												<td><strong></strong>개</td>
+												<td class="title">쿠이아의 선물</td>
+												<td><strong>00</strong>개</td>
 											</tr>
 											<tr>
 												<td><img src="./images/img_item_2.gif" alt="투지의 비약" /></td>
-												<td>투지의 비약</td>
-												<td><strong></strong>개</td>
+												<td class="title">투지의 비약</td>
+												<td><strong>00</strong>개</td>
 											</tr>
 											<tr>
 												<td><img src="./images/img_item_0.gif" alt="골드" /></td>
-												<td>골드</td>
-												<td><strong></strong>개</td>
+												<td class="title">골드</td>
+												<td><strong>00</strong>개</td>
 											</tr>
 											<tr>
 												<td><img src="./images/img_item_3.gif" alt="정제석" /></td>
-												<td>정제석</td>
-												<td><strong></strong>개</td>
+												<td class="title">정제석</td>
+												<td><strong>00</strong>개</td>
 											</tr>
 											<tr>
 												<td><img src="./images/img_item_8.gif" alt="스킬 재분배 두루마리" /></td>
-												<td>스킬 재분배 두루마리</td>
-												<td><strong></strong>개</td>
+												<td class="title">스킬 재분배 두루마리</td>
+												<td><strong>00</strong>개</td>
 											</tr>
 											<!-- 아이템 이미지 목록 
 											img_item_0.gif 티야의 선물
@@ -155,19 +164,169 @@
 										</table>
 									</div>
 									<div class="getArea">
-										
+										<p><img src="./images/txt_select_char.png" alt="" /></p>
+										<select class="charList">
+											<option>캐릭터 선택</option>
+											<option>캐릭터 선택</option>
+											<option>캐릭터 선택</option>
+											<option>캐릭터 선택</option>
+											<option>캐릭터 선택</option>
+										</select>
+										<a href="#" class="getBtn">아이템 받기</a>
 									</div>
 								</div>
 								<!-- //개발용 샘플 영역 -->
 							</div>
+							<!-- //아이템 받기 레이어 -->
+							<!-- 참여내역 보기 레이어 -->
+							<div class="viewPlay">
+								<h4>참여 내역 보기</h4>
+								<div class="viewDetail">
+									<div class="row">
+										<dl>
+											<dt>획득한 복 주머니 개수</dt>
+											<dd><strong>000</strong>개</dd>
+										</dl>
+										<dl>
+											<dt>사용한 복 주머니 개수</dt>
+											<dd><strong>000</strong>개</dd>
+										</dl>
+									</div>
+									<div class="row">
+										<dl>
+											<dt>남은 복 주머니 개수</dt>
+											<dd><strong>000</strong>개</dd>
+										</dl>
+										<dl>
+											<dt>완주 횟수</dt>
+											<dd><strong>000</strong>개</dd>
+										</dl>
+									</div>
+									<ul class="tabs">
+										<li class="tab_1"><a href="#" class="on">복 주머니 획득 내역</a></li>
+										<li class="tab_2"><a href="#">복 주머니 사용 내역</a></li>
+									</ul>
+									<div class="tblArea">
+										<!-- 획득 내용 -->
+										<div class="getView">
+											<table>
+												<colgroup>
+													<col width="171" />
+													<col width="171" />
+													<col width="171" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>일시</th>
+														<th>보상 아이템</th>
+														<th>비고</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>1,000골드</td>
+														<td>복 주머니 1개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>1,000골드</td>
+														<td>복 주머니 1개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>1,000골드</td>
+														<td>복 주머니 1개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>1,000골드</td>
+														<td>복 주머니 1개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>1,000골드</td>
+														<td>복 주머니 1개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>1,000골드</td>
+														<td>복 주머니 1개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>1,000골드</td>
+														<td>복 주머니 1개 사용</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //획득 내용 -->
+										<!-- 사용 내역 -->
+										<div class="spendView" style="display:none;">
+											<table>
+												<colgroup>
+													<col width="171" />
+													<col width="171" />
+													<col width="171" />
+												</colgroup>
+												<thead>
+													<tr>
+														<th>일시</th>
+														<th>보상 아이템</th>
+														<th>비고</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>2,000골드</td>
+														<td>복 주머니 2개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>2,000골드</td>
+														<td>복 주머니 2개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>2,000골드</td>
+														<td>복 주머니 2개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>2,000골드</td>
+														<td>복 주머니 2개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>2,000골드</td>
+														<td>복 주머니 2개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>2,000골드</td>
+														<td>복 주머니 2개 사용</td>
+													</tr>
+													<tr>
+														<td>2014.01.01 오전 10 :33 :24</td>
+														<td>2,000골드</td>
+														<td>복 주머니 2개 사용</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //사용 내역 -->
+									</div>
+								</div>
+							</div>
+							<!-- //참여내역 보기 레이어 -->
 						</div>
 						<!-- //레이어 -->
 					</div>
 					<!-- //각종 게임 요소 정의 -->
 				</div>
 			</div>
-			<footer>
-			</footer>
 		</section>
     </body>
 </html>

@@ -122,8 +122,8 @@ section .playArea .playBrd .indicator_19 {bottom:-1px;right:160px;}
 section .playArea .playBrd .playPanel {position:relative;width:635px;height:591px;}
 section .playArea .playBrd .playPanel span {display:inline;position:relative;}
 section .playArea .playBrd .playPanel .playInfo {height:115px;}
-section .playArea .playBrd .playPanel .playInfo .count_1 {float:left;width:236px;height:115px;margin:0 3px 0 0;background:url('../images/bg_count_1.jpg') 0 0 no-repeat;}
-section .playArea .playBrd .playPanel .playInfo .count_2 {float:left;width:236px;height:115px;margin:0 3px 0 0;background:url('../images/bg_count_2.jpg') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .playInfo .count_1 {float:left;width:146px;height:75px;margin:0 3px 0 0;padding:40px 0 0 90px;background:url('../images/bg_count_1.jpg') 0 0 no-repeat;}
+section .playArea .playBrd .playPanel .playInfo .count_2 {float:left;width:146px;height:75px;margin:0 3px 0 0;padding:40px 0 0 90px;background:url('../images/bg_count_2.jpg') 0 0 no-repeat;}
 section .playArea .playBrd .playPanel .playInfo .btns {float:left;}
 section .playArea .playBrd .playPanel .playInfo .btns li {width:157px;height:37px;margin:1px 0 0 0;}
 section .playArea .playBrd .playPanel .playInfo .btns .howTo {margin:0;}
@@ -167,7 +167,7 @@ section .playArea .playBrd .playPanel .action .cancel:hover {background:url('../
 
 section .playArea .playBrd .playPanel .playResult {width:620px;height:145px;padding:40px 0 0 0;text-align:center;}
 
-#layerWrap {position:absolute;top:128px;left:0;width:634px;height:461px;}
+#layerWrap {display:none;position:absolute;top:128px;left:0;width:634px;height:461px;}
 #layerWrap .viewRule {position:relative;width:634px;height:461px;background:url('../images/bg_rule.jpg') 0 0 no-repeat;}
 #layerWrap .viewRule h4 {overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
 #layerWrap .viewRule dl {overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
@@ -179,3 +179,43 @@ section .playArea .playBrd .playPanel .playResult {width:620px;height:145px;padd
 #layerWrap .viewItem .scrollArea table th {height:25px;background:#e0a012;color:#643b14;border-left:1px solid #c1890b;}
 #layerWrap .viewItem .scrollArea table td {padding-top:7px;padding-bottom:7px;padding-left:9px;background:#cb951d;border:1px solid #c1890b;border-top:0 none;color:#6e4904;}
 #layerWrap .viewItem .scrollArea table td.img {height:37px;text-align:center;}
+
+#layerWrap .getItem {position:relative;width:635px;height:379px;padding:82px 0 0 0;background:url('../images/bg_get_item.jpg') 0 0 no-repeat;}
+#layerWrap .getItem h4 {overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+#layerWrap .getItem .itemReceipt {width:530px;height:329px;margin:0 0 0 37px;padding:21px 20px 0 20px;background:#c1890b;border:1px solid #a87505;}
+#layerWrap .getItem .itemReceipt .wrapTbl {float:left;width:344px;}
+#layerWrap .getItem .itemReceipt .wrapTbl table {width:344px;table-layout:fixed;}
+#layerWrap .getItem .itemReceipt .wrapTbl table td {height:37px;padding-top:7px;padding-bottom:7px;background:#cb951d;text-align:center;font-weight:bold;color:#643b14;border:1px solid #c1890b;border-top:0 none;}
+#layerWrap .getItem .itemReceipt .wrapTbl table .title {text-align:left;padding-left:10px;}
+#layerWrap .getItem .itemReceipt .wrapTbl table strong {color:#a0410d;}
+#layerWrap .getItem .itemReceipt .getArea {float:right;width:170px;height:220px;padding:91px 0 0 0;}
+#layerWrap .getItem .itemReceipt .getArea p {text-align:center;}
+#layerWrap .getItem .itemReceipt .getArea .charList {display:block;width:166px;height:28px;margin:25px 0 0 0;background:#b07900;border:1px solid #a87505;color:#643b14;}
+#layerWrap .getItem .itemReceipt .getArea .getBtn {display:block;width:166px;height:37px;margin:5px 0 0 0;overflow:hidden;background:url('../images/btn_get_item.jpg') 0 0 no-repeat;text-indent:-10000em;font:normal 0/0 verdana;}
+
+#layerWrap .viewPlay {position:relative;width:635px;height:379px;padding:82px 0 0 0;background:url('../images/bg_view_play.jpg') 0 0 no-repeat;}
+#layerWrap .viewPlay h4 {overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+#layerWrap .viewPlay .viewDetail {width:570px;height:340px;margin:0 0 0 37px;padding:10px 0 0 0;background:#c1890b;border:1px solid #a87505;}
+#layerWrap .viewPlay .viewDetail .row {height:35px;padding:0 27px 0 20px;background:url('../images/bg_row.gif') 0 bottom repeat-x;line-height:35px;}
+#layerWrap .viewPlay .viewDetail .row dl {float:left;width:50%;height:35px;}
+#layerWrap .viewPlay .viewDetail .row dl dt {float:left;width:70%;font-size:14px;font-weight:bold;color:#643b14;}
+#layerWrap .viewPlay .viewDetail .row dl dd {float:left;width:30%;font-size:14px;font-weight:bold;color:#643b14;}
+#layerWrap .viewPlay .viewDetail .row dl dd strong {color:#a0410d;}
+#layerWrap .viewPlay .viewDetail .tabs {width:515px;margin:10px 0 0 20px;}
+#layerWrap .viewPlay .viewDetail .tabs li {width:256px;height:35px;}
+#layerWrap .viewPlay .viewDetail .tabs li a {display:block;width:256px;height:35px;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+#layerWrap .viewPlay .viewDetail .tabs .tab_1 {float:left;}
+#layerWrap .viewPlay .viewDetail .tabs .tab_1 a {background:url('../images/btn_view_get_off.jpg') 0 0 no-repeat;}
+#layerWrap .viewPlay .viewDetail .tabs .tab_1 .on {background:url('../images/btn_view_get.jpg') 0 0 no-repeat;} 
+#layerWrap .viewPlay .viewDetail .tabs .tab_2 {float:right;}
+#layerWrap .viewPlay .viewDetail .tabs .tab_2 a {background:url('../images/btn_view_spend_off.jpg') 0 0 no-repeat;}
+#layerWrap .viewPlay .viewDetail .tabs .tab_2 .on {background:url('../images/btn_view_spend.jpg') 0 0 no-repeat;} 
+#layerWrap .viewPlay .viewDetail .tblArea {width:550px;height:215px;margin:10px 0 0 20px;overflow-y:scroll;}
+#layerWrap .viewPlay .viewDetail .tblArea .getView {width:516px;}
+#layerWrap .viewPlay .viewDetail .tblArea .getView table {width:516px;table-layout:fixed;}
+#layerWrap .viewPlay .viewDetail .tblArea .getView table th {height:25px;background:#e0a012;color:#643b14;border:1px solid #c08912;border-top:0 none;}
+#layerWrap .viewPlay .viewDetail .tblArea .getView table td {height:25px;padding-left:10px;background:#cb951d;color:#6e4904;border:1px solid #c08912;border-top:0 none;}
+#layerWrap .viewPlay .viewDetail .tblArea .spendView {width:516px;}
+#layerWrap .viewPlay .viewDetail .tblArea .spendView table {width:516px;table-layout:fixed;}
+#layerWrap .viewPlay .viewDetail .tblArea .spendView table th {height:25px;background:#e0a012;color:#643b14;border:1px solid #c08912;border-top:0 none;}
+#layerWrap .viewPlay .viewDetail .tblArea .spendView table td {height:25px;padding-left:10px;background:#cb951d;color:#6e4904;border:1px solid #c08912;border-top:0 none;}

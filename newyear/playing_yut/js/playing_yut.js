@@ -119,6 +119,20 @@ $(function(){
 		e.preventDefault();
 	});
 
+	$(".tabs li a").click(function(e){
+		$(this).addClass("on");
+		if($(this).parent("li").hasClass("tab_1")){
+			$(".tab_2 a").removeClass("on");
+			$(".getView").show();
+			$(".spendView").hide();
+		} else if ($(this).parent("li").hasClass("tab_2")){
+			$(".tab_1 a").removeClass("on");
+			$(".getView").hide();
+			$(".spendView").show();
+		}
+		e.preventDefault();
+	});
+
 	// 함수 영역
 	function rolling(idx,cnt){
 		var animals = $(".animal ul li");
