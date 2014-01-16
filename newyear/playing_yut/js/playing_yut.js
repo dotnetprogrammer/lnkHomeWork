@@ -1,4 +1,9 @@
 $(function(){
+	// 헤더 메뉴 관련
+	var funcNum = $(".headFunc a").length;
+	if(funcNum<2){
+		$(".headFunc").css("padding-top","18px");
+	}
 	var stop=true;
 	var yutVal = 0;
 	var rollingCount = 0;
@@ -17,7 +22,7 @@ $(function(){
 		if($(this).hasClass("on")){
 			$(this).removeClass("on");
 			$("#layerWrap").hide();
-			$("#layerWrap div").remove();
+			$("#layerWrap .viewRule").remove();
 		} else {
 			$(this).addClass("on");
 			if ($(".view_2 a").hasClass("on")){
@@ -40,7 +45,7 @@ $(function(){
 		if($(this).hasClass("on")){
 			$(this).removeClass("on");
 			$("#layerWrap").hide();
-			$("#layerWrap div").hide();
+			$("#layerWrap>div").hide();
 		} else {
 			$(this).addClass("on");
 			if ($(".howTo a").hasClass("on")){
@@ -63,7 +68,7 @@ $(function(){
 		if($(this).hasClass("on")){
 			$(this).removeClass("on");
 			$("#layerWrap").hide();
-			$("#layerWrap div").remove();
+			$("#layerWrap .viewItem").remove();
 		} else {
 			$(this).addClass("on");
 			if ($(".howTo a").hasClass("on")){
@@ -86,7 +91,7 @@ $(function(){
 		if($(this).hasClass("on")){
 			$(this).removeClass("on");
 			$("#layerWrap").hide();
-			$("#layerWrap div").hide();
+			$("#layerWrap>div").hide();
 		} else {
 			$(this).addClass("on");
 			if ($(".howTo a").hasClass("on")){
@@ -104,18 +109,11 @@ $(function(){
 		}
 		e.preventDefault();
 	});
-
-	$(".cls").click(function(e){
-		if($("#layerWrap div").hasClass("viewRule")){
-			$(".howTo a").removeClass("on");
-			clsLayer("viewRule");
-		} else if ($("#layerWrap div").hasClass("viewItem")){
-			$(".view_2 a").removeClass("on");
-			clsLayer("viewItem");
-		} else if ($("#layerWrap div").hasClass("getItem")){
-			$("#layerWrap").hide();
-			$("#layerWrap .getItem").hide();
-		}
+	$("#layerWrap .cls").click(function(e){		
+		$("#layerWrap").hide();
+		clsLayer("viewRule");
+		clsLayer("viewItem");
+		$(".btns li a").removeClass("on");
 		e.preventDefault();
 	});
 
@@ -221,10 +219,12 @@ $(function(){
 	}
 	function makePlayView(){
 		//여기다 참여내역 불러내는 함수를 쓰시면 될 듯..
-		alert("not yet"); //test
+		//alert("not yet"); //test
+		$(".viewPlay").css("display","block");
 	}
 	function makeGetItem(){
 		//여기다 아이템 받는 레이어 만드는 함수를 쓰시면 될 듯...
-		alert("not yet"); //test
+		//alert("not yet"); //test
+		$(".getItem").css("display","block");//test
 	}
 });

@@ -29,9 +29,11 @@
 						<h2><a href="#">접속하라 0214 - 2월 6일 오픈</a></h2>
 					</li>
 				</ul>
-				<a href="#" class="lgoin">거울전쟁 로그인</a>
-				<a href="#" class="daumLogin">다음 로그인</a>
-				<a href="#" class="goHome">홈페이지 바로가기</a>
+				<div class="headFunc">
+					<a href="#" class="goHome">홈페이지 바로가기</a>
+					<a href="#" class="login">거울전쟁 로그인</a>
+					<a href="#" class="daumLogin">다음 로그인</a>
+				</div>
 			</div>
 		</header>
 		<section>
@@ -66,6 +68,12 @@
 					<span class="indicator"><em>바둑알</em></span>
 					<!-- 각종 게임 요소 정의 -->
 					<div class="playPanel">
+						<!-- 로딩중, 로그인 전 레이어 -->
+						<div class="loading" style="display:none;">
+							<!--<img src="./images/img_loading.png" alt="로딩중" />-->
+							<img src="./images/txt_before_login.png" alt="로그인 하시면 윷놀이 이벤트에 참여 하실 수 있습니다." />
+						</div>
+						<!-- //로딩중, 로그인 전 레이어 -->
 						<div class="playInfo">
 							<div class="count_1">
 								<img src="./images/img_num_0.png" alt="0" />
@@ -85,7 +93,7 @@
 						</div>
 						<!-- 로그인 전 메시지 출력 -->
 						<div class="before" style="display:none;">
-							<img src="./images/txt_before_login.png" alt="로그인 하시면 윷놀이 이벤트에 참여 하실 수 있습니다." />
+							
 						</div>
 						<!-- //로그인 전 메시지 출력 -->
 						<!-- 윷 결과 출력 -->
@@ -102,7 +110,8 @@
 						</div>
 						<div class="action">
 							<button class="play">윷 던지기</button>
-							<a href="#" class="cancel">그만하기</a>
+							<!-- <a href="#" class="cancel">그만하기</a> -->
+							<button class="cancel">그만하기</button>
 						</div>
 						<!-- 레이어 -->
 						<div id="layerWrap">
@@ -159,7 +168,7 @@
 											img_item_6.gif 금색 복(오라) 무제한
 											img_item_7.gif 빨강색 소악마 날개(등) 무제한
 											img_item_8.gif 스킬 재분배 두루마리
-											골드는 아직 없음.
+											img_item_9.gif 골드
 											-->
 										</table>
 									</div>
@@ -175,11 +184,12 @@
 										<a href="#" class="getBtn">아이템 받기</a>
 									</div>
 								</div>
+								<span class="overlay">&nbsp;</span>
 								<!-- //개발용 샘플 영역 -->
 							</div>
 							<!-- //아이템 받기 레이어 -->
 							<!-- 참여내역 보기 레이어 -->
-							<div class="viewPlay">
+							<div class="viewPlay" style="display:none;">
 								<h4>참여 내역 보기</h4>
 								<div class="viewDetail">
 									<div class="row">
