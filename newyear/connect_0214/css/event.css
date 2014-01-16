@@ -1,0 +1,49 @@
+@charset "utf-8";
+/*reset*/
+body,div,p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,ol,table,tr,th,td,caption,form,fieldset,input,select,textarea,blockquote,address{margin:0;padding:0;}
+img,fieldset,iframe{border:0 none;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;}
+address,em{font-style:normal;}
+table{border-collapse:collapse;border-spacing:0;}
+/*base*/
+body{font-family: "돋움", Dotum, "굴림", Gulim, AppleGothic, Arial, Sans-serif;font-size: 12px;line-height:1.4em;color:#333;background:#fff;}
+ul,ol,li{list-style:none;line-height:100%;}
+a{text-decoration:none;color:#333;}
+a:hover, a:focus, a:active, a:visited{text-decoration:underline;color:#333;}
+caption,legend{position:absolute;top:-5000px;text-indent:-5000px;visibility:hidden;width:0;height:0;font-size:0;line-height:0;}
+ul:after{content:" ";display:block;clear:both;}
+textarea {resize: vertical;}
+img{vertical-align:middle;}
+hr{display:none;}
+section{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0}
+
+/* float clear */
+.fix{zoom:1;}.fix:after{content:".";display:block;font-size:0;height:0px;line-height:0;clear:both;}
+
+body {background:#000;}
+header {width:100%;height:116px;background:url('../images/bg_header_repeat.gif') 0 0 repeat-x;}
+header .inner {position:relative;width:1000px;height:116px;margin:0 auto;background:url('../images/bg_header_inner.jpg') 0 0 no-repeat;}
+header .inner .menu {position:absolute;top:25px;left:215px;height:91px;}
+header .inner .menu li {float:left;height:77px;margin:0 0 0 39px;padding:14px 0 0 41px;background:url('../images/bg_menu.gif') 0 0 no-repeat;}
+header .inner .menu li .on {background:url('../images/ic_tab_arrow.gif') center bottom no-repeat;}
+header .inner .menu li h2 {height:77px;}
+header .inner .menu li h2 a {display:block;height:41px;background-repeat:no-repeat;background-image:url('../images/tab_set_main.gif');overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+header .inner .menu .mn_1 {margin:0;padding:14px 0 0 23px;}
+header .inner .menu .mn_2 {margin:0 0 0 23px;}
+header .inner .menu .mn_3 {padding:14px 0 0 35px;}
+header .inner .menu .mn_1 h2 a {width:139px;background-position:0 0;}
+header .inner .menu .mn_1 .on a {background-position:0 -44px;}
+header .inner .menu .mn_2 h2 a {width:104px;background-position:-150px 0;}
+header .inner .menu .mn_2 .on a {background-position:-150px -44px;}
+header .inner .menu .mn_3 h2 a {width:115px;background-position:-270px 0;}
+header .inner .menu .mn_3 .on a {background-position:-270px -44px;}
+header .inner .headFunc {position:absolute;top:27px;right:0;width:218px;height:70px;text-align:center;}
+header .inner .headFunc a {display:inline-block;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+header .inner .login {width:107px;height:33px;background:url('../images/btn_login.png') 0 0 no-repeat;}
+header .inner .daumLogin {width:103px;height:33px;background:url('../images/btn_daum_login.png') 0 0 no-repeat;}
+header .inner .goHome {width:137px;height:21px;margin:0 0 10px 0;background:url('../images/bg_go_home.gif') 0 0 no-repeat;}
+
+section {width:100%;height:1189px;background:#000 url('../images/bg_section_all.jpg') center 0 no-repeat;}
+section .inner {width:1000px;height:1189px;margin:0 auto;background:url('../images/bg_section.jpg') 0 0 no-repeat;}
+section .inner h3, section .inner h4, section .inner dl, section .inner p {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
