@@ -1,0 +1,24 @@
+/*login*/
+.login{background:#040404 url('../img/info/login_bg.jpg') top center no-repeat;}
+.login h1{padding-bottom:12px;}
+.login section{position:absolute; top:50%; left:50%; width:473px; padding-left:27px; margin-top:-118px; margin-left:-250px;}
+.login section .login_box{position: relative;}
+.login label{display:inline-block; width:42px;}
+.login p{padding-bottom:3px;}
+.login p input{width:275px; padding:6px 10px 7px 10px; border: none;}
+.login .login_btn{padding-bottom:0px; position:absolute; top:0px; left:342px;}
+.login .txt{padding-top:13px;}
+.login .txt li{padding-left:23px; text-indent: -23px; line-height:20px; font-size:12px; color:#c75e01;}
+
+/*pw*/
+.pw{width:568px; height:400px; background:#37373a; overflow:hidden;}
+.pw section{width:468px;padding:40px;}
+.pw .pw_box{padding-top:25px;}
+.pw p{padding-bottom:3px;}
+.pw p span{padding-left:10px; color:#fff9f4; }
+.pw label{display:inline-block; width:150px; padding-left:18px; color:#fff9f4; font-weight:bold;}
+.pw input{width:200px; padding:5px 15px; border:1px solid #d8d8d8;}
+.pw .pw_box ul{float:right; padding:10px 18px 22px 0 ;}
+.pw .pw_box li{float:left; margin-left:5px;}
+.pw .txt{clear:both;}
+.pw .txt li{padding-left:37px; text-indent: -20px; line-height:20px; color:#ff7800;}

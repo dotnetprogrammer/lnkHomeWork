@@ -1,0 +1,229 @@
+﻿<!DOCTYPE HTML>
+<!--[if IE 7]><html class="ie7" lang="ko"> <![endif]-->
+<!--[if lt IE 9]><html class="ie8" lang="ko"> <![endif]-->
+<!--[if gte IE 9]><!--> <html lang="ko"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="withh=device-withh">
+        <title>L&amp;K operation system</title>        
+        <link rel="stylesheet" type="text/css" href="../css/reset.css">
+        <link rel="stylesheet" href="../js/vendor/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="../css/common.css">
+        <link rel="stylesheet" type="text/css" href="../css/info.css">
+        <script src="../js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="../js/vendor/jquery.ui.1.10.3.js"></script>
+        <script src="../js/vendor/jquery.ui.datepicker.js"></script>
+        <script src="../js/common.js"></script>
+        <script src="../js/info.js"></script> 
+        <!--[if lt IE 9]><script src="../js/vendor/html5.js"></script><![endif]-->
+    </head>
+    <body>
+    	<header>
+    		<section>
+    			<h1><img src="../img/sub/title.png" alt="L&K integral management ststem" title="L&K integral management ststem" /></h1>
+    			<ul class="btn_top">
+        			<li class="btn01"><a href="#"><img src="../img/sub/btn_top01.gif" alt="LOG OUT" title="LOG OUT" /></a></li>
+        			<li class="btn02"><a href="../info/mypage.html"><img src="../img/sub/btn_top02.gif" alt="내 정보변경" title="내 정보변경" /></a></li>
+        		</ul> 
+        		<nav>
+        			<ul>
+        				<li class="gnb01"><a href="#">인사관리</a>
+        					<ul>
+        						<li><a href="#">등록</a></li>
+    							<li><a href="#">조회</a></li>
+								<li><a href="#">변경</a></li>
+								<li><a href="#">재직관리</a></li>
+								<li><a href="#">승인</a></li>
+        					</ul>
+        				</li>
+        				<li class="gnb02"><a href="#">계정관리</a>
+        					<ul>
+        						<li><a href="#">승인</a></li>
+    							<li><a href="#">조회</a></li>
+								<li><a href="#">변경</a></li>
+								<li><a href="#">로그조회</a></li>
+        					</ul>
+        				</li>
+        				<li class="gnb03"><a href="#">회원관리</a>
+        					<ul>
+        						<li><a href="#">개인</a></li>
+    							<li><a href="#">PC방</a></li>
+								<li><a href="#">총판</a></li>
+								<li><a href="#">관계사</a></li>
+        					</ul>
+        				</li>
+        				<li class="gnb04"><a href="#">매출관리</a>
+        					<ul>
+        						<li><a href="#">개인</a></li>
+        					</ul>
+        				</li>
+        				<li class="gnb05"><a href="#">환불/취소</a>
+        					<ul>
+        						<li><a href="#">개인</a></li>
+    							<li><a href="#">PC방</a></li>
+        					</ul>
+        				</li>
+        				<li class="gnb06"><a href="#">상품관리</a>
+        					<ul>
+        						<li><a href="#">등록</a></li>
+    							<li><a href="#">변경</a></li>
+								<li><a href="#">삭제</a></li>
+								<li><a href="#">승인</a></li>
+        					</ul>
+        				</li>
+        				<li class="gnb07"><a href="#">정산관리</a>
+        					<ul>
+        						<li><a href="#">등록</a></li>
+    							<li><a href="#">변경</a></li>
+								<li><a href="#">삭제</a></li>
+								<li><a href="#">승인</a></li>
+								<li><a href="#">매출매입자료</a></li>
+    							<li><a href="#">대사파일등록</a></li>
+								<li><a href="#">대사</a></li>
+								<li><a href="#">정합</a></li>
+								<li><a href="#">세금계산서발행</a></li>
+        					</ul>
+        				</li>
+        				<li class="gnb08"><a href="#">웹관리</a>
+        					<ul>
+        						<li><a href="#">거울전쟁</a></li>
+        					</ul>
+        				</li>
+        				<li class="gnb09"><a href="#">리포트</a>
+        					<ul>
+        						<li><a href="#">고객지원 처리현황</a></li>
+        					</ul>
+        				</li>
+        				<li class="gnb10"><a href="#">배치등록</a></li>
+        			</ul>
+        		</nav>
+    		</section>
+    	</header>
+    	<section class="center">
+    		<div class="left_nav">
+    			<h2>내 정보 변경</h2>    			
+    		</div>
+    		<div class="contents mypage">
+    			<h3><em></em>내 정보 변경</h3>
+    			<div class="photo">
+    				<p><img src="../img/pms/sample.jpg" alt="사진" title="사진" /></p>	<!-- PC에서 파일 찾기로 올라간 사진이 뿌려질 공간 -->
+    				<div class="file_input">
+    					<img src="../img/pms/btn_file.gif" alt="PC에서 파일 찾기" title="PC에서 파일 찾기" />
+						<input type="file" />
+					</div>
+					<ul>
+						<li>01. 웹 이미지 링크 불가</li>
+						<li>02. 경로를 찾아 파일을 선택하면 상단 이미지 박스로 자동 갱신</li>
+					</ul>
+    			</div>
+    			<table class="data_in">
+    				<caption>내 정보 입력 창입니다.</caption>
+    				<tbody>
+		    			<tr>
+		    				<th scope="row">고유번호</th>
+		    				<td class="nono"><input type="text" alt="고유번호" value="987654321" /></td>	<!-- input에 readonly일때 클래스 "nono"를 부여합니다. -->
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">아이디</th>
+		    				<td class="nono"><input type="text" alt="아이디" /></td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">이름</th>
+		    				<td class="nono"><input type="text" alt="이름" /></td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">한자명</th>
+		    				<td class="nono"><input type="text" alt="한자명" /></td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">영문명</th>
+		    				<td class="nono"><input type="text" alt="영문명" /></td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">주민번호</th>
+		    				<td class="s_input nono">
+		    					<input type="text" maxlength="6" title="주민번호 앞자리" /> -
+		    					<input type="password" maxlength="7" title="주민번호 뒷자리" />
+		    				</td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">생년월일</th>
+		    				<td class="nono">
+	    						<input type="text" class="datepicker" alt="생년월일" />	<!-- 달력 필요시 input에 class="datepicker" 부여 -->
+	    						<select>
+			    					<option selected="selected">양력</option>
+			    					<option>음력</option>
+		    					</select>
+	    					</td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">부서</th>
+		    				<td class="nono">
+		    					<select>
+		    						<option class="option01">부서를 선택해 주세요.</option>
+			    					<option>부서명1</option>
+			    					<option>부서명2</option>
+		    					</select>
+		    				</td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">직급</th>
+		    				<td class="nono">
+		    					<select>
+		    						<option class="option01">직급을 선택해 주세요.</option>
+			    					<option>직급명1</option>
+			    					<option>직급명2</option>
+		    					</select>
+		    				</td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">사번</th>
+		    				<td class="nono"><input type="text" alt="사번" /></td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">입사일</th>
+		    				<td class="nono"><input type="text" class="datepicker" alt="입사일" /></td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">이메일(회사)</th>
+		    				<td class="m_input nono"><input type="text" alt="이메일(회사)" /></td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">전화번호(내선)</th>
+		    				<td class="s_input nono">
+		    					<input type="text" maxlength="3" title="전화번호첫째자리"/> -
+								<input type="text" maxlength="4" title="전화번호둘째자리"/> -
+								<input type="text" maxlength="4" title="전화번호셋째자리"/>
+		    				</td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">휴대폰</th>
+		    				<td class="s_input">
+		    					<input type="text" maxlength="3" title="휴대폰첫째자리"/> -
+								<input type="text" maxlength="4" title="휴대폰둘째자리"/> -
+								<input type="text" maxlength="4" title="휴대폰셋째자리"/>
+		    				</td>
+		    			</tr>
+		    			<tr>
+		    				<th scope="row">주소</th>
+		    				<td class="s_input">
+		    					<input type="text" alt="주소" /> - <input type="text" alt="주소" />
+		    					<a href="#" class="btn zipcode">우편번호 찾기</a>
+		    					<input type="text" alt="주소" class="l_input" />	    					
+		    					<input type="text" alt="주소" class="l_input" />	    					
+		    				</td>
+		    			</tr>
+		    		</tbody>
+    			</table>
+    			<ul class="btn_box">
+    				<li class="btn02_01"><a href="../info/index.html">확인</a></li>
+    			</ul>
+    		</div>
+    	</section>
+    	<footer>
+    		<section>
+    			<p><img src="../img/sub/copy.gif" alt="COPYRIGHT L&K LOGIC KOREA. ALL RIGHT RESERVED." title="COPYRIGHT L&K LOGIC KOREA. ALL RIGHT RESERVED." /></p>
+    		</section>
+    	</footer>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*html5용 tag의 기본 렌더링 지정 : http://www.whatwg.org/specs/web-apps/current-work/multipage/rendering.html */
+
+[hidden], area, base, basefont, command, datalist, head,input[type=hidden], link, menu[type=context], meta, noembed, noframes,param, script, source, style, track, title {display: none;	/* case-insensitive */}
+address, article, aside, blockquote, body, center, dd, dir, div, dl,dt, figure, figcaption, footer, form, h1, h2, h3, h4, h5, h6, header,hgroup, hr, html, legend, listing, menu, nav, ol, p, plaintext, pre,section, summary, ul, xmp{display:block;}
+table{display: table;}
+caption{display: table-caption;}
+colgroup{display: table-column-group;}
+col{display: table-column;}
+thead{display: table-header-group;}
+tbody{display: table-row-group;}
+tfoot{display: table-footer-group;}
+tr {display: table-row;}
+td, th{display: table-cell;}
+li{display: list-item;}
+
+/*reset*/
+body,div,p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,ol,table,tr,th,td,caption,form,fieldset,input,select,textarea,blockquote,address{margin:0; padding:0;}
+img,fieldset,iframe{border:0 none;}
+h1,h2,h3,h4,h5,h6 {font-size:100%; }
+address,em{font-style:normal;}
+table{border-collapse:collapse;}
+
+/*base*/
+body{font-family: dotum, "돋움", verdana, Tahoma, Arial, sans-serif; font-size: 12px; color:#636369; background:#fff;}
+ul,ol,li{list-style:none; line-height:100%;}
+a{text-decoration:none; color:#636369;}
+a:hover, a:focus{color:#ff7800;}
+input,option,select,a{font-size:12px;}
+
+caption,legend{position:absolute;top:-5000px; text-indent:-5000px; visibility:hidden; width:0;height:0; font-size:0;line-height:0;}
+
+ul:after{content:" "; display:block; clear:both;}
+textarea {resize: vertical;}
+img{vertical-align:middle;}
+hr{display:none;}
+section{margin:0; padding:0;}
+
+/*commonClass*/
+.skip{position:absolute; top:-5000px; text-indent:-5000px; visibility:hidden; width:0; height:0; font-size:0; line-height:0; }
+.hide{display:none;}
