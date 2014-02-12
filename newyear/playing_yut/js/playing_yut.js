@@ -7,14 +7,18 @@ $(function(){
 	var stop=true;
 	var yutVal = 0;
 	var rollingCount = 0;
+	var moveVal = 0;
 	
 	// 트리거 영역
 	$(".play").click(function(e){
 		lunch();
 		$(this).attr("disabled","disabled");
 		yutVal = Math.floor(Math.random()*4); //테스트용 임시 난수 생성
-		moveVal = Math.floor(Math.random()*19); //테스트용 임시 난수 생성
-		moveIndi(moveVal); //moveVal에 생성된 결과값을 태워서 보내면 됨.
+		//moveVal = Math.floor(Math.random()*19); //테스트용 임시 난수 생성
+		moveVal += yutVal+1;
+		console.log(yutVal);
+		console.log(moveVal);
+		moveIndi(moveVal); //moveVal에 생성된 결과값을 태워서 보내면 됨.		
 		e.preventDefault();
 	});
 	
@@ -186,6 +190,9 @@ $(function(){
 			$(".indicator em").css("opacity","0");
 			$(".indicator").removeAttr("class").addClass("indicator indicator_"+num).children("em").animate({opacity:1},1000, function(){
 				$(".playBrd .pos_"+num+" em").addClass("on");
+				if (num>20){
+					alert("게임 끝");
+				}
 			});
 		},3300);
 	};
