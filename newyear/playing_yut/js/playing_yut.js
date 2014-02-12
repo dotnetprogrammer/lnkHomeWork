@@ -161,7 +161,7 @@ $(function(){
 		rolling(0,cnt);
 	};
 	var rollStop = function (num){
-			$(".animal ul li em").removeAttr("class");
+		$(".animal ul li em").removeAttr("class");
 		$(".animal ul li:eq("+num+") em").addClass("get");
 		$(".play").removeAttr("disabled");
 		writeTxt(num);
