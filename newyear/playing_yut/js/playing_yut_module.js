@@ -7,28 +7,17 @@ $(function(){
 			rollingCount : 0,
 			moveVal : 0
 		};
-		/*return {
-			funcNum : funcNum,
-			stop : stop,
-			yutVal : yutVal,
-			rollingCount : rollingCount,
-			moveVal : moveVal
-		};*/
 	}());
-
 	var action =(function(){
 		if(data.funcNum<2){
 			$(".headFunc").css("padding-top","18px");
 		}
 		$(".play").click(function(e){
-			lunch();
+			control.lunch();
 			$(this).attr("disabled","disabled");
-			data.yutVal = Math.floor(Math.random()*4); //테스트용 임시 난수 생성
-			//moveVal = Math.floor(Math.random()*19); //테스트용 임시 난수 생성
+			data.yutVal = Math.floor(Math.random()*4);
 			data.moveVal += data.yutVal+1;
-			console.log(data.yutVal);
-			console.log(data.moveVal);
-			moveIndi(data.moveVal); //moveVal에 생성된 결과값을 태워서 보내면 됨.		
+			control.moveIndi(data.moveVal);
 			e.preventDefault();
 		});
 		$(".howTo a").on("click", function(e){
@@ -49,11 +38,10 @@ $(function(){
 					$(".getItem").hide();
 				}
 				$("#layerWrap").show();
-				makeLayer("rule");
+				control.makeLayer("rule");
 			}
 			e.preventDefault();
 		});
-
 		$(".view_1 a").click(function(e){
 			if($(this).hasClass("on")){
 				$(this).removeClass("on");
@@ -72,11 +60,10 @@ $(function(){
 					$(".getItem").hide();
 				} 
 				$("#layerWrap").show();
-				makeLayer("viewPlay");
+				control.makeLayer("viewPlay");
 			}
 			e.preventDefault();
 		});
-
 		$(".view_2 a").click(function(e){
 			if($(this).hasClass("on")){
 				$(this).removeClass("on");
@@ -95,11 +82,10 @@ $(function(){
 					$(".getItem").hide();
 				} 
 				$("#layerWrap").show();
-				makeLayer("viewItem");
+				control.makeLayer("viewItem");
 			}
 			e.preventDefault();
 		});
-
 		$(".cancel").click(function(e){
 			if($(this).hasClass("on")){
 				$(this).removeClass("on");
@@ -118,18 +104,17 @@ $(function(){
 					clsLayer("viewItem");
 				} 
 				$("#layerWrap").show();
-				makeLayer("getItem");
+				control.makeLayer("getItem");
 			}
 			e.preventDefault();
 		});
 		$("#layerWrap .cls").click(function(e){		
 			$("#layerWrap").hide();
-			clsLayer("viewRule");
-			clsLayer("viewItem");
+			control.clsLayer("viewRule");
+			control.clsLayer("viewItem");
 			$(".btns li a").removeClass("on");
 			e.preventDefault();
 		});
-
 		$(".tabs li a").click(function(e){
 			$(this).addClass("on");
 			if($(this).parent("li").hasClass("tab_1")){
@@ -143,6 +128,8 @@ $(function(){
 			}
 			e.preventDefault();
 		});
+	}());
+	var control = (function(){
 		var rolling = function (idx,cnt){
 			var animals = $(".animal ul li");
 			animals.eq(idx).children("em").addClass("on");
@@ -150,15 +137,15 @@ $(function(){
 
 			if(data.rollingCount < 4) {
 			  window.setTimeout(function(){
-				  data.rollingCount++;
+				data.rollingCount++;
 					rolling(idx+1>=cnt?0:idx+1,cnt);
 				},480);
-				} else {
-				  window.setTimeout(function(){
-				  rollStop(data.yutVal);
-				},800);
-				  data.rollingCount = 0;
-				}
+			} else {
+				window.setTimeout(function(){
+				rollStop(data.yutVal);
+					},800);
+				data.rollingCount = 0;
+			}
 		};
 		var lunch = function (){
 			var cnt = $(".animal ul li").length;
@@ -248,5 +235,19 @@ $(function(){
 			var itemTot = playBrd-trap
 			alert("총 "+itemTot+"개의 아이템을 획득했습니다.")
 		};
+		return{
+			rolling : rolling,
+			lunch : lunch,
+			rollStop : rollStop,
+			writeTxt : writeTxt,
+			moveIndi : moveIndi,
+			makeLayer : makeLayer,
+			makeRule : makeRule,
+			makeItem : makeItem,
+			clsLayer : clsLayer,
+			makePlayView : makePlayView,
+			makeGetItem : makeGetItem,
+			itemGetStatus : itemGetStatus
+		}
 	}());
 });
