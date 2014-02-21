@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<!--[if lte IE 8]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script><![endif]-->
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <link href="html5Reset.css" type="text/css" rel="stylesheet" />
+		<link href="doc.css" type="text/css" rel="stylesheet" />
+		<script>
+			$(function(){
+				var toolTip_1 = $(".transTip");
+				$(".transform").on("mouseenter",function(){
+					$(this).click(function(e){
+						e.preventDefault();
+					});
+					toolTip_1.css("visibility","visible");
+				});
+				toolTip_1.on("mouseleave",function(){
+					$(this).css("visibility","hidden");
+				});
+				$(".pi").on("click", function(e){
+					e.preventDefault();
+					var url = $(this).attr("href");
+					makePreview(url);
+				});
+				$(".cls").click(function(e){
+					e.preventDefault();
+					$(".overlayWrap").hide();
+					$(".frame iframe").remove();
+				});
+				var makePreview = function(url){
+					var frame = "<iframe src="+url+" scrolling=\"auto\" width=\"100%\" height=\"100%\"></iframe>"
+					$(".frame").append(frame);
+					$(".overlayWrap").show();
+				};
+				$(window).keydown(function(e){
+					if(e.keyCode==27){
+						$(".overlayWrap").hide();
+						$(".frame iframe").remove();
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>Parallaxs</h1>
+			<dl>
+				<dt>Parallax 스크롤이란?</dt>
+				<dd>시차 스크롤기법</dd>
+				<dd>css3 최신 기법과 javascript로 실시간 값 변경으로 동적인 페이지를 구성할 수 있음. 대부분 plug-in 형태로 제공</dd>
+				<dd>css3 중 <a href="#" class="transform">transform</a>, <a href="http://caniuse.com/#feat=css-transitions" target="_blank" title="브라우저 지원현황" class="pi">transition</a>, <a href="http://caniuse.com/#feat=css-animation" target="_blank" title="브라우저 지원 현황" class="pi">animation</a>을 핵심 기능으로 동작함.</dd>
+				<dd>티져 및 프로모션 사이트에 적합.</dd>
+			</dl>
+			<div class="transTip">
+				<a href="http://caniuse.com/#feat=transforms2d" class="pi" target="_blank">2D Transform</a>
+				<a href="http://caniuse.com/#feat=transforms3d" class="pi" target="_blank">3D Transform</a>
+			</div>
+			<h2>Examples</h2>
+			<ul>
+				<li>
+					<dl>
+						<dt>scroll path</dt>
+						<dd><a href="http://joelb.me/scrollpath/" class="pi" target="_blank">예제 사이트</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>jparallax</dt>
+						<dd><a href="http://stephband.info/jparallax/" class="pi" target="_blank">예제 사이트</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>Parallaxjs</dt>
+						<dd><a href="http://stolksdorf.github.io/Parallaxjs/" class="pi" target="_blank">예제 사이트</a></dd>
+					</dl>
+				</li>
+			</ul>
+			<h3>about IE</h3>
+			<p>인터넷 익스플로러(이하 &quot;IE&quot;)는 버전 별 지원하는 css의 속성에 차이가 있음.<br />parallax 스크롤을 구성하는 대부분의 css3 요소가 IE 10 이상부터 작동함.<br />즉, 하위 버전 IE에서의 티져사이트 작동 여부를 보장할 수 없거나 제한적으로 됨.</p>
+			<p>parallax 스크롤의 기법 중 <strong>&quot;뭔가 회전하고 주기적으로 움직이는&quot;</strong>속성은 IE 9 이하에서는 잘 안되는 것이 대부분임.<br /></p>
+			<h4>모션별 IE 구현 가능성 판별 방법</h4>
+			<ul style="display:none;">
+				<li>
+					<dl>
+						<dt>객체가 이동하는 경우</dt>
+						<dd>객체가 이동하는 모션은 transform 속성을 사용할 수 있으나 전통적으로 position 속성을 통해 사용할 수도 있음.</dd>
+						<dd>화면이나 객체가 2차원적으로 움직일 경우(상하좌우) 50%의 확률로 나눌 수 있으며 정확한 것은 구현방법을 들여봐야 함.</dd>
+						<dd>사용하는 plug-in이 전통적인 방법이 아닌 transform 속성만 지원한다면 대체할 방법을 찾는 것이 어려움.</dd>
+						<dd><a href="http://joelb.me/scrollpath/" class="pi" target="_blank">scroll path</a>의 경우 전체적으로 화면이 2차원(상,하,좌,우)으로 움직이는 것은 가능하지만 4에서 5로 넘어가는 효과와 5에서 6으로 넘어가는 효과는 하위버전 IE에서 구현되지 않음.</dd>
+						<dd>IE 9이상 부터 가능(IE 9에서는 -ms- vender prefix 사용됨.) <a href="http://caniuse.com/#feat=transforms2d" class="pi">브라우저 지원현황</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>지속적으로 움직이는 경우</dt>
+						<dd>css3가 보편화된 상황에서는 animation이라는 속성을 사용하지만 기존의 전통적인 방법으로도 구현할 수 있음.</dd>
+						<dd>사용하는 plug-in이 지원하지 않을 경우 대체가 불가능하다고 봐야함.</dd>
+						<dd><a href="http://www.logickorea.co.kr/" class="pi" target="_blank">자사 사이트</a>처럼 css의 박스모델을 통한 구현은 가능하지만 다양한 기능을 제공하는 plug-in에서는 지원하지 않음.</dd>
+						<dd><a href="http://slides.html5rocks.com/#css-animation" target="_blank" class="pi">예제 사이트</a>처럼 작동하는 예제의 경우는 하위버전 IE에서 구현이 어렵다고 생각해야 함.</dd>
+						<dd>IE 10이상 부터 가능 <a href="http://caniuse.com/#feat=css-animation" class="pi">브라우저 지원현황</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>객체가 회전하는 경우</dt>
+						<dd>회전하는 객체는 다른 css 속성으로 대체 되는 경우가 없음.</dd>
+						<dd><a href="http://joelb.me/scrollpath/" class="pi" target="_blank">scroll path</a>의 4~5~6 구간</dd>
+						<dd><a href="http://journey.lifeofpimovie.com/#!/waves" class="pi" target="_blank">예제 사이트</a>의 우측 박스 회전같은 모션.</dd>
+						<dd>IE 10이상 부터 부분적(partial)으로 가능 <a href="http://caniuse.com/#feat=transforms3d" class="pi" target="_blank">브라우저 지원현황</a></dd>
+					</dl>
+				</li>
+			</ul>
+			<table>
+				<thead>
+					<tr>
+						<th>상황</th>
+						<th>구현방법</th>
+						<th>설명</th>
+						<th>예제 사이트</th>
+						<th>브라우저 지원 현황</th>
+						<th>비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>객체가 이동하는 경우</td>
+						<td>css 3 : transform(2d)<br />css 2.1 : left, top, right, bottom 값들을 조절하여 구현도 가능함.</td>
+						<td>화면 상에서 객체가 2차원으로 움직이는 상황을 구현할 때 사용.</td>
+						<td><a href="http://joelb.me/scrollpath/" class="pi" target="_blank">scroll path</a>의 경우 전체적으로 화면이 2차원(상,하,좌,우)으로 움직이는 것은 가능하지만 4에서 5로 넘어가는 효과와 5에서 6으로 넘어가는 효과는 하위버전 IE에서 구현되지 않음.</td>
+						<td>IE 9이상 부터 가능(IE 9에서는 -ms- vender prefix 사용됨.) <a href="http://caniuse.com/#feat=transforms2d" class="pi">브라우저 지원현황</a></td>
+						<td>단, 플러그인 css 3의 방법으로 구현할 경우 css 2.1로 대체할 방법이 없음.</td>
+					</tr>
+					<tr>
+						<td>객체가 회전하는 경우</td>
+						<td>css 3 : transform(3d)<br />css 2.1 : 없음.</td>
+						<td>화면 상에서 객체가 3차원으로 움직이는 상황을 구현할 때 사용.</td>
+						<td><a href="http://joelb.me/scrollpath/" class="pi" target="_blank">scroll path</a>의 4~5~6 구간<br /><a href="http://journey.lifeofpimovie.com/#!/waves" class="pi" target="_blank">예제 사이트</a>의 우측 박스 회전같은 모션.</td>
+						<td><a href="http://caniuse.com/#feat=transforms3d" class="pi" target="_blank">브라우저 지원현황</a></td>
+						<td>현재 webkit 계열 브라우저만 됨.</td>
+					</tr>
+					<tr>
+						<td>객체가 지속적으로 움직이는 경우</td>
+						<td>css 3 : animation<br />css 2.1 : left, top, right, bottom, margin 값들을 조절하여 구현도 가능함.</td>
+						<td>화면 상에 객체가 반복적, 지속적으로 움직이는 상황을 구현할 때 사용. 단, 사이즈가 변하는 모션은 제한적 상황이 많음.</td>
+						<td><a href="http://www.logickorea.co.kr/" class="pi" target="_blank">자사 사이트</a>처럼 css의 박스모델을 통한 구현은 가능</td>
+						<td><a href="http://caniuse.com/#feat=css-animation" target="_blank" title="브라우저 지원 현황" class="pi">브라우저 지원 현황</a></td>
+						<td>단, 플러그인 css 3의 방법으로 구현할 경우 css 2.1로 대체할 방법이 없음.</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="overlayWrap">
+				<div class="overlay">
+					<a href="#" class="cls">닫기</a>
+					<div class="frame"></div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
