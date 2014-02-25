@@ -13,6 +13,40 @@
 		</script>
 	</head>
 	<body>
-		
+		<section class="css2">
+			<div class="motion_1">
+				<h1>객체의 이동</h1>
+				<div class="exBox">
+					<div class="move_1_obj">
+					</div>
+					<div class="codeAssi">
+						<pre>
+...(중략)<br />
+<code>
+if (!revers) {<br />
+        obj.animate({<br />
+            marginTop : "20px"<br />
+        }, speed, "", function() {<br />
+            $(this).animate({<br />
+                marginTop : "0px"<br />
+            }, speed, "", function() {<br />
+                Moving(obj, speed, revers);<br />
+                return;<br />
+            });<br />
+        });<br />
+    }<br />
+</code>
+(이하 생략)
+						</pre>
+					</div>
+				</div>
+			</div>
+			<div class="motion_2">
+			</div>
+			<div class="motion_3">
+			</div>
+		</section>
+		<section class="css3">
+		</section>
 	</body>
 </html>
