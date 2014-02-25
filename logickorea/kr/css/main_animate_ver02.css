@@ -1,0 +1,229 @@
+/*main_animate.js 활성화시 적용되는 Style*/
+#animate_box {
+    position: relative;
+    height: 974px;
+    overflow-y: hidden;
+    width: 100%;
+    min-width: 1160px;
+}
+#animate_box #wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -580px;
+    z-index: 100;
+}
+#animate_box .top_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1160px;
+    height: 58px;
+    background: url('../img/main_bg_01.jpg') top center no-repeat;
+    z-index: 50;
+}
+#animate_box .animate_img_list {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    height: 916px;
+    z-index: 10;
+}
+#animate_box .animate_img_list .animate_img01 {
+    position: relative;
+    width: 100%;
+    min-width: 1160px;
+    height: 916px;
+    background: #ffdd9f url('../img/main_animate01_bg.jpg') center -58px no-repeat;
+}
+#animate_box .animate_img_list .animate_img01 .obj01 {
+    position: absolute;
+    top: 206px;
+    left: 50%;
+    margin-left: -40px;
+    width: 400px;
+    height: 380px;
+    background: url('../img/main_animate01_obj01.png') 0 0 no-repeat;
+}
+#animate_box .animate_img_list .animate_img02 {
+    position: relative;
+    width: 100%;
+    min-width: 1160px;
+    height: 916px;
+    background: #73cec8 url('../img/main_animate02_bg.jpg') center -58px no-repeat;
+}
+#animate_box .animate_img_list .animate_img02 .obj01 {
+    position: absolute;
+    top: 101px;
+    left: 50%;
+    margin-left: -260px;
+    width: 260px;
+    height: 290px;
+    background: url('../img/main_animate02_obj01.png') 0 0 no-repeat;
+    margin-top: 20px;
+}
+#animate_box .animate_img_list .animate_img02 .obj02 {
+    position: absolute;
+    top: 181px;
+    left: 50%;
+    margin-left: -170px;
+    width: 740px;
+    height: 500px;
+    background: url('../img/main_animate02_obj02.png') 0 0 no-repeat;
+}
+#animate_box .animate_img_list .animate_img02 .obj03 {
+    position: absolute;
+    top: 541px;
+    left: 50%;
+    margin-left: 340px;
+    width: 210px;
+    height: 200px;
+    background: url('../img/main_animate02_obj03.png') 0 0 no-repeat;
+    margin-top: 20px;
+}
+#animate_box .animate_img_list .animate_img02 .obj04 {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -260px;
+    width: 830px;
+    height: 910px;
+    background: url('../img/main_animate02_obj04.png') 0 0 no-repeat;
+}
+#animate_box .animate_img_list .animate_img03 {
+    position: relative;
+    width: 100%;
+    min-width: 1160px;
+    height: 916px;
+    background: #a9da63 url('../img/main_animate03_bg.jpg') center -58px no-repeat;
+}
+#animate_box .animate_img_list .animate_img03 .obj_group01 {
+    position: absolute;
+    top: 101px;
+    left: 50%;
+    margin-left: -250px;
+    width: 494px;
+    height: 360px;
+}
+#animate_box .animate_img_list .animate_img03 .obj_group01 .obj01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 280px;
+    background: url('../img/main_animate03_group01_obj01.png') 0 0 no-repeat;
+}
+#animate_box .animate_img_list .animate_img03 .obj_group01 .obj02 {
+    position: absolute;
+    top: 0;
+    left: 124px;
+    width: 390px;
+    height: 360px;
+    background: url('../img/main_animate03_group01_obj02.png') 0 0 no-repeat;
+}
+#animate_box .animate_img_list .animate_img03 .obj_group02 {
+    position: absolute;
+    top: 401px;
+    left: 50%;
+    margin-left: -20px;
+    width: 580px;
+    height: 460px;
+    margin-top: 20px;
+}
+#animate_box .animate_img_list .animate_img03 .obj_group02 .obj01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 430px;
+    height: 460px;
+    background: url('../img/main_animate03_group02_obj01.png') 0 0 no-repeat;
+}
+#animate_box .animate_img_list .animate_img03 .obj_group02 .obj02 {
+    position: absolute;
+    top: 0;
+    left: 260px;
+    width: 320px;
+    height: 320px;
+    background: url('../img/main_animate03_group02_obj02.png') 0 0 no-repeat;
+}
+#animate_box .animate_img_list .animate_img04 {
+    position: relative;
+    width: 100%;
+    min-width: 1160px;
+    height: 916px;
+    background: #84dfaf url('../img/main_animate04_bg.jpg') center -58px no-repeat;
+}
+#animate_box .animate_img_list .animate_img04 .obj01 {
+    position: absolute;
+    top: 201px;
+    left: 50%;
+    margin-left: -190px;
+    width: 320px;
+    height: 550px;
+    background: url('../img/main_animate04_obj01.png') 0 0 no-repeat;
+    margin-top: 20px;
+}
+#animate_box .animate_img_list .animate_img04 .obj02 {
+    position: absolute;
+    top: 201px;
+    left: 50%;
+    margin-left: 0px;
+    width: 360px;
+    height: 500px;
+    background: url('../img/main_animate04_obj02.png') 0 0 no-repeat;
+}
+#animate_box .animate_img_list .animate_img04 .obj03 {
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    margin-left: 220px;
+    width: 280px;
+    height: 500px;
+    background: url('../img/main_animate04_obj03.png') 0 0 no-repeat;
+    margin-top: 20px;
+}
+#animate_box .controller {
+    position: absolute;
+    top: 437px;
+    left: 50%;
+    margin-left: 554px;
+    width: 34px;
+    height: 107px;
+    padding: 21px 0 0 16px;
+    background: url('../img/main_animate_controll_bg.png') 0 0 no-repeat;
+    z-index: 100;
+}
+#animate_box .controller li {
+    padding-bottom: 11px;
+    cursor: pointer;
+}
+@media all and (max-width: 1160px) {
+    #animate_box .controller {
+        margin-left: 504px;
+    }
+}
+.max-width-1160 #animate_box .controller {
+    margin-left: 504px;
+}
+#animate_box .btn_palay_pause {
+    position: absolute;
+    top: 570px;
+    left: 50%;
+    margin-left: 556px;
+    width: 42px;
+    z-index: 100;
+}
+#animate_box .btn_palay_pause li {
+    float: left;
+    cursor: pointer;
+}
+.max-width-1160 #animate_box .btn_palay_pause {
+    margin-left: 506px;
+}
+@media all and (max-width: 1160px) {
+    #animate_box .btn_palay_pause {
+        margin-left: 506px;
+    }
+}

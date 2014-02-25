@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>board_basic [List]</title>
+		
+		<!--사이트 전체에 적용된 스타일입니다.-->
+		<link rel="stylesheet" href="../../css/common.css">
+		<!--//사이트 전체에 적용된 스타일입니다.-->
+		
+		<!--board_basic에서 사용하는 style및 js입니다.-->
+		<link rel="stylesheet" href="./board_basic.css">
+		<script src="./board_basic.js"></script>
+		<!--//board_basic에서 사용하는 style및 js입니다.-->
+		
+		<style>
+			body{
+				padding:50px;
+				width: 754px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="board_basic_list">
+			<table>
+				<caption>보도자료</caption>
+					<thead>
+						<tr>
+							<th scope="col"><img src="./img/basic_list_num.gif" alt="번호" title="번호" /></th>
+							<th scope="col"><img src="./img/basic_list_subject.gif" alt="제목" title="제목" /></th>
+							<th scope="col"><img src="./img/basic_list_date.gif" alt="등록일" title="등록일" /></th>											
+						</tr>
+					</thead>
+					<tbody>
+						
+						<!--List 반복되는 부분-->
+						<tr>
+							<td class="num">2</td>
+							<th class="subject" scope="row"><a href="view.html">제목이 들어갑니다.</a></th>
+							<td class="date">2013-03-21</td>
+						</tr>
+						<!--//List 반복되는 부분-->
+						
+						<tr>
+							<td class="num">12345</td>
+							<th class="subject" scope="row"><a href="view.html">아주 긴~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 제목이 들어갑니다.</a></th>
+							<td class="date">2013-03-21</td>
+						</tr>
+					</tbody>
+			</table>
+			
+			<div class="paging_comm">
+				<a href="#" class="img_sample btn_prev"><img src="./img/btn_prev_first.gif" alt="최신 페이지" title="최신 페이지" /></a>
+			    <a href="#" class="img_sample btn_prev"><img src="./img/btn_prev.gif" alt="이전" title="이전" /></a>
+			    <span class="screen_out">현재페이지</span><em class="link_page">1</em>
+			    <a href="#" class="link_page">2</a>
+			    <a href="#" class="link_page">3</a>
+			    <a href="#" class="img_sample btn_next"><img src="./img/btn_next.gif" alt="다음" title="다음" /></a>
+				<a href="#" class="img_sample btn_next"><img src="./img/btn_next_last.gif" alt="마지막 페이지" title="마지막 페이지" /></a>
+			</div>							
+		</div>
+	</body>
+</html>

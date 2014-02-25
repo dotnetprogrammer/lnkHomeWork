@@ -1,0 +1,318 @@
+body{
+	background:url('../img/main_bg_01.jpg') top center no-repeat;
+}
+#wrapper{
+	background:url('../img/main_bg_01.jpg') top center no-repeat;
+}
+/*header*/
+h1{
+	position:absolute;
+	top:87px;
+	left:157px;
+}
+.top_btn{
+	position:absolute;
+	top:79px;
+	right:81px;
+}
+.game_info{
+	background:url('../img/game_info01_bg.jpg') top left no-repeat;
+	width:100%;
+	height:58px;
+}
+.game_info li a{
+	display:block;
+	width:100%;
+	height:58px;
+}
+.game_info li a img{
+	float:right;
+	margin:19px 200px 0 0;
+}
+/*sitemap*/
+.sitemap{
+	position:absolute;
+	top:58px;
+	left:324px;
+}
+/*contents-layout*/
+#con_left{
+	padding-left:67px;
+	height:755px;
+}
+#con_right{
+	width:834px;
+}
+
+/*left*/
+nav{
+	margin-top:142px;
+}
+/*보도자료*/
+#con_left article{
+	position:relative;
+	margin-left:13px;
+	background:url('../img/press_bg.png') top center no-repeat;
+	width:221px;
+	height:163px;
+}
+#con_left article h2{
+	padding:10px 0 8px 16px;
+}
+#con_left article p{
+	position:absolute;
+	top:0;
+	right:0;
+}
+#con_left article table{
+	margin:13px 13px 13px 11px;
+	width:197px;
+}
+.lt-ie8 #con_left article table{
+	margin-top:-5px;
+}
+#con_left article caption{
+	position:absolute;
+	text-indent:-5000px;	
+}
+#con_left article th,#con_left article td{
+	border-bottom:1px solid #f2f2f2;
+}
+#con_left article .line_not th,#con_left article .line_not td{
+	border:none;
+}
+#con_left article th,#con_left article td{
+	vertical-align: top;
+	height:17px;
+	padding-top:6px;
+}
+#con_left article th{
+	text-align:left;
+	background:url('../img/dot01.png') 0 12px no-repeat;
+	text-indent:8px;
+	font-weight:normal;
+}
+#con_left article th a{
+	display:block;
+	overflow:hidden;
+	width:150px;
+	height:15px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overow: ellipsis;
+}
+#con_left article th a,x:-moz-any-link,x:default{
+	white-space:normal;
+	word-wrap:break-word
+} /* Firefox 에서 줄 바꿈이 가능하도록 변경 */
+#con_left article th *+html a{
+	white-space:nowrap
+}
+
+#con_left article td{
+	text-align:right;
+}
+
+/*footer*/
+footer h2{
+	margin:27px 0 0 94px;
+}
+footer p{
+	padding:9px 0 29px 94px;
+}
+.familysite{
+	position:absolute;
+	top:9px;
+	right:81px;
+	z-index:10;
+}
+/*game_info.js 활성확시 적용되는  Style*/
+.game_info{
+    position: relative;
+    background: none;
+}
+.game_info li{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    background:url('../img/game_info01_bg.jpg') top left no-repeat;
+}
+.game_info_btn li{
+    width: auto;
+}
+.game_info_btn li a img{
+    margin: 0;
+}
+.game_info_btn li a{
+    width: auto;
+    height: auto;
+}
+.game_info_btn .btn_prev a,.game_info_btn .btn_next a{
+    padding: 10px;
+}
+.game_info_btn .btn_prev{
+    position: absolute;
+    top:14px;
+    left:965px;
+}
+.game_info_btn .btn_next{
+    position: absolute;
+    top:14px;
+    left:1000px;
+}
+.game_info_btn .btn_open{
+    position: absolute;
+    top:13px;
+    left:1045px;
+}
+.lt-ie8 .game_info_btn .btn_prev,.lt-ie8 .game_info_btn .btn_next{
+	margin-left: 10px;
+}
+.lt-ie8 .game_info_btn .btn_prev,.lt-ie8 .game_info_btn .btn_next{
+    width:14px;
+    height:14px;
+}
+.lt-ie8 .game_info_btn .btn_open{
+    width: 45px;
+    height: 45px;
+    margin-left: -10px;
+}
+.game_info_pop{
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000 url('../img/game_info_pop01_bg.jpg') top center no-repeat;
+    z-index: 1000;
+}
+.game_info_pop h2{
+    position: absolute;
+    top:90px;
+    left: 50%;
+    margin-left: -450px;
+}
+.game_info_pop p{
+    position: absolute;
+    top:220px;
+    left: 50%;
+    margin-left: -450px;
+}
+.game_info_pop .btn_go_site{
+    position: absolute;
+    top:374px;
+    left: 50%;
+    margin-left: -437px;
+}
+.game_info_pop ul{
+    position: absolute;
+    top:0;
+    left: 0;
+    top:421px;
+    left: 50%;
+    margin-left: -492px;
+}
+.game_info_pop ul li{
+    float: left;
+    padding-right: 10px;
+}
+.game_info_pop .btn_prev{
+    padding-top: 14px;
+    padding-right: 12px;
+}
+.game_info_pop .last{
+    padding-right: 0;
+}
+.game_info_pop .btn_next{
+    padding-top: 14px;
+    padding-right: 0px;
+    padding-left: 12px;
+}
+.game_info_pop .btn_close{
+    position: absolute;
+    top:62px;
+    left: 50%;
+    margin-left: 440px;
+}
+/*main_animate.js 활성화시 적용되는 Style*/
+#animate_box{
+    position:relative;
+    height:974px;
+    overflow-y:hidden;
+    width: 100%;
+    min-width:1160px;
+}
+#animate_box #wrapper{
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-580px;
+    z-index: 100;
+}
+#animate_box .top_bg{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    min-width:1160px;
+    height: 58px;
+    background:url('../img/main_bg_01.jpg') top center no-repeat;
+    z-index: 50;
+}
+#animate_box .animate_img_list{
+    position: absolute;
+    top:58px;
+    left: 0;
+    width: 100%;
+    height:916px;
+    z-index: 10;
+}
+#animate_box .animate_img_list .animate_img01{
+    width:100%;
+    min-width:1160px;
+    height:916px;
+    background:#ffdd9f url('../img/main_bg_01.jpg') center -58px no-repeat;
+}
+#animate_box .animate_img_list .animate_img02{
+    width:100%;
+    min-width:1160px;
+    height:916px;
+    background:#73cec8 url('../img/main_bg_02.jpg') center -58px no-repeat;
+}
+#animate_box .animate_img_list .animate_img03{
+    width:100%;
+    min-width:1160px;
+    height:916px;
+    background:#a9da63 url('../img/main_bg_03.jpg') center -58px no-repeat;
+}
+#animate_box .animate_img_list .animate_img04{
+    width:100%;
+    min-width:1160px;
+    height:916px;
+    background:#84dfaf url('../img/main_bg_04.jpg') center -58px no-repeat;
+}
+#animate_box .controller{
+    position: absolute;
+    top:437px;
+    left: 50%;
+    margin-left:554px;
+    width: 34px;
+    height: 107px;
+    padding:21px 0 0 16px;
+    background: url('../img/main_animate_controll_bg.png') 0 0 no-repeat;
+    z-index: 100;
+}
+#animate_box .controller li{
+    padding-bottom: 11px;
+    cursor: pointer;
+}
+@media all and (max-width:1160px) {
+    #animate_box .controller{
+        margin-left:504px;
+    }
+}
+.max-width-1160 #animate_box .controller{
+    margin-left:504px;
+}

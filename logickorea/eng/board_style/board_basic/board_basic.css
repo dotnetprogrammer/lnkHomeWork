@@ -1,0 +1,201 @@
+/*List*/
+/*글 내용*/
+.board_basic_list table{
+	width:754px;
+	position:relative;
+	color:#8d8989;
+}
+.board_basic_list caption{
+	width:0;
+	height:0;
+	text-indent:-5000px;
+	overflow: hidden;
+}
+.board_basic_list thead th{
+	height:40px;
+}
+.board_basic_list tbody th{
+	border-bottom:1px solid #e5e5e5;
+	font-weight:normal;
+	text-align:left;
+}
+.board_basic_list tbody th a{
+	color:#8d8989;
+	display:block;
+	overflow:hidden;
+	width:512px;
+	height:28px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overow: ellipsis;
+	padding-top:7px;
+	line-height:200%;	
+}
+.board_basic_list tbody th a,x:-moz-any-link,x:default{
+	white-space:normal;
+	word-wrap:break-word;
+}
+.board_basic_list tbody th *+html a{
+	white-space:nowrap
+}
+.board_basic_list tbody td{
+	height:35px;
+	border-bottom:1px solid #e5e5e5;
+	font-weight:normal;
+	text-align:center;
+}
+
+/*페이지 리스트*/
+.board_basic_list .paging_comm {
+	text-align:center;
+	vertical-align:top;
+	margin-top:99px;
+}
+.board_basic_list .paging_comm .link_page {
+	display:inline-block;
+	padding:4px 6px 3px 5px;
+	margin-right:1px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#949090;				
+}
+.board_basic_list .paging_comm .link_page:hover,.board_basic_list .paging_comm em.link_page {
+	color:#ff7800;
+	font-weight:bold;
+}
+.board_basic_list .paging_comm .img_sample {
+	display:inline-block;
+	padding:6px 2px 4px 3px;
+	border:0 none;
+	text-decoration:none
+}
+.board_basic_list .paging_comm .link_page:hover {
+	text-decoration:none
+}
+.board_basic_list .paging_comm .btn_prev {
+	padding-left:6px;
+	background-position:0 10px
+}
+.board_basic_list .paging_comm .btn_next {
+	padding-right:7px;
+	background-position:100% -10px
+}
+.board_basic_list .paging_comm a.btn_prev:hover {
+	background-position:0 -30px;
+}
+.board_basic_list .paging_comm a.btn_next:hover {
+	background-position:100% -50px;
+}
+.board_basic_list .paging_comm span.btn_prev {
+	background-position:0 10px;
+}
+.board_basic_list .paging_comm span.btn_next {
+	background-position:100% -10px;color:#999
+}
+.board_basic_list .screen_out {
+	display:block;
+	overflow:hidden;
+	position:absolute;
+	left:-9999px;
+	width:1px;
+	height:1px;
+	font-size:0;
+	line-height:0;
+	text-indent:-9999px
+}
+
+/*View*/
+/*글 내용*/
+.board_basic_view caption{
+	width:0;
+	height:0;
+	text-indent:-5000px;
+	overflow: hidden;
+}
+.board_basic_view .board_basic_view_table{
+	width:754px;
+	color:#8d8989;
+}
+.board_basic_view .board_basic_view_table thead{
+	border-bottom:1px solid #ff9c3a;	
+}
+.board_basic_view .board_basic_view_table thead td{
+	color:#706959;
+	font-weight:bold;		
+}			
+.board_basic_view .board_basic_view_table .view_top th{
+	border-bottom:1px solid #fff;
+	padding-top:10px;
+	background:#fff4e8 url("./img/board_basic_view_table_bg.gif") top left no-repeat;
+	width:88px;
+}
+.board_basic_view .board_basic_view_table .view_top td{
+	border-bottom:1px solid #e8e4da;
+	padding-top:10px;
+	background:url("./img/board_basic_view_table_bg.gif") top right no-repeat;
+	word-break:break-all;
+}
+.board_basic_view .board_basic_view_table span{
+	display:block;
+	margin:5px;
+}
+.board_basic_view .board_basic_view_table tbody td{
+	border-bottom:1px solid #d4d2cd;
+	color:#82817e;
+}
+.board_basic_view .press_basic_middle_text{
+	padding:38px 30px 38px 27px;
+	word-break:break-all;
+}
+/*목록 버튼*/
+.board_basic_view .board_basic_view_btn_list{
+	margin:10px 27px 120px 682px;
+}
+
+/*이전글 - 다음글*/
+.board_basic_view .prenext_paging{
+	width:736px;
+	margin-left:9px;
+	border-top:1px solid #eee; 
+	border-bottom:1px solid #eee; 
+	background: #f9f9f9;
+}
+.board_basic_view .prenext_paging th,.board_basic_view .prenext_paging td{
+	height:34px;
+}
+.board_basic_view .prenext_paging th{
+	font-weight: normal;
+	text-align: left;
+	text-indent: 10px;
+}
+.board_basic_view .prenext_paging th a{
+	color:#727272;
+	display:block;
+	overflow:hidden;
+	width:633px;
+	height:25px;
+	margin-top: 10px;	
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overow: ellipsis;
+}
+.board_basic_view .prenext_paging td{
+	width: 86px;
+}
+
+
+.board_basic_view .prenext_paging .prenext_paging_next th{
+	background:url("./img/board_basic_view_next_bg.gif") bottom right no-repeat;
+}
+.board_basic_view .prenext_paging .prenext_paging_next td{
+	vertical-align: top;
+	background:url("./img/board_basic_view_next_bg.gif") bottom left no-repeat;
+}
+
+.board_basic_view .prenext_paging .prenext_paging_prev th{
+	background:url("./img/board_basic_view_prev_bg.gif") top right no-repeat;
+}
+.board_basic_view .prenext_paging .prenext_paging_prev td{
+	vertical-align: bottom;
+	background:url("./img/board_basic_view_prev_bg.gif") top left no-repeat;
+}	

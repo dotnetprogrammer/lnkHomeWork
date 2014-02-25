@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>board_basic [View]</title>
+		
+		<!--사이트 전체에 적용된 스타일입니다.-->
+		<link rel="stylesheet" href="../../css/common.css">
+		<!--//사이트 전체에 적용된 스타일입니다.-->
+		
+		<!--board_basic에서 사용하는 style및 js입니다.-->
+		<link rel="stylesheet" href="./board_basic.css">
+		<script src="./board_basic.js"></script>
+		<!--//board_basic에서 사용하는 style및 js입니다.-->
+		
+		<style>
+			body{
+				padding:50px;
+				width: 754px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="board_basic_view">
+			
+			<table class="board_basic_view_table">
+				<caption>보도자료</caption>
+					<thead>
+						<tr class="view_top">
+							<th scope="row"><img src="./img/basic_view_subject.gif" alt="제목" title="제목" /></th>
+							<td><span>제목이 들어갑니다.</span></td>
+						</tr>  
+						<tr>
+							<th scope="row"><img src="./img/basic_view_date.gif" alt="작성일" title="작성일" /></th>
+							<td><span>2013-03-21</span></td>
+						</tr>										
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="2" class="press_basic_middle_text">
+							글 내용이 들어갑니다.<br />
+							글 내용이 들어갑니다.<br />
+							글 내용이 들어갑니다.<br />
+							글 내용이 들어갑니다.<br />
+							글 내용이 들어갑니다.<br />
+							글 내용이 들어갑니다.<br />
+							글 내용이 들어갑니다.<br />
+							글 내용이 들어갑니다.<br />
+							글 내용이 들어갑니다.<br />
+							글 내용이 들어갑니다.<br />
+							글 내용이 들어갑니다.
+							</td>
+						</tr>
+					</tbody>
+			</table>
+			
+			<p class="board_basic_view_btn_list"><a href="list.html"><img src="./img/board_basic_view_btn_list.gif" alt="목록" title="목록" /></a></p>
+			
+			<table class="prenext_paging">
+				<caption>이전글 다음글</caption>					
+					<tbody>
+						<tr class="prenext_paging_next">
+							<td><img src="./img/board_basic_view_next.gif" alt="다음글" title="다음글" /></td>
+							<th scope="row"><a href="#">아주 긴 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 이전글이 들어갑니다.</a></th>
+						</tr>
+						<tr class="prenext_paging_prev">
+							<td><img src="./img/board_basic_view_prev.gif" alt="이전글" title="이전글" /></td>
+							<th scope="row"><a href="#">아주 긴 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 다음글 이 들어갑니다.</a></th>
+						</tr>
+					</tbody>		
+			</table>			
+		</div>
+	</body>
+</html>

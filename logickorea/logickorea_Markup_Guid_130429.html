@@ -1,0 +1,831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Logickorea Markup Guide</title>
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="syntaxhighlighter_3.0.83/scripts/shBrushPhp.js"></script>
+	<link type="text/css" rel="stylesheet" href="syntaxhighlighter_3.0.83/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="syntaxhighlighter_3.0.83/styles/shThemeDjango.css"/>
+	<link type="text/css" rel="stylesheet" href="syntaxhighlighter_3.0.83/styles/normalize.css"/>
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = 'scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+	<style>
+		th,td{
+			text-align:left;
+			vertical-align:top;
+		}
+		.f_orenge{
+			font-weight:bold;
+			color:#FA1;
+		}
+		h1{
+			padding-top:50px;
+		}
+		h2{
+			padding-top:30px;
+		}
+		.p_not{
+			padding:0;
+		}
+		span{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+<h1 class="p_not">1. 완료페이지 LIST</h1>
+<ul>
+	<li>
+		해당 문서는 <br />
+		국문 - 메인 : <a href="http://172.31.0.41:9999/logickorea/kr/index.html" target="_blank">/kr/index.html<a/><br />
+		국문 - 서브 : <a href="http://172.31.0.41:9999/logickorea/kr/company/greeting.html" target="_blank">/kr/greeting.html<a/><br />
+		
+		영문 - 메인 : <a href="http://172.31.0.41:9999/logickorea/eng/index.html" target="_blank">/eng/index.html<a/><br />
+		영문 - 서브 : <a href="http://172.31.0.41:9999/logickorea/eng/company/greeting.html" target="_blank">/eng/greeting.html<a/>
+		을 기준으로 작성되어 있습니다.
+	</li><br />
+	<li>작업파일 위치 : \\172.31.0.41\WebTeamWorks\wwwroot\publish\logickorea</li><br /><br />
+	<li>추가 완료 파일 List
+		<h2>1.1 국문</h2>
+		<ul>
+			<li>COMPANY</a>
+				<ul>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/company/info.html" target="_blank">회사소개</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/company/history.html" target="_blank">연혁</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/company/ci.html" target="_blank">C.I소개</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/company/network.html" target="_blank">네트워크</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/company/location.html" target="_blank">오시는길</a></li>
+				</ul>
+			</li>
+			<li>GAMES</a>
+				<ul>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/games/mirrorwar.html" target="_blank">거울전쟁-신성부활</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/games/redgem2.html" target="_blank">붉은보석2</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/games/redgem.html" target="_blank">붉은보석</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/games/rollandann.html" target="_blank">거울전쟁 - 롤과 앤의 모험</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/games/ppungttakji.html" target="_blank">가자! 뻥딱지</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/games/womanofsilver.html" target="_blank">거울전쟁 - 은의 여인</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/games/evilforce.html" target="_blank">거울전쟁 - 악령군</a></li>
+				</ul>
+			</li>
+			<li>CAREER</a>
+				<ul>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/career/people.html" target="_blank">인재상</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/career/welfare.html" target="_blank">사원복지</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/career/recruit.html" target="_blank">채용절차</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/kr/career/inquiry.html" target="_blank">채용문의</a></li>
+				</ul>								
+			</li>
+			<li><a href="http://172.31.0.41:9999/logickorea/kr/other/sitemap.html" target="_blank">SITE MAP</a></li>
+		</ul>
+<h2>1.2 영문</h2>
+		<ul>
+			<li><a href="http://172.31.0.41:9999/logickorea/eng/index.html" target="_blank">MAIN</a></li>
+			<li>COMPANY</a>
+				<ul>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/company/greeting.html" target="_blank">CEO Message</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/company/info.html" target="_blank">Overview</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/company/history.html" target="_blank">History</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/company/ci.html" target="_blank">L&K C.I</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/company/network.html" target="_blank">Network</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/company/location.html" target="_blank">Contact US</a></li>
+				</ul>
+			</li>
+			<li>GAMES</a>
+				<ul>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/games/mirrorwar.html" target="_blank">Mirror War</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/games/redgem2.html" target="_blank">Red Stone2</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/games/redgem.html" target="_blank">Red Stone</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/games/rollandann.html" target="_blank">Adventure of Roll&Ann</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/games/ppungttakji.html" target="_blank">Ppungttakji</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/games/womanofsilver.html" target="_blank">Woman of Silver</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/games/evilforce.html" target="_blank">Evil Force</a></li>
+				</ul>
+			</li>
+			<li>PR ROOM</a>
+				<ul>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/pr/press_list.html" target="_blank">Press(LIST)</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/pr/press_view.html" target="_blank">Press(VIEW)</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/pr/media_list.html" target="_blank">Multimedia(LIST)</a></li>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/pr/media_view.html" target="_blank">Multimedia(VIEW)</a></li>
+				</ul>
+			</li>
+			<li>CAREER</a>
+				<ul>
+					<li><a href="http://172.31.0.41:9999/logickorea/eng/career/recruit.html" target="_blank">HR INFORMATION</a></li>
+				</ul>								
+			</li>
+			<li><a href="http://172.31.0.41:9999/logickorea/eng/other/sitemap.html" target="_blank">SITE MAP</a></li>
+		</ul>		
+	</li>
+</ul>
+<p><strong>※ 국문의 <span>/kr/css/ 폴더</span>(파일 총 4개)와 <span>/kr/js/ 폴더</span>(파일 총 8개)의 파일은 신규 파일로 update 부탁드립니다.</strong></p>
+
+<h1>2-1. Include GUIDE - 국문(수정)</h1>
+<h2>1.상세 코드</h2>
+<h3>Line08. 1.사이트 전체에 적용되는 INFO/CSS/JS</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;meta charset="utf-8">
+				&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+				&lt;title>*엘엔케이로직코리아* - Always :on:&lt;/title>
+				&lt;meta name="description" content="L&K Logickorea,(주)엘엔케이로직코리아,거울전쟁 - 신성부활,붉은보석,붉은보석2">
+				&lt;meta name="viewport" content="width=device-width">
+				&lt;link rel="stylesheet" href="/kr/css/common.css">
+				
+				&lt;script src="/kr/js/vendor/html5.js">&lt;/script>
+				&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">&lt;/script>
+				&lt;script>window.jQuery || document.write('&lt;script src="/kr/js/vendor/jquery-1.9.1.min.js">&lt;\/script>')&lt;/script>
+				&lt;script src="/kr/js/common.js">&lt;/script>
+		        &lt;script src="/kr/js/nav.js">&lt;/script>        
+				&lt;script src="/kr/js/top_btn.js">&lt;/script>
+			</pre>
+		</td>
+		<td>
+			<table border="1" width="100%">
+				<caption>js추가 링크</caption>
+				<colgroup>
+					<col width="40%" />
+					<col width="60%" />
+				</colgroup>
+				<tr>
+					<th>Line12. nav.js <br />Line13. top_btn_js</th>
+					<td>신규 js 파일이 추가되었습니다.</td>				
+				</tr>	
+			</table>				
+		</td>
+	</tr>
+</table>
+<h3>Line25. 3-1.메인에서만 적용되는 header/game_info</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;header>
+					&lt;h1>&lt;a href="/kr/index.html">&lt;img src="/kr/img/logo.png" alt="엘엔케이로직코리아" title="엘엔케이로직코리아"/>&lt;/a>&lt;/h1>
+					&lt;div class="top_btn">
+						&lt;ul>
+							&lt;li>&lt;a href="/kr/company/location.html">&lt;img src="/kr/img/top_btn_contact.png" alt="CONTACT US" title="CONTACT US"/>&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="../eng/">&lt;img src="/kr/img/top_btn_eng.png" alt="ENGLISH" title="ENGLISH"/>&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="/kr/other/sitemap.html">&lt;img src="/kr/img/top_btn_sitemap.png" alt="SITE MAP" title="SITE MAP"/>&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/div>
+				&lt;/header>
+				
+				&lt;article class="game_info">
+					&lt;ul>
+						&lt;li>&lt;a href="http://www.mirrorwar.co.kr/" target="_blank">&lt;img src="/kr/img/game_info01_title.gif" 
+						alt="슈팅 RPG 게임 거울전쟁 - 신성부활" title="거울전쟁 - 신성부활"/>&lt;/a>&lt;/li>
+					&lt;/ul>
+				&lt;/article>
+			</pre>
+		</td>
+		<td>
+			<table border="1" width="100%">
+				<caption>변경 사항</caption>
+				<colgroup>
+					<col width="40%" />
+					<col width="60%" />
+				</colgroup>
+				<tr>
+					<th>Line02. alt</th>
+					<td>logo의 alt 값 변경 되었습니다.</td>				
+				</tr>				
+				<tr>
+					<th>Line05. 링크</th>
+					<td>contact us의 링크 페이지가 변경되었습니다.</td>				
+				</tr>
+				<tr>
+					<th>Line06. 링크</th>
+					<td>국문-영문 변경 링크 주소가 변경되었습니다.</td>				
+				</tr>				
+			</table>			
+		</td>
+	</tr>
+</table>
+<h3>Line26. 3-2.서브에서만 적용되는 header </h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;header>
+					&lt;h1>&lt;a href="/kr/index.html">&lt;img src="/kr/img/sub_logo.gif" alt="엘엔케이로직코리아" title="엘엔케이로직코리아"/>&lt;/a>&lt;/h1>
+					&lt;div class="top_btn">
+						&lt;ul>
+							&lt;li>&lt;a href="/kr/company/location.html">&lt;img src="/kr/img/sub_top_btn_contact.gif" alt="CONTACT US" title="CONTACT US"/>&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="../../eng/">&lt;img src="/kr/img/sub_top_btn_eng.gif" alt="ENGLISH" title="ENGLISH"/>&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="/kr/other/sitemap.html">&lt;img src="/kr/img/sub_top_btn_sitemap.gif" alt="SITE MAP" title="SITE MAP"/>&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/div>
+				&lt;/header>
+			</pre>
+		</td>	
+		<td>
+			<table border="1" width="100%">
+				<caption>변경사항</caption>
+				<colgroup>
+					<col width="40%" />
+					<col width="60%" />
+				</colgroup>
+				<tr>
+					<th>Line02. alt</th>
+					<td>logo의 alt 값 변경 되었습니다.</td>				
+				</tr>				
+				<tr>
+					<th>Line05. 링크</th>
+					<td>contact us의 링크 페이지가 변경되었습니다.</td>				
+				</tr>
+				<tr>
+					<th>Line06. 링크</th>
+					<td>국문. 영문 변경 링크 주소로 변경되었습니다.</td>				
+				</tr>				
+			</table>			
+		</td>		
+	</tr>
+</table>
+<h3>Line48. 9.사이트 전체에 적용되는 footer </h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;footer>
+					&lt;h2>&lt;img src="/kr/img/footer_logo.png" alt="L&K ROGIC KOREA" title="L&K ROGIC KOREA"/>&lt;/h2>
+					&lt;p>&lt;img src="/kr/img/copy.png" alt="COPYRIGHT (c) 2013 L&amp;K LOGIC KOREA CO.LTD ALL RIGHTS RESERUED" title="copyright"/>&lt;/p>
+					&lt;div class="familysite">
+						&lt;h3>&lt;img src="/kr/img/family_site.png" alt="FAMILY SITE" title="FAMILY SITE"/>&lt;/h3>
+						&lt;ul>
+							&lt;li>&lt;a href="http://www.mirrorwar.co.kr/index.aspx" target="_blank">거울전쟁 - 신성부활&lt;/a>&lt;/li>	
+							&lt;li>&lt;a href="#" target="_blank">붉은보석2&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="http://www.redgem.co.kr/default.aspx?teaser_direct=on" target="_blank">붉은보석&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="http://www.logickorea.co.kr/mwsilver/main.aspx" target="_blank">거울전쟁 - 은의 여인&lt;/a>&lt;/li>	
+							&lt;li>&lt;a href="http://www.logickorea.co.kr/mirrorwar/index.aspx" target="_blank">거울전쟁 - 악령군&lt;/a>&lt;/li>	
+						&lt;/ul>
+					&lt;/div>
+				&lt;/footer>
+			</pre>
+		</td>
+		<td>
+			<table border="1" width="100%">
+				<caption>오타 수정</caption>
+				<colgroup>
+					<col width="40%" />
+					<col width="60%" />
+				</colgroup>
+				<tr>
+					<th>Line05. h3부분 닫는 a태그 삭제</th>
+					<td>h3부분 기존 닫는 a태그는 미스로 삭제부탁드립니다.</td>
+				</tr>
+			</table>		
+		</td>		
+	</tr>
+</table>
+
+<h1>2-2. Include GUIDE - 영문</h1>
+<h2>0.전체 구성</h2>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;!DOCTYPE html>
+				&lt;!--[if lt IE 7]>      &lt;html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ko"> &lt;![endif]-->
+				&lt;!--[if IE 7]>         &lt;html class="no-js lt-ie9 lt-ie8"lang="ko"> &lt;![endif]-->
+				&lt;!--[if IE 8]>         &lt;html class="no-js lt-ie9" lang="ko"> &lt;![endif]-->
+				&lt;!--[if gt IE 8]>&lt;!--> &lt;html class="no-js" lang="ko"> &lt;!--&lt;![endif]-->
+					&lt;head>
+						
+						&lt;!--1.사이트 전체에 적용되는 INFO/CSS/JS-->
+						
+						&lt;!--2-1.메인에서만 적용되는 CSS/JS-->
+						&lt;!--2-2.서브에서만 적용되는 CSS/JS-->
+						
+						&lt;!--3.각페이지별 개별적으로 적용되는 CSS/JS-->
+						
+					&lt;/head>
+					&lt;body>
+						&lt;!--[if lt IE 7]>
+							&lt;p class="chromeframe">You are using an &lt;strong>outdated&lt;/strong> browser. 
+							Please &lt;a href="http://browsehappy.com/">upgrade your browser&lt;/a> or 
+							&lt;a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame&lt;/a>
+							to improve your experience.&lt;/p>
+						&lt;![endif]-->
+						&lt;div id="wrapper">
+						
+							&lt;!--3-1.메인에서만 적용되는 header/game_info-->
+							&lt;!--3-2.서브에서만 적용되는 header-->
+							
+							&lt;div id="contents">
+								&lt;div id="con_left">
+									
+									&lt;!--4.사이트 전체에 적용되는 nav-->
+									
+									&lt;!--5.메인에서만 적용되는 .main_press-->
+									
+								&lt;/div>
+								&lt;div id="con_right">
+								
+								&lt;!--6-1.서브에서만 적용되는 pageInfo-->
+								
+								&lt;!--7.각페이지별 개별적으로 적용되는 .con-->
+								
+								
+								&lt;/div>
+							&lt;/div>
+							
+							&lt;!--8.서브에서만 적용되는 aside-->
+							
+							&lt;!--9.사이트 전체에 적용되는 footer-->
+							
+						&lt;/div>
+					&lt;/body>
+				&lt;/html>
+			</pre>
+		</td>
+		<td>
+			<table border="1" width="100%">
+				<caption>각 주석당 적용되는 내용</caption>
+				<colgroup>
+					<col width="40%" />
+					<col width="60%" />
+				</colgroup>
+				<tr>
+					<th>Line08. 1.사이트 전체에...</th>
+					<td>사이트 전체에 동일한 코드가 들어갑니다.</td>
+				</tr>
+				<tr>
+					<th>Line10~11. 2-1.메인에서만...</th>
+					<td>메인/서브별 코드가 들어갑니다.</td>
+				</tr>
+				<tr>
+					<th>Line13. 3.각페이지별 ...</th>
+					<td>각 페이지 별 고유 코드가 들어갑니다.</td>
+				</tr>
+				<tr>
+					<th>Line25~26. 3-1. 3-2.메인에서만 ...</th>
+					<td>메인/서브별 코드가 들어갑니다.</td>
+				</tr>
+				<tr>
+					<th>Line31. 4.사이트 전체에 ...</th>
+					<td>전체 nav 코드가 들어갑니다.</td>
+				</tr>
+				<tr>
+					<th>Line33. 5.메인에서만 ...</th>
+					<td>메인에서만 적용되는 .main_press 보도자료쪽 코드가 들어갑니다. </td>
+				</tr>
+				<tr>
+					<th>Line38. 6-1.서브에서만 ...</th>
+					<td>서브에서만 적용되는 pageInfo 코드가 들어갑니다. </td>
+				</tr>
+				<tr>
+					<th>Line40. 7.각 페이지별...</th>
+					<td>서브에서만 적용되는 각 페이지별 .con 코드가 들어갑니다.</td>
+				</tr>
+				<tr>
+					<th>Line46. 8.서브에서만...</th>
+					<td>서브에서만 적용되는 aside top 버튼 코드가 들어갑니다.</td>
+				</tr>
+				<tr>
+					<th>Line48. 9.사이트 전체에...</th>
+					<td>사이트 전체에 적용되는 footer부분 코드가 들어갑니다.</td>
+				</tr>						
+			</table>
+		</td>
+	</tr>
+</table>
+<h2>1.상세 코드</h2>
+<h3>Line08. 1.사이트 전체에 적용되는 INFO/CSS/JS</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;meta charset="utf-8">
+				&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+				&lt;title>*L&amp;K ROGIC KOREA* - Always :on:&lt;/title>
+				&lt;meta name="description" content="L&K Logickorea,mirror war,red stone,red stone2">
+				&lt;meta name="viewport" content="width=device-width">
+				&lt;link rel="stylesheet" href="/eng/css/common.css">
+				
+				&lt;script src="/eng/js/vendor/html5.js">&lt;/script>
+				&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">&lt;/script>
+				&lt;script>window.jQuery || document.write('&lt;script src="/eng/js/vendor/jquery-1.9.1.min.js">&lt;\/script>')&lt;/script>
+				&lt;script src="/eng/js/common.js">&lt;/script>
+		        &lt;script src="/js/nav.js">&lt;/script>        
+				&lt;script src="/js/top_btn.js">&lt;/script>
+			</pre>
+		</td>
+		<td>	
+		</td>
+	</tr>
+</table>
+<h3>Line10. 2-1.메인에서만 적용되는 CSS/JS</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;link rel="stylesheet" href="/eng/css/main.css">
+				&lt;script src="/eng/js/main_animate.js">&lt;/script>
+				&lt;script src="/eng/js/game_info.js">&lt;/script>
+			</pre>
+		</td>
+		<td>
+			
+		</td>
+	</tr>
+</table>
+
+<h3>Line11. 2-2.서브에서만 적용되는 CSS/JS</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;link rel="stylesheet" href="/eng/css/sub.css">
+			</pre>
+		</td>
+		<td>
+		
+		</td>		
+	</tr>
+</table>
+
+<h3>Line13. 3.각페이지별 개별적으로 적용되는 CSS/JS</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;style>
+				...
+				&lt;/style>
+			</pre>
+		</td>
+		<td>
+		</td>		
+	</tr>
+</table>
+
+<h3>Line25. 3-1.메인에서만 적용되는 header/game_info</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;header>
+					&lt;h1>&lt;a href="/eng/index.html">&lt;img src="/eng/img/logo.png" alt="L&K ROGIC KOREA" title="L&K ROGIC KOREA"/>&lt;/a>&lt;/h1>
+					&lt;div class="top_btn">
+						&lt;ul>
+							&lt;li>&lt;a href="/eng/company/location.html">&lt;img src="/eng/img/top_btn_contact.png" alt="CONTACT US" title="CONTACT US"/>&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="/../kr/">&lt;img src="/eng/img/top_btn_kr.png" alt="KOREAN" title="KOREAN"/>&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="/eng/other/sitemap.html">&lt;img src="/eng/img/top_btn_sitemap.png" alt="SITE MAP" title="SITE MAP"/>&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/div>
+				&lt;/header>
+				
+				&lt;article class="game_info">
+					&lt;ul>
+						&lt;li>&lt;a href="http://www.mirrorwar.co.kr/" target="_blank">&lt;img src="/eng/img/game_info01_title.gif" 
+						alt="Online Shooting RPG  Mirror War – Reincarnation of Holiness" 
+						title="Online Shooting RPG Mirror War – Reincarnation of Holiness"/>&lt;/a>&lt;/li>
+					&lt;/ul>
+				&lt;/article>
+			</pre>
+		</td>
+		<td>
+		</td>
+	</tr>
+</table>
+<h3>Line26. 3-2.서브에서만 적용되는 header </h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;header>
+					&lt;h1>&lt;a href="/eng/index.html">&lt;img src="/eng/img/sub_logo.gif" alt="L&K ROGIC KOREA" title="L&K ROGIC KOREA"/>&lt;/a>&lt;/h1>
+					&lt;div class="top_btn">
+						&lt;ul>
+							&lt;li>&lt;a href="/eng/company/location.html">&lt;img src="/eng/img/sub_top_btn_contact.gif" alt="CONTACT US" title="CONTACT US"/>&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="/../../kr/">&lt;img src="/eng/img/sub_top_btn_kr.gif" alt="KOREAN" title="KOREAN"/>&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="/eng/other/sitemap.html">&lt;img src="/eng/img/sub_top_btn_sitemap.gif" alt="SITE MAP" title="SITE MAP"/>&lt;/a>&lt;/li>
+						&lt;/ul>
+					&lt;/div>
+				&lt;/header>
+			</pre>
+		</td>	
+		<td>		
+		</td>		
+	</tr>
+</table>
+
+<h3>Line31. 4.사이트 전체에 적용되는 nav </h3>
+<p>
+	사이트 전체에 동일한 코드가 들어가지만, <span class="f_orenge">$nav00_on</span> 을 통해 하위 메뉴를 오픈하고,<br />
+	<span class="f_orenge">$isActive</span>를 통해 해당메뉴를 on/off합니다.
+</p>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;nav>
+					&lt;ul>
+						&lt;li class=$nav00_on>&lt;a href="/eng/company/greeting.html">&lt;img src="/eng/img/lnb01" + $isActive + ".png" alt="COMPANY" />&lt;/a>
+							&lt;ul>
+								&lt;li>&lt;a href="/eng/company/greeting.html">&lt;img src="/eng/img/lnb01_sub01" + $isActive + ".png" alt="CEO Message" />&lt;/a>&lt;/li>
+								&lt;li>&lt;a href="/eng/company/info.html">&lt;img src="/eng/img/lnb01_sub02" + $isActive + ".png" alt="Overview" />&lt;/a>&lt;/li>
+								&lt;li class="m_not">&lt;a href="/eng/company/history.html">&lt;img src="/eng/img/lnb01_sub03" + $isActive + ".png" alt="History" />&lt;/a>&lt;/li>
+								&lt;li>&lt;a href="/eng/company/ci.html">&lt;img src="/eng/img/lnb01_sub04" + $isActive + ".png" alt="L&K C.I" />&lt;/a>&lt;/li>
+								&lt;li>&lt;a href="/eng/company/network.html">&lt;img src="/eng/img/lnb01_sub05" + $isActive + ".png" alt="Network" />&lt;/a>&lt;/li>
+								&lt;li class="m_not">&lt;a href="/eng/company/location.html">&lt;img src="/eng/img/lnb01_sub06" + $isActive + ".png" alt="Contact US"" />&lt;/a>&lt;/li>
+							&lt;/ul>
+						&lt;/li>
+						&lt;li class=$nav00_on>&lt;a href="/eng/games/mirrorwar.html">&lt;img src="/eng/img/lnb02" + $isActive + ".png" alt="GAMES" />&lt;/a>
+							&lt;ul>
+								&lt;li>&lt;a href="/eng/games/mirrorwar.html">&lt;img src="/eng/img/lnb02_sub01" + $isActive + ".png" alt="Mirror War" />&lt;/a>&lt;/li>
+								&lt;li class="m_not">&lt;a href="/eng/games/redgem2.html">&lt;img src="/eng/img/lnb02_sub02" + $isActive + ".png" alt="Red Stone2" />&lt;/a>&lt;/li>
+								&lt;li>&lt;a href="/eng/games/redgem.html">&lt;img src="/eng/img/lnb02_sub03" + $isActive + ".png" alt="Red Stone" />&lt;/a>&lt;/li>
+								&lt;li class="m_not">&lt;a href="/eng/games/rollandann.html">&lt;img src="/eng/img/lnb02_sub04" + $isActive + ".png" alt="Adventure of Roll &Ann" />&lt;/a>&lt;/li>
+								&lt;li>&lt;a href="/eng/games/ppungttakji.html">&lt;img src="/eng/img/lnb02_sub05" + $isActive + ".png" alt="Ppungttakji" />&lt;/a>&lt;/li>
+								&lt;li class="m_not">&lt;a href="/eng/games/womanofsilver.html">&lt;img src="/eng/img/lnb02_sub06" + $isActive + ".png" alt="Woman of Silver" />&lt;/a>&lt;/li>
+								&lt;li>&lt;a href="/eng/games/evilforce.html">&lt;img src="/eng/img/lnb02_sub07" + $isActive + ".png" alt="Evil Force" />&lt;/a>&lt;/li>
+							&lt;/ul>
+						&lt;/li>
+						&lt;li class=$nav00_on>&lt;a href="/eng/pr/press_list.html">&lt;img src="/eng/img/lnb03" + $isActive + ".png" alt="PR ROOM" />&lt;/a>
+							&lt;ul>
+								&lt;li>&lt;a href="/eng/pr/press_list.html">&lt;img src="/eng/img/lnb03_sub01" + $isActive + ".png" alt="Press" />&lt;/a>&lt;/li>
+								&lt;li class="m_not">&lt;a href="/eng/pr/media_list.html">&lt;img src="/eng/img/lnb03_sub02" + $isActive + ".png" alt="Multimedia" />&lt;/a>&lt;/li>
+							&lt;/ul>
+						&lt;/li>
+						&lt;li class=$nav00_on>&lt;a href="/eng/career/recruit.html">&lt;img src="/eng/img/lnb04" + $isActive + ".png" alt="CAREER" />&lt;/a>
+							&lt;ul>
+								&lt;li>&lt;a href="/eng/career/recruit.html">&lt;img src="/eng/img/lnb04_sub03" + $isActive + ".png" alt="HR INFORMATION" />&lt;/a>&lt;/li>
+							&lt;/ul>								
+						&lt;/li>					
+					&lt;/ul>
+				&lt;/nav>
+			</pre>
+		</td>
+		<td>
+			<table border="1" width="100%">
+				<caption>주의 사항</caption>
+				<colgroup>
+					<col width="40%" />
+					<col width="60%" />
+				</colgroup>
+				<tr>
+					<th>Line30. Career 링크 상이</th>
+					<td>영문에서는 career링크 주소가 recruit.html입니다.</td>
+				</tr>
+				<tr>
+					<th>Line31. Career 페이지 sub03으로 통합</th>
+					<td>영문에서는 career 페이지가 recruit.html 단일 페이지 입니다.</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<h3>Line33. 5.메인에서만 적용되는 .main_press</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+					&lt;article class="main_press">
+						&lt;h2>&lt;img src="/eng/img/press_title.gif" alt="PRESS" title="PRESS"/>&lt;/h2>
+						&lt;table>
+							&lt;caption>PRESS&lt;/caption>
+							&lt;!--최신글 반복되는 부분-->
+							&lt;tr>
+								&lt;th scope="row">&lt;a href="/eng/pr/press_view.html">The Press Last post enters&lt;/a>&lt;/th>
+								&lt;td>03-18&lt;/td>
+							&lt;/tr>
+							&lt;!--/최신글 반복되는 부분-->
+							&lt;tr>
+								&lt;th scope="row">&lt;a href="/eng/pr/press_view.html">The Press Last post enters&lt;/a>&lt;/th>
+								&lt;td>03-18&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;th scope="row">&lt;a href="/eng/pr/press_view.html">The Press Last post enters&lt;/a>&lt;/th>
+								&lt;td>03-18&lt;/td>
+							&lt;/tr>
+							&lt;tr>
+								&lt;th scope="row">&lt;a href="/eng/pr/press_view.html">The Press Last post enters&lt;/a>&lt;/th>
+								&lt;td>03-18&lt;/td>
+							&lt;/tr>
+						&lt;/table>
+						&lt;p>&lt;a href="/eng/pr/press_list.html" target="_blank">&lt;img src="/eng/img/press_btn_more.png" alt="more" title="press more"/>&lt;/a>&lt;/p>
+					&lt;/article>			
+			</pre>
+		</td>
+		<td>
+		</td>		
+	</tr>
+</table>
+
+<h3>Line38. 6-1.서브에서만 적용되는 pageInfo</h3>
+<p>전 서브페이지 동일한 코드가 들어가지만, <span class="f_orenge">$Variables</span> 부분은 각 페이지별 정보를 갖습니다.</p>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;h2>&lt;img src="/eng/img/top_img.jpg" alt=$CateName title=$CateName />&lt;/h2>
+				&lt;div class="current">&lt;a href="/eng/index.html">HOME&lt;/a> &#62; &lt;a href=$CateURL>$CateName&lt;/a> &#62; 
+				&lt;strong>$pageName&lt;/strong>&lt;/div>
+				&lt;h3>&lt;img src="/eng/img/sub_title0" + $pageNum + ".gif" alt=$pageName title=$pageName />&lt;/h3>
+			</pre>
+		</td>
+		<td>
+			<table border="1" width="100%">
+				<caption>페이지 별로 달라지는 부분</caption>
+				<colgroup>
+					<col width="40%" />
+					<col width="60%" />
+				</colgroup>
+				<tr>
+					<th>$CateName</th>
+					<td>
+					카테고리 명이 들어갑니다.<br />
+					<em>ex)COMPANY</em>
+					</td>
+				</tr>
+				<tr>
+					<th>$CateURL</th>
+					<td>
+					카테고리별 첫번째 페이지의 주소가 들어갑니다.<br />
+					<em>ex)/kr/company/greeting.html</em>
+					</td>
+				</tr>
+				<tr>
+					<th>$pageName</th>
+					<td>
+					해당 페이지의 이름이 들어갑니다.<br />
+					<em>ex)CEO 인사말</em>
+					</td>
+				</tr>
+				<tr>
+					<th>$pageNum</th>
+					<td>
+					1 ~ ... 페이지별 Number를 통해 이미지를 표시합니다.
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<h3>Line40. 7.각페이지별 개별적으로 적용되는 .con</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;div class="con">
+				...
+				&lt;/div>
+			</pre>
+		</td>
+		<td>
+		
+		</td>		
+	</tr>
+</table>
+
+<h3>Line46. 8.서브에서만 적용되는 aside</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;aside>
+					&lt;a href="#">&lt;img src="/eng/img/btn_top.gif" alt="TOP" title="TOP"/></a>
+				&lt;/aside>				
+			</pre>
+		</td>
+		<td>
+		</td>		
+	</tr>  
+</table>
+
+<h3>Line48. 9.사이트 전체에 적용되는 footer</h3>
+<table width="100%;">
+	<colgroup>
+		<col width="70%" />
+		<col width="30%" />
+	</colgroup>
+	<tr>
+		<td>
+			<pre class="brush: php;">
+				&lt;footer>
+					&lt;h2>&lt;img src="/eng/img/footer_logo.png" alt="L&K ROGIC KOREA" title="L&K ROGIC KOREA"/>&lt;/h2>
+					&lt;p>&lt;img src="/eng/img/copy.png" alt="COPYRIGHT (c) 2013 L&amp;K LOGIC KOREA CO.LTD ALL RIGHTS RESERUED" title="copyright"/>&lt;/p>
+					&lt;div class="familysite">
+						&lt;h3>&lt;img src="/eng/img/family_site.png" alt="FAMILY SITE" title="FAMILY SITE"/>&lt;/h3>
+						&lt;ul>
+							&lt;li>&lt;a href="http://www.mirrorwar.co.kr/index.aspx" target="_blank">Mirror War&lt;/a>&lt;/li>	
+							&lt;li>&lt;a href="#" target="_blank">Red Stone2&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="http://www.redgem.co.kr/default.aspx?teaser_direct=on" target="_blank">Red Stone&lt;/a>&lt;/li>
+							&lt;li>&lt;a href="http://www.logickorea.co.kr/mwsilver/main.aspx" target="_blank">Woman of Silver&lt;/a>&lt;/li>	
+							&lt;li>&lt;a href="http://www.logickorea.co.kr/mirrorwar/index.aspx" target="_blank">Evil Force&lt;/a>&lt;/li>	
+						&lt;/ul>
+					&lt;/div>
+				&lt;/footer>
+			</pre>
+		</td>
+		<td>
+		</td>		
+	</tr>
+</table>
+<h1>3. 특수 Directory 설명</h1>
+<h2> /eng/board_style/</h2>
+<p>
+	각, 게시판별 img/css/js가 들어 있습니다.<br />
+	list.html, veiw.html은 Sample입니다.
+</p>
+<h2> /eng/other/sitemap.html</h2>
+<p>JavaScript 비활성화시 대체 사이트맵을 보여줍니다. 해당 페이지의 코드를 수정하면 전 페이지의 전체메뉴 보기 부분도 함께 변경됩니다.</p>
+
+<h1>4. 특별 요청사항</h1>
+<h2>추가 적인 스크립트가 필요할시 해당 페이지에 embedded하거나 새로운 스크립트 파일을 생성해 링크해 주시기 바라며<br />
+아래의 파일은 원본을 유지해 주시기 바랍니다.</h2>
+<h3>리스트</h3>
+	<ul>
+		<li>/eng/board_style/board_basic/board_basic.css</li>
+		<li>/eng/board_style/board_thum/board_thum.css</li>
+		<br />
+		<li>/eng/css/common.css</li>
+		<li>/eng/css/main.css</li>
+		<li>/eng/css/sub.css</li>
+		<li>/eng/css/game.css</li>
+		<br />
+		<li>/eng/js/vendor/html5.js</li>
+		<li>/eng/js/vendor/jquery-1.9.1.min.js</li>
+		<br />
+		<li>/eng/js/common.js</li>
+		<li>/eng/js/game_info.js</li>
+		<li>/eng/js/main_animate.js</li>
+		<li>/eng/js/game.js</li>
+		<li>/eng/js/nav.js</li>
+		<li>/eng/js/top_btn.js</li>
+</ul>
+</html>

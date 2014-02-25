@@ -1,0 +1,271 @@
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+	position :fixed;
+	top:0;
+	left:0;
+	width:100%;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em;
+    z-index: 10000;
+}
+
+/*reset*/
+body,div,p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,ol,table,tr,th,td,caption,form,fieldset,input,select,textarea,blockquote,address{
+	margin:0;
+	padding:0;
+}
+img,fieldset,iframe{
+	vertical-align:middle;
+	border:none;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+}
+address,em{
+	font-style:normal;
+}
+legend,.skip{
+	position:absolute;
+	top:-5000px;
+	text-indent:-5000px;
+	visibility:hidden;
+	width:0;
+	height:0;
+	font-size:0;
+	line-height:0;
+}
+ul,ol,li{
+	list-style:none;
+	line-height:100%;
+}
+a{
+	text-decoration:none;
+	color:#706959;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+a:hover, a:focus{
+	text-decoration:underline;
+}
+.lt-ie8 ul{
+	zoom:1;
+}
+ul:after{
+	content:" ";
+	display:block;
+	clear:both;
+}
+textarea {
+    resize: vertical;
+}
+caption{
+	position:absolute;
+	top:0;
+	left:0;
+	text-indent:-5000px;
+	width:0;
+	height:0;
+}
+/*공통 스타일*/
+body{
+	font-family: "돋움", Dotum, "굴림", Gulim, AppleGothic, Arial, Sans-serif;
+    font-size: 12px;
+	line-height:130%;
+	color:#706959;
+}
+/*공통클래스*/
+.hide{
+	display: none;
+}
+#wrapper{
+	width:1160px;
+	margin:0 auto;
+	position:relative;
+}
+/*header*/
+.top_btn li{
+	float:left;
+	background:url('../img/dot01.png') 7px 3px no-repeat;
+	padding-left:12px;
+}
+/*sitemap*/
+.sitemap{
+	display: none;
+}
+.sitemap ul{
+	padding:33px 65px 25px 50px;
+	background:#6a6a6a;
+}
+.sitemap ul li{
+	float: left;
+}
+.sitemap ul .sitemap01{
+	width: 191px;
+	margin-bottom:16px;
+}
+.sitemap ul .sitemap02{
+	width: 184px;
+}
+.sitemap ul .sitemap03{
+	width: 193px;
+}
+.sitemap ul .sitemap04{
+	width: 90px;
+}
+.sitemap ul li ul{
+	padding:0;
+	background: none;
+	margin-top:16px;
+}
+.sitemap ul li ul li{
+	float: none;
+	margin-bottom:9px;
+}
+.sitemap p{
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+/*left-menu*/
+nav{
+	height:363px;
+}
+nav li{
+	padding-bottom:36px;
+	position:relative;		
+}
+nav{
+	height:400px;
+}
+nav ul li ul{
+	display: none;
+	margin-top:25px;
+}
+nav ul li ul li{
+	float:left;
+	padding-bottom:6px;
+}
+nav ul li ul .m_not{
+	margin-right:0;
+}
+.nav01_on,.nav02_on,.nav03_on,.nav04_on{
+	padding-bottom:28px;
+}
+.nav01_on ul{
+	display:block;
+	width:230px;
+	margin-left:22px;
+}
+.nav01_on ul li{
+	margin-right:20px;
+}
+.nav02_on ul{
+	display:block;
+	width:228px;
+	margin-left:22px;
+}
+.nav02_on ul li{
+	margin-right:9px;
+}
+.nav03_on ul{
+	display:block;
+	width:152px;
+	margin-left:55px;
+}
+.nav03_on ul li{
+	margin-right:47px;
+}
+.nav04_on ul{
+	display:block;
+	width:107px;
+	margin-left:78px;
+}
+ul .threeDepth{
+    display: none;
+}
+/*3차메뉴*/
+nav ul li ul li .threeDepth{
+    display: none;
+    position: absolute;
+    top: 21px;
+    left: 0;
+    margin:0;
+    padding: 3px 0;
+    border: 2px solid #706959;
+}
+nav ul li ul li .threeDepth01{
+    left: -31px;
+    width:115px;
+}
+nav ul li ul li .threeDepth02{
+    left: -44px;
+    width:176px;
+}
+nav ul li ul li .threeDepth li{
+    padding: 0 3px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 11px;
+}
+nav ul li ul li .threeDepth .active a{
+    color: #ff7800;
+    text-decoration:none;
+    /*text-decoration: line-through;*/
+}
+nav ul li ul li .threeDepth li a:hover{
+    color: #ff7800;
+    text-decoration:none;
+    /*text-decoration: line-through;*/
+}
+
+/*contents-layout*/
+#contents{
+	*zoom:1;
+}
+#contents:after{
+	content:""; 
+	display:block; 
+	clear:both;
+}
+#con_left{
+	width:259px;
+	float:left;
+}
+#con_right{
+	float:right;	
+}
+/*footer*/
+footer{
+	position:relative;
+}
+
+/*familysite*/
+.familysite h3{
+	cursor: pointer;
+}
+.familysite ul{
+	position:absolute;
+	bottom:24px;
+	left:0;
+	background-color:#b5a98e;
+	width:127px;
+}
+.familysite li{
+	width:127px;
+}
+.familysite li a{
+	display:block;
+	padding:7px 10px 5px 10px;
+	color:#fff;
+	letter-spacing:-1px;
+}
+.familysite li a:hover{
+	text-decoration: none;
+	background: #9c9179;
+}
