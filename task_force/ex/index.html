@@ -256,21 +256,32 @@ $(function(){
 								<span class="dot_2"></span>
 								<span class="dot_3"></span>
 							</div>
+							<div class="motionBox_2">
+								<span class="dot_1"></span>
+								<span class="dot_2"></span>
+								<span class="dot_3"></span>
+							</div>
 						</div>
 						<p><button class="viewRect">구현원리 보기</button></p>
 						<style>
 							@-webkit-keyframes rotated { 0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(360deg); } }
-							.move_arc_obj {position:relative;width:300px;height:300px;margin:30px auto;border-radius:50%;background:#d1e2ea url("bg.png") repeat;border:1px solid #000;z-index:9;}
+							.move_arc_obj {position:relative;width:300px;height:300px;margin:100px auto;border-radius:50%;background:#d1e2ea url("bg.png") repeat;border:1px solid #000;z-index:9;}
 							.move_arc_obj .motionBox {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated 5s linear infinite;z-index:8;}
 							.move_arc_obj .motionBox.rect {border:1px solid #f60;background:rgba(255,102,0,0.1);}
 							.move_arc_obj .motionBox .dot_1 {position:absolute;top:-10px;left:150px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
 							.move_arc_obj .motionBox .dot_2 {position:absolute;top:-10px;left:-10px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
-							.move_arc_obj .motionBox .dot_3 {position:absolute;bottom:-50px;right:-30px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
+							.move_arc_obj .motionBox .dot_3 {position:absolute;bottom:-10px;right:50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
+							@-webkit-keyframes rotated_2 { 0% { -webkit-transform: rotate(45deg); }100% { -webkit-transform: rotate(405deg); } }
+							.move_arc_obj .motionBox_2 {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated_2 2.5s linear infinite;z-index:8;}
+							.move_arc_obj .motionBox_2.rect {border:1px solid #6f0;background:rgba(102,255,0,0.1);}
+							.move_arc_obj .motionBox_2 .dot_1 {position:absolute;top:-30px;left:100px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
+							.move_arc_obj .motionBox_2 .dot_2 {position:absolute;top:-30px;left:-40px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
+							.move_arc_obj .motionBox_2 .dot_3 {position:absolute;bottom:-30px;right:-50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
 						</style>
 						<script defer>
 							$(function(){
 								$(".viewRect").click(function(){
-									$(".motionBox").toggleClass("rect");
+									$(".motionBox, .motionBox_2").toggleClass("rect");
 								});
 							});
 						</script>
