@@ -2,14 +2,14 @@
 
 table{border-collapse:collapse;border-spacing:0;}
 /*base*/
-body{font-family:"맑은 고딕";background:#eee;}
+body{font-family:"맑은 고딕";background:#eee url("dot.gif") 50% 0 repeat-y;}
 
 /* float clear */
 .fix{zoom:1;}.fix:after{content:".";display:block;font-size:0;height:0;line-height:0;clear:both;}
 code {font-family:"Bitstream Vera Sans Mono";font-size:13px;word-wrap:break-word;}
 h1 {font-size:40px;text-align:center;margin:0;}
 .wrap {width:100%;}
-.css2 {float:left;width:48%;}
+.css2 {float:left;width:48%;/*padding:0 1.9% 0 0;border-right:1px solid #000;*/}
 
 .move_1_obj {position:relative;width:90%;padding:10px 5%;border:1px solid #000;border-radius:5px;}
 .move_1_obj .motionBox {width:50px;height:50px;background:#f60;}
