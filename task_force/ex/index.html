@@ -261,6 +261,11 @@ $(function(){
 								<span class="dot_2"></span>
 								<span class="dot_3"></span>
 							</div>
+							<div class="motionBox_3">
+								<span class="dot_1"></span>
+								<span class="dot_2"></span>
+								<span class="dot_3"></span>
+							</div>
 						</div>
 						<p>
 							<button class="viewRect">구현원리 보기</button>
@@ -275,23 +280,29 @@ $(function(){
 							.move_arc_obj .motionBox .dot_1 {position:absolute;top:-10px;left:150px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
 							.move_arc_obj .motionBox .dot_2 {position:absolute;top:-10px;left:-10px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
 							.move_arc_obj .motionBox .dot_3 {position:absolute;bottom:-10px;right:50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
-							@-webkit-keyframes rotated_2 { 0% { -webkit-transform: rotate(45deg); }100% { -webkit-transform: rotate(405deg); } }
+							@-webkit-keyframes rotated_2 { 0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(360deg); } }
 							.move_arc_obj .motionBox_2 {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated_2 2.5s linear infinite;z-index:8;}
 							.move_arc_obj .motionBox_2.rect {border:1px solid #6f0;background:rgba(102,255,0,0.1);}
 							.move_arc_obj .motionBox_2 .dot_1 {position:absolute;top:-30px;left:100px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
 							.move_arc_obj .motionBox_2 .dot_2 {position:absolute;top:-30px;left:-40px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
 							.move_arc_obj .motionBox_2 .dot_3 {position:absolute;bottom:-30px;right:-50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
+							@-webkit-keyframes rotated_3 { 0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(-360deg); } }
+							.move_arc_obj .motionBox_3 {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated_3 5s linear infinite;z-index:8;}
+							.move_arc_obj .motionBox_3.rect {border:1px solid #06f;background:rgba(0,102,255,0.1);}
+							.move_arc_obj .motionBox_3 .dot_1 {position:absolute;top:-30px;left:100px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
+							.move_arc_obj .motionBox_3 .dot_2 {position:absolute;top:-30px;left:-40px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
+							.move_arc_obj .motionBox_3 .dot_3 {position:absolute;bottom:-30px;right:-50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
 						</style>
 						<script defer>
 							$(function(){
 								$(".viewRect").click(function(){
-									$(".motionBox, .motionBox_2").toggleClass("rect");
+									$(".motionBox, .motionBox_2, .motionBox_3").toggleClass("rect");
 								});
 								$(".stop").click(function(){
-									$(".motionBox, .motionBox_2").css("-webkit-animation","0");
+									$(".motionBox, .motionBox_2, .motionBox_3").css("-webkit-animation","0");
 								});
 								$(".start").click(function(){
-									$(".motionBox, .motionBox_2").removeAttr("style");
+									$(".motionBox, .motionBox_2, .motionBox_3").removeAttr("style");
 								});
 							});
 						</script>
