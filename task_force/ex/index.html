@@ -262,7 +262,11 @@ $(function(){
 								<span class="dot_3"></span>
 							</div>
 						</div>
-						<p><button class="viewRect">구현원리 보기</button></p>
+						<p>
+							<button class="viewRect">구현원리 보기</button>
+							<button class="stop">효과 벗기기</button>
+							<button class="start">효과 넣기</button>
+						</p>
 						<style>
 							@-webkit-keyframes rotated { 0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(360deg); } }
 							.move_arc_obj {position:relative;width:300px;height:300px;margin:100px auto;border-radius:50%;background:#d1e2ea url("bg.png") repeat;border:1px solid #000;z-index:9;}
@@ -282,6 +286,12 @@ $(function(){
 							$(function(){
 								$(".viewRect").click(function(){
 									$(".motionBox, .motionBox_2").toggleClass("rect");
+								});
+								$(".stop").click(function(){
+									$(".motionBox, .motionBox_2").css("-webkit-animation","0");
+								});
+								$(".start").click(function(){
+									$(".motionBox, .motionBox_2").removeAttr("style");
 								});
 							});
 						</script>
