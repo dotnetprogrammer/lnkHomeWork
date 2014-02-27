@@ -14,6 +14,8 @@
 	</head>
 	<body>
 		<div id="flex-container">
+			<button class="rotate_all">전체회전</button>
+						<button class="rotate_all_on">전체복귀</button>
 			<div id="wrapAll">
 				<section class="wrap fix" id="slide_1" style="">
 					<section class="css2">
@@ -301,7 +303,7 @@ $(function(){
 									.move_arc_obj .motionBox_3 .dot_1 {position:absolute;top:-30px;left:100px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
 									.move_arc_obj .motionBox_3 .dot_2 {position:absolute;top:-30px;left:-40px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
 									.move_arc_obj .motionBox_3 .dot_3 {position:absolute;bottom:-30px;right:-50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
-									@-webkit-keyframes rotated_4 { 0% { -webkit-transform: rotateX(0deg) rotateY(0deg); }100% { -webkit-transform: rotateX(-360deg) rotateY(360deg); } }
+									@-webkit-keyframes rotated_4 { 0% { -webkit-transform: rotateX(0deg) rotateY(0deg); }100% { -webkit-transform: rotateX(360deg) rotateY(360deg); } }
 									.move_arc_obj .motionBox_4 {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated_4 5s linear infinite;z-index:8;}
 									.move_arc_obj .motionBox_4.rect {border:1px solid #000;background:rgba(0,0,0,0.5);}
 									.move_arc_obj .motionBox_4 .dot_1 {position:absolute;top:-30px;left:100px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
@@ -311,6 +313,8 @@ $(function(){
 									@-webkit-keyframes rotate_origin { 0% { -webkit-transform: rotateX(180deg) rotateY(360deg) /*translate3d(0,0,0) skewX(0deg) skewY(0deg)*/; }100% { -webkit-transform: rotateX(00deg) rotateY(0deg) /*translate3d(120px,100%,3em) skewX(360deg) skewY(360deg)*/; } }
 									#slide_3.rotate_slide {-webkit-transform-origin:50% 50%;-webkit-animation:rotate_slide 5s;z-index:8;-webkit-transform: rotateX(180deg) rotateY(360deg) /*translate3d(120px,100%,3em) skewX(360deg) skewY(360deg)*/;}
 									#slide_3.rotate_origin {-webkit-transform-origin:50% 50%;-webkit-animation:rotate_origin 5s;z-index:8;-webkit-transform: rotateX(0deg) rotateY(0deg) /*translate3d(120px,100%,3em) skewX(360deg) skewY(360deg)*/;}
+									html.rotate_slide {-webkit-transform-origin:50% 50%;-webkit-animation:rotate_slide 5s;z-index:8;-webkit-transform: rotateX(180deg) rotateY(360deg) /*translate3d(120px,100%,3em) skewX(360deg) skewY(360deg)*/;}
+									html.rotate_origin {-webkit-transform-origin:50% 50%;-webkit-animation:rotate_origin 5s;z-index:8;-webkit-transform: rotateX(0deg) rotateY(0deg) /*translate3d(120px,100%,3em) skewX(360deg) skewY(360deg)*/;}
 								</style>
 								<script defer>
 									$(function(){
@@ -326,11 +330,19 @@ $(function(){
 										$(".rotate").click(function(){
 											$("#slide_3").addClass("rotate_slide");
 											$("#slide_3").removeClass("rotate_origin");
-											//$(this).addClass("rotate_on");
 										});
 										$(".rotate_on").click(function(){
 											$("#slide_3").removeClass("rotate_slide");
 											$("#slide_3").addClass("rotate_origin");
+											$(this).removeClass("rotate_on");
+										});
+										$(".rotate_all").click(function(){
+											$("html").addClass("rotate_slide");
+											$("html").removeClass("rotate_origin");
+										});
+										$(".rotate_all_on").click(function(){
+											$("html").removeClass("rotate_slide");
+											$("html").addClass("rotate_origin");
 											$(this).removeClass("rotate_on");
 										});
 									});
@@ -356,6 +368,8 @@ $(function(){
 						</div>
 						<button class="rotate">회전</button>
 						<button class="rotate_on">복귀</button>
+						<button class="rotate_all">전체회전</button>
+						<button class="rotate_all_on">전체복귀</button>
 					</section>
 				</section>
 				

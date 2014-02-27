@@ -2,10 +2,11 @@
 
 table{border-collapse:collapse;border-spacing:0;}
 /*base*/
-body{font-family:"맑은 고딕";background:#778 url("bg.png");padding:10px;}
+body{font-family:"맑은 고딕";}
 
 /* float clear */
 .fix{zoom:1;}.fix:after{content:".";display:block;font-size:0;height:0;line-height:0;clear:both;}
+html {background:#778 url("bg.png");padding:40px 0;}
 code {font-family:"Bitstream Vera Sans Mono";font-size:13px;word-wrap:break-word;}
 h1 {font-size:40px;text-align:center;margin:0;}
 
