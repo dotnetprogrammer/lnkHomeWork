@@ -2,16 +2,82 @@
 
 table{border-collapse:collapse;border-spacing:0;}
 /*base*/
-body{font-family:"맑은 고딕";background:#eee url("dot.gif") 50% 0 repeat-y;}
+body{font-family:"맑은 고딕";background:#778 url("bg.png");padding:10px;}
 
 /* float clear */
 .fix{zoom:1;}.fix:after{content:".";display:block;font-size:0;height:0;line-height:0;clear:both;}
 code {font-family:"Bitstream Vera Sans Mono";font-size:13px;word-wrap:break-word;}
 h1 {font-size:40px;text-align:center;margin:0;}
-.wrap {width:100%;}
+
+/*#flex-container {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+	min-height: 704px;
+	min-width: 904px;
+}*/
+#wrapAll {
+	position:relative;
+	width:100%;
+	height:1000px;
+	-webkit-transform-style:preserve-3d;
+}
+.wrap {
+	
+	/*position:absolute;*/
+	margin:0 auto 10px;
+	padding:0 10px;
+	border:1px solid #000;
+	background:#eee;
+	background-image:-webkit-linear-gradient(top, #fff, #bbd);
+	border-radius:0 20px;
+	z-index:8;
+	/*-webkit-box-orient:vertical;
+	-webkit-transition:-webkit-transform 4.8s ease-in-out, opacity 5.2s ease-in-out;
+	box-sizing:content-box;*/
+}
+.wrap.far_past {
+	z-index:8;
+	opacity:0;
+	-webkit-transform:translateZ(-600px) rotateY(-180deg) translateZ(600px);
+	display:block;
+}
+.wrap.past {
+	z-index:8;
+	opacity:0;
+	visibility:visible;
+	display:block;
+	-webkit-transform:translateZ(-600px) rotateY(-90deg) translateZ(600px);	
+}
+.wrap.current {
+	z-index:9;
+	visibility:visible;
+	display:block;
+	opacity:1;
+	-webkit-transform:translateZ(-600px) rotateY(0deg) translateZ(600px);
+}
+.wrap.future {
+	z-index:8;
+	opacity:0;
+	visibility:visible;
+	display:block;
+	-webkit-transform:translateZ(-600px) rotateY(90deg) translateZ(600px);		
+}
+.wrap.far_future {
+	z-index:8;
+	opacity:0;
+	-webkit-transform:translateZ(-600px) rotateY(180deg) translateZ(600px);
+	display:block;
+}
 .css2 {float:left;width:48%;/*padding:0 1.9% 0 0;border-right:1px solid #000;*/}
 
-.move_1_obj {position:relative;width:90%;padding:10px 5%;border:1px solid #000;border-radius:5px;}
+.move_1_obj {position:relative;width:90%;height:250px;padding:10px 5%;}
 .move_1_obj .motionBox {width:50px;height:50px;background:#f60;}
 
 .move_2_obj {position:relative;width:90%;height:200px;padding:10px 5%;border:1px solid #000;border-radius:5px;}
@@ -20,9 +86,11 @@ h1 {font-size:40px;text-align:center;margin:0;}
 .css2 .move_2_obj .motionBox {width:50px;height:50px;background:#f60;opacity:0.2;}
 
 .css3 {float:right;width:48%;}
-.css3 .move_1_obj #motionBox {-webkit-transition: margin-left 1s ease-in-out, opacity 1s ease-in-out;width:50px;height:50px;background:#f60;border-radius:50%;}
+.css3 .move_1_obj #motionBox {-webkit-transition: margin-left 1s ease-in-out, margin-top 1s ease-in-out, opacity 1s ease-in-out;width:50px;height:50px;background:#f60;border-radius:50%;}
 .css3 .move_1_obj #motionBox.left {margin-left:0%;opacity:1;}
-.css3 .move_1_obj #motionBox.right {margin-left:90%;opacity:0.2}
+.css3 .move_1_obj #motionBox.right {margin-left:90%;margin-top:200px;opacity:0.2}
 
 .pname {color:#f60;}
 .vname {color:#18a600;}
+
+.btn {clear:both;display:block;}

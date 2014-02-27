@@ -13,40 +13,44 @@
 		</script>
 	</head>
 	<body>
-		<section class="wrap fix">
-			<section class="css2">
-				<h1>CSS 2</h1>
-				<div class="motion_1">
-					<h2>객체의 (지속적인) 이동</h2>
-					<div class="exBox">
-						<div class="move_1_obj">
-							<div class="motionBox"></div>
-						</div>
-						<script defer>
-							$(function(){
-								function moveLeft(){
-									$(".css2 .move_1_obj .motionBox").animate({
-										marginLeft:"90%",
-										opacity:0.2
-									}, 1000, function(){
-										moveRight();
-									});
-								}
-								function moveRight() {
-									$(".css2 .move_1_obj .motionBox").animate({
-										marginLeft:"0%",
-										opacity:1
-									}, 1000, function(){
+		<div id="flex-container">
+			<div id="wrapAll">
+				<section class="wrap fix" id="slide_1" style="">
+					<section class="css2">
+						<h1>CSS 2</h1>
+						<div class="motion_1">
+							<h2>객체의 (지속적인) 이동</h2>
+							<div class="exBox">
+								<div class="move_1_obj">
+									<div class="motionBox"></div>
+								</div>
+								<script defer>
+									$(function(){
+										function moveLeft(){
+											$(".css2 .move_1_obj .motionBox").animate({
+												marginLeft:"90%",
+												marginTop:"200px",
+												opacity:0.2
+											}, 1000, function(){
+												moveRight();
+											});
+										}
+										function moveRight() {
+											$(".css2 .move_1_obj .motionBox").animate({
+												marginLeft:"0%",
+												marginTop:"0%",
+												opacity:1
+											}, 1000, function(){
+												moveLeft();
+											});
+										}
 										moveLeft();
 									});
-								}
-								moveLeft();
-							});
-						</script>
-						<div class="codeAssi">
-							<p>현재 자사사이트에 사용된 구현법 일부</p>
-							<pre>
-...(중략)<br />
+								</script>
+								<div class="codeAssi">
+									<p>현재 자사사이트에 사용된 구현법 일부</p>
+									<pre>
+		...(중략)<br />
 <code>
 if (!revers) {
         obj.animate({
@@ -73,41 +77,41 @@ $(".css2 .motionBox").animate({
 	moveRight();
 });
 </code>
-							</pre>
+									</pre>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-			<section class="css3">
-				<h1>CSS 3</h1>
-				<div class="motion_1">
-					<h2>객체의 (지속적인) 이동</h2>
-					<div class="exBox">
-						<div class="move_1_obj">
-							<div id="motionBox" class="left"></div>
-						</div>
-						<script defer>
-							$(function(){
-								function moveRhCss3(){
-									$(".css3 #motionBox").removeClass("left");
-									$(".css3 #motionBox").addClass("right");
-									/*var callBack_1 = */setTimeout(function(){
-										moveLhCss3();
-									}, 1001);
-								}
-								function moveLhCss3(){
-									$(".css3 #motionBox").removeClass("right");
-									$(".css3 #motionBox").addClass("left");
-									/*var callBack_2 = */setTimeout(function(){
+					</section>
+					<section class="css3">
+						<h1>CSS 3</h1>
+						<div class="motion_1">
+							<h2>객체의 (지속적인) 이동</h2>
+							<div class="exBox">
+								<div class="move_1_obj" style="height:250px;border:0 none;">
+									<div id="motionBox" class="left"></div>
+								</div>
+								<script defer>
+									$(function(){
+										function moveRhCss3(){
+											$(".css3 #motionBox").removeClass("left");
+											$(".css3 #motionBox").addClass("right");
+											/*var callBack_1 = */setTimeout(function(){
+												moveLhCss3();
+											}, 1001);
+										}
+										function moveLhCss3(){
+											$(".css3 #motionBox").removeClass("right");
+											$(".css3 #motionBox").addClass("left");
+											/*var callBack_2 = */setTimeout(function(){
+												moveRhCss3();
+											}, 1001);
+										}
 										moveRhCss3();
-									}, 1001);
-								}
-								moveRhCss3();
-							});
-						</script>
-						<div class="codeAssi">
-							<p>아래와 같이 시작하는 코드, 끝나는 코드를 정해놓고 <strong>transition</strong>속성이 애니메이션을 생성해 줌.</p>
-							<pre>
+									});
+								</script>
+								<div class="codeAssi">
+									<p>아래와 같이 시작하는 코드, 끝나는 코드를 정해놓으면 <strong>transition</strong>속성이 애니메이션을 생성해 줌.</p>
+									<pre>
 <code>
 #motionBox {
 	<strong class="pname">-webkit-transition</strong>: <strong class="vname">margin-left 1s ease-in-out, 
@@ -116,45 +120,45 @@ $(".css2 .motionBox").animate({
 #motionBox.left {margin-left:0%;}
 #motionBox.right {margin-left:90%;}
 </code>
-							</pre>
+									</pre>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-		</section>
-		<section class="wrap fix">
-			<section class="css2">
-				<div class="motion_2">
-					<h2>객체의 지속적인 움직임 및 변화</h2>
-					<div class="exBox">
-						<div class="move_2_obj">
-							<div class="motionBox"></div>
-						</div>
-						<script defer>
-							$(function(){
-								function growUp(){
-									$(".css2 .move_2_obj .motionBox").animate({
-										height:"150px",
-										width:"150px",
-										opacity:1
-									}, 1000, function(){
-										growDn();
+					</section>
+				</section>
+				<section class="wrap fix" id="slide_2" style="">
+					<section class="css2">
+						<div class="motion_2">
+							<h2>객체의 지속적인 움직임 및 변화</h2>
+							<div class="exBox">
+								<div class="move_2_obj">
+									<div class="motionBox"></div>
+								</div>
+								<script defer>
+									$(function(){
+										function growUp(){
+											$(".css2 .move_2_obj .motionBox").animate({
+												height:"150px",
+												width:"150px",
+												opacity:1
+											}, 1000, function(){
+												growDn();
+											});
+										}
+										function growDn(){
+											$(".css2 .move_2_obj .motionBox").animate({
+												height:"50px",
+												width:"50px",
+												opacity:0.2
+											}, 1000, function(){
+												growUp();
+											});
+										}
+										growUp()
 									});
-								}
-								function growDn(){
-									$(".css2 .move_2_obj .motionBox").animate({
-										height:"50px",
-										width:"50px",
-										opacity:0.2
-									}, 1000, function(){
-										growUp();
-									});
-								}
-								growUp()
-							});
-						</script>
-						<div class="codeAssi">
-							<pre>
+								</script>
+								<div class="codeAssi">
+									<pre>
 <code>
 $(function(){
 	function growUp(){
@@ -178,42 +182,42 @@ $(function(){
 	growUp()
 });
 </code>
-							</pre>
+									</pre>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-			<section class="css3">
-				<div class="motion_2">
-					<h2>객체의 지속적인 움직임.</h2>
-					<div class="exBox">
-						<div class="move_2_obj">
-							<div class="motionBox"></div>
-						</div>
-						<style>
-							@-webkit-keyframes pulse {
-								from {
-									opacity: 0.2;
-									width: 50px;
-									height: 50px;
-								}
-								to {
-									opacity: 1;
-									width: 150px;
-									height: 150px;
-								}
-							}
-							.css3 .move_2_obj .motionBox {
-								border-radius:50%;
-								-webkit-animation-name: pulse;
-								-webkit-animation-duration: 1s;
-								-webkit-animation-iteration-count: infinite;
-								-webkit-animation-timing-function: ease-in-out;
-								-webkit-animation-direction: alternate;
-							}
-						</style>
-						<div class="codeAssi">
-							<pre>
+					</section>
+					<section class="css3">
+						<div class="motion_2">
+							<h2>객체의 지속적인 움직임.</h2>
+							<div class="exBox">
+								<div class="move_2_obj">
+									<div class="motionBox"></div>
+								</div>
+								<style>
+									@-webkit-keyframes pulse {
+										from {
+											opacity: 0.2;
+											width: 50px;
+											height: 50px;
+										}
+										to {
+											opacity: 1;
+											width: 150px;
+											height: 150px;
+										}
+									}
+									.css3 .move_2_obj .motionBox {
+										border-radius:50%;
+										-webkit-animation-name: pulse;
+										-webkit-animation-duration: 1s;
+										-webkit-animation-iteration-count: infinite;
+										-webkit-animation-timing-function: ease-in-out;
+										-webkit-animation-direction: alternate;
+									}
+								</style>
+								<div class="codeAssi">
+									<pre>
 <code>
 @-webkit-keyframes <strong class="pname">pulse</strong> {
 	from {
@@ -235,79 +239,104 @@ $(function(){
 	<strong class="vname">-webkit-animation</strong>-direction: alternate;
 }
 </code>
-							</pre>
-						</div>
-					</div>
-				</div>
-			</section>
-		</section>
-		<section class="wrap fix">
-			<section class="css2">
-				<h2>2차원적 회전하는 경우(2D)</h2>
-				<p>회전하는 객체는 CSS 2로 구현하는 방법이 없음</p>
-			</section>
-			<section class="css3">
-				<div class="motion_2">
-					<h2>2차원적 회전하는 경우(2D)</h2>
-					<div class="exBox">
-						<div class="move_arc_obj">
-							<div class="motionBox">
-								<span class="dot_1"></span>
-								<span class="dot_2"></span>
-								<span class="dot_3"></span>
-							</div>
-							<div class="motionBox_2">
-								<span class="dot_1"></span>
-								<span class="dot_2"></span>
-								<span class="dot_3"></span>
-							</div>
-							<div class="motionBox_3">
-								<span class="dot_1"></span>
-								<span class="dot_2"></span>
-								<span class="dot_3"></span>
+									</pre>
+								</div>
 							</div>
 						</div>
-						<p>
-							<button class="viewRect">구현원리 보기</button>
-							<button class="stop">효과 벗기기</button>
-							<button class="start">효과 넣기</button>
-						</p>
-						<style>
-							@-webkit-keyframes rotated { 0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(360deg); } }
-							.move_arc_obj {position:relative;width:300px;height:300px;margin:100px auto;border-radius:50%;background:#d1e2ea url("bg.png") repeat;border:1px solid #000;z-index:9;}
-							.move_arc_obj .motionBox {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated 5s linear infinite;z-index:8;}
-							.move_arc_obj .motionBox.rect {border:1px solid #f60;background:rgba(255,102,0,0.1);}
-							.move_arc_obj .motionBox .dot_1 {position:absolute;top:-10px;left:150px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
-							.move_arc_obj .motionBox .dot_2 {position:absolute;top:-10px;left:-10px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
-							.move_arc_obj .motionBox .dot_3 {position:absolute;bottom:-10px;right:50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
-							@-webkit-keyframes rotated_2 { 0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(360deg); } }
-							.move_arc_obj .motionBox_2 {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated_2 2.5s linear infinite;z-index:8;}
-							.move_arc_obj .motionBox_2.rect {border:1px solid #6f0;background:rgba(102,255,0,0.1);}
-							.move_arc_obj .motionBox_2 .dot_1 {position:absolute;top:-30px;left:100px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
-							.move_arc_obj .motionBox_2 .dot_2 {position:absolute;top:-30px;left:-40px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
-							.move_arc_obj .motionBox_2 .dot_3 {position:absolute;bottom:-30px;right:-50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
-							@-webkit-keyframes rotated_3 { 0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(-360deg); } }
-							.move_arc_obj .motionBox_3 {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated_3 5s linear infinite;z-index:8;}
-							.move_arc_obj .motionBox_3.rect {border:1px solid #06f;background:rgba(0,102,255,0.1);}
-							.move_arc_obj .motionBox_3 .dot_1 {position:absolute;top:-30px;left:100px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
-							.move_arc_obj .motionBox_3 .dot_2 {position:absolute;top:-30px;left:-40px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
-							.move_arc_obj .motionBox_3 .dot_3 {position:absolute;bottom:-30px;right:-50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
-						</style>
-						<script defer>
-							$(function(){
-								$(".viewRect").click(function(){
-									$(".motionBox, .motionBox_2, .motionBox_3").toggleClass("rect");
-								});
-								$(".stop").click(function(){
-									$(".motionBox, .motionBox_2, .motionBox_3").css("-webkit-animation","0");
-								});
-								$(".start").click(function(){
-									$(".motionBox, .motionBox_2, .motionBox_3").removeAttr("style");
-								});
-							});
-						</script>
-						<div class="codeAssi">
-							<pre>
+					</section>
+				</section>
+				<section class="wrap fix" id="slide_3" style="">
+					<section class="css2">
+						<h2>2차원적 회전하는 경우(2D)</h2>
+						<p>회전하는 객체는 CSS 2로 구현할 수 있는 방법이 없음</p>
+					</section>
+					<section class="css3">
+						<div class="motion_2">
+							<h2>2차원적 회전하는 경우(2D)</h2>
+							<div class="exBox">
+								<div class="move_arc_obj">
+									<div class="motionBox">
+										<span class="dot_1"></span>
+										<span class="dot_2"></span>
+										<span class="dot_3"></span>
+									</div>
+									<div class="motionBox_2">
+										<span class="dot_1"></span>
+										<span class="dot_2"></span>
+										<span class="dot_3"></span>
+									</div>
+									<div class="motionBox_3">
+										<span class="dot_1"></span>
+										<span class="dot_2"></span>
+										<span class="dot_3"></span>
+									</div>
+									<div class="motionBox_4">
+										<span class="dot_1"></span>
+										<span class="dot_2"></span>
+										<span class="dot_3"></span>
+									</div>
+								</div>
+								<p>
+									<button class="viewRect">구현원리 보기</button>
+									<button class="stop">효과 벗기기</button>
+									<button class="start">효과 넣기</button>
+								</p>
+								<style>
+									@-webkit-keyframes rotated { 0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(360deg); } }
+									.move_arc_obj {position:relative;width:300px;height:300px;margin:100px auto;border-radius:50%;background:#d1e2ea url("bg.png") repeat;border:1px solid #000;z-index:9;}
+									.move_arc_obj .motionBox {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated 5s linear infinite;z-index:8;}
+									.move_arc_obj .motionBox.rect {border:1px solid #f60;background:rgba(255,102,0,0.1);}
+									.move_arc_obj .motionBox .dot_1 {position:absolute;top:-10px;left:150px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
+									.move_arc_obj .motionBox .dot_2 {position:absolute;top:-10px;left:-10px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
+									.move_arc_obj .motionBox .dot_3 {position:absolute;bottom:-10px;right:50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
+									@-webkit-keyframes rotated_2 { 0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(360deg); } }
+									.move_arc_obj .motionBox_2 {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated_2 2.5s linear infinite;z-index:8;}
+									.move_arc_obj .motionBox_2.rect {border:1px solid #6f0;background:rgba(102,255,0,0.1);}
+									.move_arc_obj .motionBox_2 .dot_1 {position:absolute;top:-30px;left:100px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
+									.move_arc_obj .motionBox_2 .dot_2 {position:absolute;top:-30px;left:-40px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
+									.move_arc_obj .motionBox_2 .dot_3 {position:absolute;bottom:-30px;right:-50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
+									@-webkit-keyframes rotated_3 { 0% { -webkit-transform: rotate(0deg); }100% { -webkit-transform: rotate(-360deg); } }
+									.move_arc_obj .motionBox_3 {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated_3 5s linear infinite;z-index:8;}
+									.move_arc_obj .motionBox_3.rect {border:1px solid #06f;background:rgba(0,102,255,0.1);}
+									.move_arc_obj .motionBox_3 .dot_1 {position:absolute;top:-30px;left:100px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
+									.move_arc_obj .motionBox_3 .dot_2 {position:absolute;top:-30px;left:-40px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
+									.move_arc_obj .motionBox_3 .dot_3 {position:absolute;bottom:-30px;right:-50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
+									@-webkit-keyframes rotated_4 { 0% { -webkit-transform: rotateX(0deg) rotateY(0deg); }100% { -webkit-transform: rotateX(-360deg) rotateY(360deg); } }
+									.move_arc_obj .motionBox_4 {position:absolute;top:0;left:0;width:300px;height:300px;-webkit-transform-origin:50% 50%;-webkit-animation:rotated_4 5s linear infinite;z-index:8;}
+									.move_arc_obj .motionBox_4.rect {border:1px solid #000;background:rgba(0,0,0,0.5);}
+									.move_arc_obj .motionBox_4 .dot_1 {position:absolute;top:-30px;left:100px;display:block;width:20px;height:20px;background:#000;border-radius:50%}
+									.move_arc_obj .motionBox_4 .dot_2 {position:absolute;top:-30px;left:-40px;display:block;width:20px;height:20px;background:#666;border-radius:50%}
+									.move_arc_obj .motionBox_4 .dot_3 {position:absolute;bottom:-30px;right:-50px;display:block;width:20px;height:20px;background:#aaa;border-radius:50%}
+									@-webkit-keyframes rotate_slide { 0% { -webkit-transform: rotateX(0deg) rotateY(0deg) /*translate3d(0,0,0) skewX(0deg) skewY(0deg)*/; }100% { -webkit-transform: rotateX(180deg) rotateY(360deg) /*translate3d(120px,100%,3em) skewX(360deg) skewY(360deg)*/; } }
+									@-webkit-keyframes rotate_origin { 0% { -webkit-transform: rotateX(180deg) rotateY(360deg) /*translate3d(0,0,0) skewX(0deg) skewY(0deg)*/; }100% { -webkit-transform: rotateX(00deg) rotateY(0deg) /*translate3d(120px,100%,3em) skewX(360deg) skewY(360deg)*/; } }
+									#slide_3.rotate_slide {-webkit-transform-origin:50% 50%;-webkit-animation:rotate_slide 5s;z-index:8;-webkit-transform: rotateX(180deg) rotateY(360deg) /*translate3d(120px,100%,3em) skewX(360deg) skewY(360deg)*/;}
+									#slide_3.rotate_origin {-webkit-transform-origin:50% 50%;-webkit-animation:rotate_origin 5s;z-index:8;-webkit-transform: rotateX(0deg) rotateY(0deg) /*translate3d(120px,100%,3em) skewX(360deg) skewY(360deg)*/;}
+								</style>
+								<script defer>
+									$(function(){
+										$(".viewRect").click(function(){
+											$(".move_arc_obj > div").toggleClass("rect");
+										});
+										$(".stop").click(function(){
+											$(".move_arc_obj > div").css("-webkit-animation","0");
+										});
+										$(".start").click(function(){
+											$(".move_arc_obj > div").removeAttr("style");
+										});
+										$(".rotate").click(function(){
+											$("#slide_3").addClass("rotate_slide");
+											$("#slide_3").removeClass("rotate_origin");
+											//$(this).addClass("rotate_on");
+										});
+										$(".rotate_on").click(function(){
+											$("#slide_3").removeClass("rotate_slide");
+											$("#slide_3").addClass("rotate_origin");
+											$(this).removeClass("rotate_on");
+										});
+									});
+								</script>
+								<div class="codeAssi">
+									<pre>
 <code>
 @-webkit-keyframes <strong class="pname">rotated</strong> <strong class="vname">{ 
 	0% { -webkit-transform: rotate(0deg); }
@@ -316,19 +345,21 @@ $(function(){
 
 .move_arc_obj .motionBox {/*......*/-webkit-transform-origin:50% 50%;-webkit-animation:<strong class="pname">rotated</strong> 5s linear infinite;/*.....*/}
 </code>
-							</pre>
-							<p>keyframes 부분에 변수처럼 시작과 끝부분의 내용을 지정 후 해당 객체의 속성에서 keyframes 내용을 호출함.</p>
+									</pre>
+									<p>keyframes 부분에 변수처럼 시작과 끝부분의 내용을 지정 후 해당 객체의 속성에서 keyframes 내용을 호출함.</p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="motion_3">
-					<h3>3차원적 회전하는 경우 (3D)</h3>
-					<div class="exBox">
-						<div class="">
+						<div class="motion_3">
+							<h2>3차원 회전 객체(3D)</h2>
+							<p>추후 추가</p>
 						</div>
-					</div>
-				</div>
-			</section>
-		</section>
+						<button class="rotate">회전</button>
+						<button class="rotate_on">복귀</button>
+					</section>
+				</section>
+				
+			</div>
+		</div>
 	</body>
 </html>
