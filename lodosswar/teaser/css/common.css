@@ -36,9 +36,15 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 #btns .notice {background:url('../images/btn_notice.png') 0 0 no-repeat;}
 #btns .talk {background:url('../images/btn_talk.png') 0 0 no-repeat;}
 #noticePanel {position:fixed;top:339px;left:0;width:342px;height:300px;background:url('../images/bg_notice_frame.png') 0 0 no-repeat;}
+.scroll {position:fixed;bottom:70px;left:50%;width:182px;height:105px;margin:0 0 0 -91px;background:url('../images/bg_scroll.png') 0 0 no-repeat;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;z-index:999;}
 
 section {position:relative;width:100%;height:1080px;min-height:750px;}
 section .wrap {position:relative;width:1024px;height:100%;margin:0 auto;}
-section .wrap .scroll {position:absolute;bottom:70px;left:50%;width:182px;height:105px;margin:0 0 0 -91px;background:url('../images/bg_scroll.png') 0 0 no-repeat;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
-#main {background:url('../images/bg_sect_1.jpg') center center no-repeat;background-size:cover;}
+#main {background:url('../images/bg_sect_1.jpg') center center fixed no-repeat;background-size:cover;}
 #main .wrap h1 {position:absolute;top:315px;left:50%;width:916px;height:354px;margin:0 0 0 -458px;background:url('../images/h1_logo_v2.png');overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+
+#heros {background:url('../images/bg_sect_2.jpg') center center fixed no-repeat;background-size:cover;}
+#heros img {position:absolute;}
+#heros .img1 {top:0;left:0;}
+#heros .img2 {top:54px;left:168px;}
+#heros .img3 {top:166px;left:56px;}

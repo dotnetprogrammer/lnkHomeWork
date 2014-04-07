@@ -8,6 +8,14 @@
 	<!--[if lte IE 8]><script src="./js/html5.js"></script><![endif]-->
 	<link rel="stylesheet" href="./css/common.css" type="text/css"/>
 	<!-- <link rel="stylesheet" href="./css/teaser.css" type="text/css"/> -->
+	<script src="./js/jquery-1.9.1.min.js"></script>
+	<script>
+		$(function(){
+			$(".map1").on("mouseenter", function(){
+				$(".img1").attr("src","./images/char_03_off.png");
+			});
+		});
+	</script>
 </head>
 
 <body class=""><!-- class 없으면 노말, 1024 이하로 줄어들 경우 narrow -->
@@ -15,6 +23,7 @@
 		<a href="#" class="notice" id="notice">공지사항보기</a>
 		<a href="#" class="talk" id="talk">SNS</a>
 	</div>
+	<div class="scroll">스크롤을 내려주세요.</div>
 	<nav id="nav">
 		<a href="#"></a>
 		<a href="#"></a>
@@ -26,10 +35,17 @@
 	<section id="main" class="main">
 		<div class="wrap">
 			<h1 class="logo">Lodoss war Online</h1>
-			<div class="scroll">스크롤을 내려주세요.</div>
 		</div>
 	</section>
 	<section id="heros" class="heros">
+		<div class="wrap">
+			<img src="./images/char_01_on.png" alt="" class="img1" usemap="#poly1" />
+			<img src="./images/char_02_on.png" alt="" class="img2" usemap="#poly2" />
+			<img src="./images/char_03_off.png" alt="" class="img3" usemap="#poly3" />
+			<map name="#poly1"><area class="map1" shape="poly" coords="111,0,0,110,110,220,221,110" href="#" /></map>
+			<map name="#poly2"><area class="map2" shape="poly" coords="111,0,0,110,110,220,221,110" href="#" /></map>
+			<map name="#poly3"><area class="map3" shape="poly" coords="111,0,0,110,110,220,221,110" href="#" /></map>
+		</div>
 	</section>
 	<div id="noticePanel">
 		<h3>공지사항</h3>
