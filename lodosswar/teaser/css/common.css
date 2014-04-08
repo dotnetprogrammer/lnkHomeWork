@@ -45,6 +45,9 @@ section .wrap {position:relative;width:1024px;height:100%;margin:0 auto;}
 
 #heros {background:url('../images/bg_sect_2.jpg') center center fixed no-repeat;background-size:cover;}
 #heros img {position:absolute;}
-#heros .img1 {top:0;left:0;}
-#heros .img2 {top:54px;left:168px;}
-#heros .img3 {top:166px;left:56px;}
+#heros .img1 {top:211px;left:558px;}
+#heros .img2 {top:265px;left:726px;}
+#heros .img3 {top:377px;left:615px;}
+#heros .img4 {top:488px;left:504px;}
+#heros .img5 {top:670px;left:544px;}
+#heros .img6 {top:558px;left:655px;}
