@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body { color:#666; font-size:14px; line-height:1em; font-family:'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;}
+body { color:#666; font-size:14px; line-height:1em; font-family:'맑은 고딕','Malgun Gothic',Helvetica,sans-serif;overflow:hidden;}
 body.safari { font-family:Helvetica; }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,button,p,blockquote,th,td { margin:0; padding:0; -webkit-text-size-adjust:none;}
 img,fieldset{border:0}
@@ -35,9 +35,11 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 #btns a {float:left;width:54px;height:54px;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
 #btns .notice {background:url('../images/btn_notice.png') 0 0 no-repeat;}
 #btns .talk {background:url('../images/btn_talk.png') 0 0 no-repeat;}
-#noticePanel {position:fixed;top:339px;left:0;width:342px;height:300px;background:url('../images/bg_notice_frame.png') 0 0 no-repeat;}
+#noticePanel {position:fixed;top:339px;left:0;width:304px;height:216px;padding:84px 0 0 38px;background:url('../images/bg_notice_frame.png') 0 0 no-repeat;z-index:9999;}
+#noticePanel ul {}
+#noticePanel ul li {width:250px;padding:10px 0;background:url('../images/bg_list_bar.png') 0 bottom no-repeat;}
+#noticePanel ul li a {color:#9e8749;font-size:12px;}
 #noticePanel h3 {overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
-#noticePanel {}
 #maskLayer {width:100%;height:100%;left:0;top:0;position:fixed;background:#000;z-index:999999;}
 
 .scroll {position:fixed;bottom:70px;left:50%;width:182px;height:105px;margin:0 0 0 -91px;background:url('../images/bg_scroll.png') 0 0 no-repeat;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;z-index:999;}
@@ -56,5 +58,6 @@ section .wrap {position:relative;width:1024px;height:100%;margin:0 auto;}
 #heros .img5 {top:670px;left:544px;}
 #heros .img6 {top:558px;left:655px;}
 
-.container {position:relative;height:100%;overflow:hidden;}
+.container {position:relative;height:100%;overflow:hidden;overflow-x:auto;}
 .section {position:relative;left:0;top:0;height:100%;}
+#bodyWrap {height:100%;}

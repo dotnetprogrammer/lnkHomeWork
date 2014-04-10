@@ -65,11 +65,10 @@ var control = (function(){
 	};
 	var viewScrollBtn = function(){
 		base.scrollBtn.animate({opacity:1}, 1800);
-		console.log("callback ok");
+		//console.log("callback ok");
 	};
 	var aclick = function(num) {
 		contHeight = $(".box").height();
-		console.log(contHeight);
 		cnt = num;
 		base.section.animate({"top":(contHeight*cnt)*(-1)+"px"},"normal",function(){
 			/*moveStatus = false;
