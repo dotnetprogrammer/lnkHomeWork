@@ -39,25 +39,42 @@ command, datalist, keygen, mark, meter, progress, rp, rt, ruby, time, wbr { disp
 #noticePanel ul {}
 #noticePanel ul li {width:250px;padding:10px 0;background:url('../images/bg_list_bar.png') 0 bottom no-repeat;}
 #noticePanel ul li a {color:#9e8749;font-size:12px;}
+#noticePanel ul li .on {color:#c69e31;}
 #noticePanel h3 {overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
-#maskLayer {width:100%;height:100%;left:0;top:0;position:fixed;background:#000;z-index:999999;}
-
-.scroll {position:fixed;bottom:70px;left:50%;width:182px;height:105px;margin:0 0 0 -91px;background:url('../images/bg_scroll.png') 0 0 no-repeat;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;z-index:999;}
+#noticePanel .notiBtn {position:absolute;top:43px;left:254px;}
+#noticePanel .notiBtn a {float:left;width:20px;height:20px;margin:0 3px 0 0;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+#noticePanel .notiBtn .prev {background:url('../images/btn_notice_prev_off.png') 0 0 no-repeat;}
+#noticePanel .notiBtn .next {background:url('../images/btn_notice_next_off.png') 0 0 no-repeat;}
+#noticePanel .notiBtn .prev:hover {background:url('../images/btn_notice_prev_on.png') 0 0 no-repeat;}
+#noticePanel .notiBtn .next:hover {background:url('../images/btn_notice_next_on.png') 0 0 no-repeat;}
 
 section {position:relative;width:100%;height:1080px;min-height:750px;}
 section .wrap {position:relative;width:1024px;height:100%;margin:0 auto;}
 #main {background:url('../images/bg_sect_1.jpg') center center fixed no-repeat;background-size:cover;}
-#main .wrap h1 {position:absolute;bottom:-354px;left:50%;width:916px;height:354px;margin:0 0 0 -458px;background:url('../images/h1_logo_v2.png');overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+#main .wrap h1 {position:absolute;bottom:-354px;left:50%;width:916px;height:354px;margin:0 0 0 -458px;background:url('../images/h1_logo_v3.png');overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
 
 #heros {background:url('../images/bg_sect_2.jpg') center center fixed no-repeat;background-size:cover;}
 #heros img {position:absolute;}
-#heros .img1 {top:211px;left:558px;}
-#heros .img2 {top:265px;left:726px;}
-#heros .img3 {top:377px;left:615px;}
-#heros .img4 {top:488px;left:504px;}
-#heros .img5 {top:670px;left:544px;}
-#heros .img6 {top:558px;left:655px;}
+
+#heros .img1 {bottom:649px;left:558px;}
+#heros .img2 {bottom:594px;left:726px;}
+#heros .img3 {bottom:483px;left:615px;}
+#heros .img4 {bottom:372px;left:504px;}
+#heros .img5 {bottom:316px;left:670px;}
+#heros .img6 {bottom:205px;left:559px;}
 
 .container {position:relative;height:100%;overflow:hidden;overflow-x:auto;}
 .section {position:relative;left:0;top:0;height:100%;}
 #bodyWrap {height:100%;}
+#maskLayer {width:100%;height:100%;left:0;top:0;position:fixed;background:#000;z-index:9999;}
+.scroll {position:fixed;bottom:70px;left:50%;width:182px;height:105px;margin:0 0 0 -91px;background:url('../images/bg_scroll.png') 0 0 no-repeat;overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;z-index:999;}
+#nav {position:fixed;top:422px;right:25px;z-index:999;}
+#nav li {width:105px;height:22px;padding:2px 30px 0 0;background:url('../images/bg_nav_bull_off.png') right 1px no-repeat;text-align:right;}
+#nav li.on {background:url('../images/bg_nav_bull_on.png') right 0 no-repeat;}
+
+#frmFieldWrap {position:absolute;top:133px;left:50%;width:720px;height:662px;margin:0 0 0 -360px;padding:54px 0 0 0;z-index:10000;}
+#frmFieldWrap .cls {position:absolute;top:0;right:0;display:block;width:54px;height:54px;background:url('../images/btn_frm_cls.png') 0 0 no-repeat;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+#frmFieldWrap .frmField {position:relative;width:682px;height:662px;margin:0 auto;background:url('../images/bg_frm_field.png') 0 0 no-repeat;}
+#frmFieldWrap .frmField label {position:absolute;left:138px;}
+#frmFieldWrap .frmField label span {overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+#frmFieldWrap .frmField label input {}

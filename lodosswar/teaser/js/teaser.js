@@ -14,6 +14,9 @@ var base = (function(){
 		cnt : 0,
 		boxNum : $(".box").length,
 		section : $(".section"),
+		contentLng : $(".section section").length,
+		defTxt1 : "제목을 쓰는 곳입니다.",
+		defTxt2 : "메일을 쓰는 곳입니다."
 	}
 }());
 
@@ -34,8 +37,20 @@ var mEvent = (function(){
 				base.cnt--;
 			}
 		}
-		//target = $("#controller").find("li:eq("+cnt+") a");
-		control.aclick(base.cnt/*,target*/);
+		var target = $("#nav").find("li:eq("+base.cnt+")");
+		control.aclick(base.cnt,target);
+	});
+	$("#nav").find("li").each(function(index){
+		$(this).find("a").click(function(e){
+			e.preventDefault();
+			var target = $(this).parent("li");
+			if(target.index()+1>base.contentLng){
+				alert("not yet");
+				//control.warnBox("not yet"); // 추후 작업 예정
+				return false;
+			}
+			control.aclick(index,target);
+		});
 	});
 }());
 
@@ -67,24 +82,16 @@ var control = (function(){
 		base.scrollBtn.animate({opacity:1}, 1800);
 		//console.log("callback ok");
 	};
-	var aclick = function(num) {
+	var aclick = function(num, target) {
 		contHeight = $(".box").height();
 		cnt = num;
-		base.section.animate({"top":(contHeight*cnt)*(-1)+"px"},"normal",function(){
-			/*moveStatus = false;
-			if(num==0){
-				$(".toplogo").fadeOut(200);
-				$("#scrollBtn").find("img").attr("src","images/main/btn_scroll.png");
-			}else{
-			    if(num==boxNum-1){
-			        $("#scrollBtn").fadeOut(200);
-			    }else{
-			        $("#scrollBtn").fadeIn(200);
-			    }
-				$(".toplogo").fadeIn(200);
-				$("#scrollBtn").find("img").attr("src","images/main/btn_scroll2.gif");
-			}*/
+		base.section.animate({"top":(contHeight*cnt)*(-1)+"px"}, 700, function(){
+			$("#nav li").removeClass("on");
+			target.addClass("on");
 		});
+	/*var warnBox = function(txt){
+		maskLayerOpen();
+	};*/
 	};
 	return {
 		viewNotiBox : viewNotiBox,
@@ -116,9 +123,3 @@ var init = (function(){
 	control.initMove();
 	control.maskLayerClose();
 }());
-
-//$('.float_nav a').scroll(GS.scrollTo);
-	/*$(".map1").on("mouseenter", function(){
-		$(".img1").attr("src","./images/char_01_on_named.png");
-	});*/
-//});

@@ -17,11 +17,13 @@
 	</div>
 	<div class="scroll">스크롤을 내려주세요.</div>
 	<nav id="nav">
-		<a href="#"></a>
-		<a href="#"></a>
-		<a href="#"></a>
-		<a href="#"></a>
-		<a href="#"></a>
+		<ul>
+			<li id="txt_1" class="on"><a href="#main"><img src="./images/txt_main.png" alt="MAIN" /></a></li>
+			<li id="txt_2"><a href="#hero"><img src="./images/txt_char.png" alt="CHARACTER" /></a></li>
+			<li id="txt_3"><a href="#feature"><img src="./images/txt_lodoss.png" alt="LODOSS WAR" /></a></li>
+			<li id="txt_4"><a href="#movie"><img src="./images/txt_movie.png" alt="MOVIE" /></a></li>
+			<li id="txt_5"><a href="#screen"><img src="./images/txt_shot.png" alt="SCREEN SHOT" /></a></li>
+		</ul>
 	</nav>
 	<div id="miniHead" class="miniHead"></div>
 	<div id="bodyWrap">
@@ -53,17 +55,29 @@
 	</div>
 	<div id="noticePanel">
 		<h3>공지사항</h3>
-		<ul>
-			<li><a href="#">로도스도전기 티저사이트 오픈하였습니다.</a></li>
-			<li><a href="#">로도스도전기 티저사이트 오픈하였습니다.</a></li>
-			<li><a href="#">로도스도전기 티저사이트 오픈하였습니다.</a></li>
-			<li><a href="#">로도스도전기 티저사이트 오픈하였습니다.</a></li>
-			<li><a href="#">로도스도전기 티저사이트 오픈하였습니다.</a></li>
-		</ul>
+		<div class="listWrap">
+			<ul>
+				<li><a href="#">로도스도전기 티저사이트 오픈하였습니다.</a></li>
+				<li><a href="#">로도스도전기 티저사이트 오픈하였습니다.</a></li>
+				<li><a href="#">로도스도전기 티저사이트 오픈하였습니다.</a></li>
+				<li><a href="#">로도스도전기 티저사이트 오픈하였습니다.</a></li>
+				<li><a href="#">로도스도전기 티저사이트 오픈하였습니다.</a></li>
+			</ul>
+		</div>
 		<div class="notiBtn">
 			<a href="#" class="prev">이전</a>
 			<a href="#" class="next">다음</a>
 		</div>
+	</div>
+	<div id="frmFieldWrap">
+		<div class="frmField">
+			<fieldset>
+				<label class="title"><span>제목</span><input type="text" /></label>
+				<label class="mail"><span>메일</span><input type="text" /></label>
+				<label class="context"><span>내용</span><textarea></textarea></label>
+			</fieldset>
+		</div>
+		<a href="#" class="cls">문의창 닫기</a>
 	</div>
 	<div id="maskLayer"></div>
 	<script src="./js/jquery-1.9.1.min.js"></script>
