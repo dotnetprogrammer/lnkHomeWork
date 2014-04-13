@@ -53,13 +53,50 @@ var mEvent = (function(){
 		});
 	});
 	$("label input").click(function(){
-		inputData = $(this).value();
-		//var lableLength = $(".frmField label").length;
+		var inputData = $(this).val();
 		var myParent = $(this).parent("label").index()+1;
-		control.clearDefValue(myParent);
+		if(myParent==1){
+			if(inputData==base.defTxt1){
+				$(this).val("");
+			} else {
+				return false;
+			}
+			
+		} else if(myParent==2){
+			if(inputData==base.defTxt2){
+				$(this).val("");
+			} else {
+				return false;
+			}
+		}
 	});
 	$("label input").blur(function(){
-		var myParent = $(this).parent("label").attr("id");
+		var inputData = $(this).val();
+		var myParent = $(this).parent("label").index()+1;
+		if(myParent==1){
+			if(inputData==""){
+				$(this).val(base.defTxt1);
+			} else {
+				return false;
+			}
+			
+		} else if(myParent==2){
+			if(inputData==""){
+				$(this).val(base.defTxt2);
+			} else {
+				return false;
+			}
+		}
+	});
+	$("#frmFieldWrap .cls").click(function(){
+		$("#frmFieldWrap").hide();
+	});
+	// 문의하기 폼에 내용을 남긴 후 다시 문의하기를 사용할 때 기존 내용을 지우는 것.
+	$("#talk").click(function(){
+		$("#frmFieldWrap").show();
+		$(".title input").val(base.defTxt1);
+		$(".mail input").val(base.defTxt2);
+		$(".context textarea").val("");
 	});
 }());
 
@@ -98,28 +135,6 @@ var control = (function(){
 			$("#nav li").removeClass("on");
 			target.addClass("on");
 		});
-	var clearDefValue = function(idx){
-		switch(idx){
-			case 1:
-			if(inputData == defTxt1){
-				$(this).value();
-			} else {
-				return false;
-			};
-			case 2:
-			if(inputData == defTxt2){
-				$(this).value();
-			} else {
-				return false;
-			};
-		}
-	};
-	var setDefValue = function(id){
-		
-	};
-	/*var warnBox = function(txt){
-		maskLayerOpen();
-	};*/
 	};
 	return {
 		viewNotiBox : viewNotiBox,
@@ -127,10 +142,7 @@ var control = (function(){
 		maskLayerOpen : maskLayerOpen,
 		maskLayerClose : maskLayerClose,
 		viewScrollBtn : viewScrollBtn,
-		aclick : aclick,
-		//setDefValue : setDefValue,
-		clearDefValue : clearDefValue
-
+		aclick : aclick
 	}
 }());
 
