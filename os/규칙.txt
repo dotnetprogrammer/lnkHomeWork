@@ -1,0 +1,27 @@
+<< 베이스 >>
+1. center -> left_nav -> h2에 해당 2차depth
+2. contents 에 해당 페이지명 파일명 부여
+3. 해당 페이지에 active 부여 (cf > nav의 li에 부여)
+
+<< class >>
+1. css 제어를 위한 class 부여는 "_" 언더바 사용
+2. js 제어를 위한 class 또는 함수명은 appleApple (소문자+대문자)
+
+
+<< input >>
+1. input 입력 불가(readonly)  : "nono"  (cf>dd에 부여)
+
+2. iuput width
+- 일반사이즈 : 클래스 없음
+- short(주민번호size) : "s_input" (cf>dd에 부여)
+- long(이메일size) : "l_input" (cf>dd에 부여)
+
+
+<< btn >>
+1. 버튼 위치에 따라
+- 상단 (로그아웃/내 정보변경) : "btn_top" (cf> ul)
+- 중단 입력 박스 : "btn" (cf> input)
+- 입력창 밖 하단 : "btn_box" (cf> ul)
+
+
+
