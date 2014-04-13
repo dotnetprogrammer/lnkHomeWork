@@ -138,7 +138,15 @@ $(function(){
 			if(data.rollingCount < 4) {
 			  window.setTimeout(function(){
 				data.rollingCount++;
-					rolling(idx+1>=cnt?0:idx+1,cnt);
+					//rolling(idx+1>=cnt?0:idx+1, cnt);
+					var temp = '';
+					if( idx+1 >= cnt ){
+						temp = 0;
+					}else{
+						temp = idx+1;
+					}
+					rolling( temp, cnt );
+					
 				},480);
 			} else {
 				window.setTimeout(function(){
@@ -232,8 +240,8 @@ $(function(){
 		var itemGetStatus = function(){
 			var playBrd = $(".playBrd > span em.on").length;
 			var trap = $(".playBrd > span.item_5 em.on").length;
-			var itemTot = playBrd-trap
-			alert("총 "+itemTot+"개의 아이템을 획득했습니다.")
+			var itemTot = playBrd-trap;
+			alert("총 "+itemTot+"개의 아이템을 획득했습니다.");
 		};
 		return{
 			rolling : rolling,
@@ -248,6 +256,6 @@ $(function(){
 			makePlayView : makePlayView,
 			makeGetItem : makeGetItem,
 			itemGetStatus : itemGetStatus
-		}
+		};
 	}());
 });

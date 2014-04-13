@@ -72,9 +72,13 @@ section .wrap {position:relative;width:1024px;height:100%;margin:0 auto;}
 #nav li {width:105px;height:22px;padding:2px 30px 0 0;background:url('../images/bg_nav_bull_off.png') right 1px no-repeat;text-align:right;}
 #nav li.on {background:url('../images/bg_nav_bull_on.png') right 0 no-repeat;}
 
-#frmFieldWrap {position:absolute;top:133px;left:50%;width:720px;height:662px;margin:0 0 0 -360px;padding:54px 0 0 0;z-index:10000;}
+#frmFieldWrap {position:absolute;top:11%;left:50%;width:720px;height:662px;margin:0 0 0 -360px;padding:54px 0 0 0;z-index:10000;}
 #frmFieldWrap .cls {position:absolute;top:0;right:0;display:block;width:54px;height:54px;background:url('../images/btn_frm_cls.png') 0 0 no-repeat;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
 #frmFieldWrap .frmField {position:relative;width:682px;height:662px;margin:0 auto;background:url('../images/bg_frm_field.png') 0 0 no-repeat;}
 #frmFieldWrap .frmField label {position:absolute;left:138px;}
 #frmFieldWrap .frmField label span {overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
-#frmFieldWrap .frmField label input {}
+#frmFieldWrap .frmField label input {width:420px;height:35px;padding:0 15px;background:#fbf6e5;border:1px solid #e8d2b0;color:#935600;line-height:35px;}
+#frmFieldWrap .frmField label textarea {width:420px;height:160px;padding:15px;background:#fbf6e5;border:1px solid #e8d2b0;color:#935600;}
+#frmFieldWrap .frmField label.title {top:220px;}
+#frmFieldWrap .frmField label.mail {top:262px;}
+#frmFieldWrap .frmField label.context {top:304px;}

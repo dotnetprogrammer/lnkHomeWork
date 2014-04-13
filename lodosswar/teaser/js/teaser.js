@@ -52,6 +52,15 @@ var mEvent = (function(){
 			control.aclick(index,target);
 		});
 	});
+	$("label input").click(function(){
+		inputData = $(this).value();
+		//var lableLength = $(".frmField label").length;
+		var myParent = $(this).parent("label").index()+1;
+		control.clearDefValue(myParent);
+	});
+	$("label input").blur(function(){
+		var myParent = $(this).parent("label").attr("id");
+	});
 }());
 
 var control = (function(){
@@ -89,6 +98,25 @@ var control = (function(){
 			$("#nav li").removeClass("on");
 			target.addClass("on");
 		});
+	var clearDefValue = function(idx){
+		switch(idx){
+			case 1:
+			if(inputData == defTxt1){
+				$(this).value();
+			} else {
+				return false;
+			};
+			case 2:
+			if(inputData == defTxt2){
+				$(this).value();
+			} else {
+				return false;
+			};
+		}
+	};
+	var setDefValue = function(id){
+		
+	};
 	/*var warnBox = function(txt){
 		maskLayerOpen();
 	};*/
@@ -99,7 +127,10 @@ var control = (function(){
 		maskLayerOpen : maskLayerOpen,
 		maskLayerClose : maskLayerClose,
 		viewScrollBtn : viewScrollBtn,
-		aclick : aclick
+		aclick : aclick,
+		//setDefValue : setDefValue,
+		clearDefValue : clearDefValue
+
 	}
 }());
 
