@@ -1,4 +1,5 @@
 //$(function(){
+// 기본 초기화 데이터 세팅
 var base = (function(){
 	return {
 		wHeight : $(window).height(),
@@ -16,10 +17,18 @@ var base = (function(){
 		section : $(".section"),
 		contentLng : $(".section section").length,
 		defTxt1 : "제목을 쓰는 곳입니다.",
-		defTxt2 : "메일을 쓰는 곳입니다."
+		defTxt2 : "메일을 쓰는 곳입니다.",
+		charImg1 : $("#heros .img1"),
+		charImg2 : $("#heros .img2"),
+		charImg3 : $("#heros .img3"),
+		charImg4 : $("#heros .img4"),
+		charImg5 : $("#heros .img5"),
+		charImg6 : $("#heros .img6"),
+		btnsAll : $("#talk, #notice, #nav")
 	}
 }());
 
+// 이벤트 발생 영역
 var mEvent = (function(){
 	base.blank.click(function(e){
 		e.preventDefault();
@@ -89,34 +98,40 @@ var mEvent = (function(){
 		}
 	});
 	$("#frmFieldWrap .cls").click(function(){
-		$("#frmFieldWrap").hide();
+		control.frmCls();
 	});
 	// 문의하기 폼에 내용을 남긴 후 다시 문의하기를 사용할 때 기존 내용을 지우는 것.
 	$("#talk").click(function(){
-		$("#frmFieldWrap").show();
-		$(".title input").val(base.defTxt1);
-		$(".mail input").val(base.defTxt2);
-		$(".context textarea").val("");
+		control.frmClear();
+	});
+	// 최종 submit전 간단한 폼검증
+	$(".frmField .confirm").click(function(){
+		control.frmValidate();
+	});
+	$(".imgWrap a").click(function(){
+		var idName = $(this).attr("id");
+		control.viewBlurContent();
 	});
 }());
 
+// 함수 모음
 var control = (function(){
 	var initMove = function(){
-		base.logo.animate({bottom:414}, 700, "easeOutCubic", function(){
+		base.logo.animate({bottom:414}, 800, "easeOutExpo", function(){
 			viewScrollBtn();
 		});
 	};
 	var viewNotiBox = function(){
 		var getLeft = base.notiPanel.css("left");
 		if (getLeft == "-342px") {
-			base.notiPanel.animate({left:0}, 500, "easeOutCubic");
+			base.notiPanel.animate({left:0}, 500, "easeOutExpo");
 		} else {
-			base.notiPanel.animate({left:-342}, 500, "easeOutCubic");
+			base.notiPanel.animate({left:-342}, 500, "easeOutExpo");
 		}
 	};
 	var maskLayerOpen = function(){
-		base.maskLayer.animate({opacity:70}, 600, function(){
-			base.maskLayer.css("z-index",99999);
+		base.maskLayer.animate({opacity:0.7}, 600, function(){
+			base.maskLayer.css("z-index",10000);
 		});
 	};
 	var maskLayerClose = function(){
@@ -126,43 +141,123 @@ var control = (function(){
 	};
 	var viewScrollBtn = function(){
 		base.scrollBtn.animate({opacity:1}, 1800);
-		//console.log("callback ok");
 	};
 	var aclick = function(num, target) {
 		contHeight = $(".box").height();
 		cnt = num;
-		base.section.animate({"top":(contHeight*cnt)*(-1)+"px"}, 700, function(){
+		base.section.animate({"top":(contHeight*cnt)*(-1)+"px"}, 800, "easeOutExpo", function(){
 			$("#nav li").removeClass("on");
 			target.addClass("on");
+			if(cnt==1){
+				sect2Animate();
+			} else if(cnt!=1) {
+				initAnimate();
+				backBlurContent();
+			}
 		});
 	};
+	var frmClear = function(){
+		$("#frmFieldWrap").show().animate({bottom:"11%"}, 600, "easeOutExpo");
+		$(".title input").val(base.defTxt1);
+		$(".mail input").val(base.defTxt2);
+		$(".context textarea").val("");
+		maskLayerOpen();
+	};
+	var frmCls = function(){
+		$("#frmFieldWrap").animate({bottom:"-720px"}, 600, "easeOutExpo", function(){
+			$("#frmFieldWrap").hide();
+		});
+		maskLayerClose();
+	};
+	var frmValidate = function(){
+		var field1 = $(".frmField .title input");
+		var field2 = $(".frmField .mail input");
+		var field3 = $(".frmField .context textarea");
+		var mailData = /^([0-9a-zA-Z_-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/; //RegExp
+		if(field1.val()=="" || field1.val()==base.defTxt1){
+			alert("제목을 입력해주세요");
+			return false;
+			field1.focus();
+		} else if(field2.val()=="" || field2.val()==base.defTxt2){
+			alert("회신받을 이메일을 입력해주세요.");
+			return false;
+			field2.focus();
+		} else if (!mailData.test(field2.val())){
+			alert("올바른 이메일 형식이 아닙니다.");
+			return false;
+			field2.focus();
+		} else if(field3.val()==""){
+			alert("문의하실 내용을 입력해주세요.");
+			return false;
+			field3.focus();
+		} else {
+			alert("미즈노 료 선생님에게 문의가 접수되었습니다.");
+			frmCls();
+		}
+	};
+	var sect2Animate = function(){
+		base.charImg1.animate({"bottom":"649px","left":"558px"}, 1200, "easeOutExpo");
+		base.charImg2.animate({"bottom":"594px","left":"726px"}, 1200, "easeOutExpo");
+		base.charImg3.animate({"bottom":"483px","left":"615px"}, 1200, "easeOutExpo");
+		base.charImg4.animate({"bottom":"372px","left":"504px"}, 1200, "easeOutExpo");
+		base.charImg5.animate({"bottom":"316px","left":"670px"}, 1200, "easeOutExpo");
+		base.charImg6.animate({"bottom":"205px","left":"559px"}, 1200, "easeOutExpo");
+	};
+	var initAnimate = function(){
+		base.charImg1.css({"bottom":"2649px","left":"2558px"});
+		base.charImg2.css({"bottom":"-2594px","left":"-2726px"});
+		base.charImg3.css({"bottom":"-2483px","left":"-2615px"});
+		base.charImg4.css({"bottom":"-2372px","left":"-2504px"});
+		base.charImg5.css({"bottom":"2316px","left":"2670px"});
+		base.charImg6.css({"bottom":"2205px","left":"2559px"});
+	};
+	var viewBlurContent = function(){
+		$("#blurContent").animate({"left":"-0.1%"}, 2400, "easeOutExpo");
+	};
+	var backBlurContent = function(){
+		$("#blurContent").css("left","100%");
+	}
 	return {
 		viewNotiBox : viewNotiBox,
 		initMove : initMove,
 		maskLayerOpen : maskLayerOpen,
 		maskLayerClose : maskLayerClose,
 		viewScrollBtn : viewScrollBtn,
-		aclick : aclick
+		aclick : aclick,
+		frmClear : frmClear,
+		frmCls : frmCls,
+		frmValidate : frmValidate,
+		sect2Animate : sect2Animate,
+		viewBlurContent : viewBlurContent,
+		backBlurContent : backBlurContent
 	}
 }());
 
+//초기화 즉시실행기명함수
 var init = (function(){
 	if(base.wWidth <= 1024){
 		$("body").addClass("narrow");
 	}
-	$("section").css("height",base.wHeight);
+	$("section, #blurContent").css("height",base.wHeight);
 	$(window).resize(function(){
 		var wHeight = $(window).height();
 		var wWidth = $(window).width();
-		$("section").css("height",wHeight);
+		$("section, #blurContent").css("height",wHeight);
 		if(wWidth <= 1024){
 			$("body").addClass("narrow");
 		} else {
 			$("body").removeClass("narrow");
 		}
 	});
+	$("#frmFieldWrap").hide();
 	base.notiPanel.css("left",-342);
 	base.scrollBtn.css("opacity",0);
 	control.initMove();
 	control.maskLayerClose();
+	base.charImg1.css({"bottom":"2649px","left":"2558px"});
+	base.charImg2.css({"bottom":"-2594px","left":"-2726px"});
+	base.charImg3.css({"bottom":"-2483px","left":"-2615px"});
+	base.charImg4.css({"bottom":"-2372px","left":"-2504px"});
+	base.charImg5.css({"bottom":"2316px","left":"2670px"});
+	base.charImg6.css({"bottom":"2205px","left":"2559px"});
 }());

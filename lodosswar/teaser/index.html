@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no" />
 	<title>로도스도 전기</title>
 	<!--[if lte IE 8]><script src="./js/html5.js"></script><![endif]-->
@@ -36,18 +37,100 @@
 				</section>
 				<section id="heros" class="heros box">
 					<div class="wrap">
-						<img src="./images/char_01_on.png" alt="" class="img1" usemap="#poly1" />
-						<img src="./images/char_02_on.png" alt="" class="img2" usemap="#poly2" />
-						<img src="./images/char_03_off.png" alt="" class="img3" usemap="#poly3" />
-						<img src="./images/char_04_off.png" alt="" class="img4" usemap="#poly4" />
-						<img src="./images/char_05_off.png" alt="" class="img5" usemap="#poly5" />
-						<img src="./images/char_06_off.png" alt="" class="img6" usemap="#poly6" />
-						<map name="#poly1"><area class="map1" shape="poly" coords="111,0,0,110,110,220,221,110" href="#" /></map>
-						<map name="#poly2"><area class="map2" shape="poly" coords="111,0,0,110,110,220,221,110" href="#" /></map>
-						<map name="#poly3"><area class="map3" shape="poly" coords="111,0,0,110,110,220,221,110" href="#" /></map>
-						<map name="#poly4"><area class="map4" shape="poly" coords="111,0,0,110,110,220,221,110" href="#" /></map>
-						<map name="#poly5"><area class="map5" shape="poly" coords="111,0,0,110,110,220,221,110" href="#" /></map>
-						<map name="#poly6"><area class="map6" shape="poly" coords="111,0,0,110,110,220,221,110" href="#" /></map>
+						<span class="imgWrap img1" ><a href="#" class="map map1" id="char_1">판</a><!--<img src="./images/char_01_on.png" alt="" usemap="#poly1" />--></span>
+						<span class="imgWrap img2" ><a href="#" class="map map2" id="char_2">디드리트</a><!--<img src="./images/char_02_on.png" alt="" usemap="#poly2" />--></span>
+						<span class="imgWrap img3"><a href="#" class="map map3" id="char_3">김</a><!-- <img src="./images/char_03_off.png" alt="" usemap="#poly3" />--></span>
+						<span class="imgWrap img4"><a href="#" class="map map4" id="char_4">슬레인 스타시카</a><!-- <img src="./images/char_04_off.png" alt="" usemap="#poly4" />--></span>
+						<span class="imgWrap img5"><a href="#" class="map map5" id="char_5">우드척</a><!-- <img src="./images/char_05_off.png" alt="" usemap="#poly5" />--></span>
+						<span class="imgWrap img6"><a href="#" class="map map6" id="char_6">에토</a><!-- <img src="./images/char_06_off.png" alt="" usemap="#poly6" />--></span>
+						
+					</div>
+					<!-- 캐릭터 정보 blur 영역 -->
+					<div id="blurContent">
+						<a href="#" id="prev"></a>
+						<div class="wrap">
+							<div class="charHolder">
+								<div class="charWrap" id="char_1">
+									<div class="desc">
+										<h2>판</h2>
+										<p>"자신을 버리지 말라는 뜻이야. 단지 주어진 임무만 완수하는 남자가 되지 말아라."</p>
+										<p>신성 왕국 바리스의 출신. 성기사였던 부친의 불명예스러운 죽음으로 어릴 적에 모친과 함께 천년왕국 아라니아의 국경에 있는 잭슨 마을에 이주합니다.16살에 부친의 유품인 갑옷을 입고 전장에 섰던 그는 잭슨 마을에 돌아와서 대상의 호위나 마을의 경비로 생계를 이어가면서 가슴 한 켠에서는 어느 왕을 모시는 기사나 영웅이 되는 것을 꿈꾸고 있었습니다. 그러던 어느 날 잭슨 주변에 들러 붙은 고블린 퇴치로 목숨을 잃을 뻔 하며 자신의 미숙함을 깨닫고 무사 수행의 여행길을 떠나게 됩니다.</p>
+									</div>
+									<img src="./images/img_char_1.png" alt="판 이미지" />
+									<img src="./images/btn_char_num_1.png" alt="현재 판 케릭터 소개 중" usemap="#num1" />
+									<map name="num1">
+										<area shape="poly" class="charMap1" coords="14,24,42,55,69,28,41,0" href="#" />
+										<area shape="poly" class="charMap2" coords="56,42,84,69,111,42,83,14" href="#" />
+										<area shape="poly" class="charMap3" coords="55,42,28,70,56,97,83,70" href="#" />
+										<area shape="poly" class="charMap4" coords="27,70,0,98,28,125,55,98" href="#" />
+										<area shape="poly" class="charMap5" coords="70,83,43,111,71,138,98,111" href="#" />
+										<area shape="poly" class="charMap6" coords="42,111,15,139,43,166,70,138" href="#" />
+									</map>
+									<a href="#" class="charCls">캐릭터 정보창 닫기</a>
+								</div>
+								<div class="charWrap" id="char_2">
+									<img src="./images/btn_char_num_1.png" alt="현재 판 케릭터 소개 중" usemap="#num2" />
+									<map name="num2">
+										<area shape="poly" class="charMap1" coords="14,24,42,55,69,28,41,0" href="#" />
+										<area shape="poly" class="charMap2" coords="56,42,84,69,111,42,83,14" href="#" />
+										<area shape="poly" class="charMap3" coords="55,42,28,70,56,97,83,70" href="#" />
+										<area shape="poly" class="charMap4" coords="27,70,0,98,28,125,55,98" href="#" />
+										<area shape="poly" class="charMap5" coords="70,83,43,111,71,138,98,111" href="#" />
+										<area shape="poly" class="charMap6" coords="42,111,15,139,43,166,70,138" href="#" />
+									</map>
+									<a href="#" class="charCls">캐릭터 정보창 닫기</a>
+								</div>
+								<div class="charWrap" id="char_3">
+									<img src="./images/btn_char_num_1.png" alt="현재 판 케릭터 소개 중" usemap="#num3" />
+									<map name="num3">
+										<area shape="poly" class="charMap1" coords="14,24,42,55,69,28,41,0" href="#" />
+										<area shape="poly" class="charMap2" coords="56,42,84,69,111,42,83,14" href="#" />
+										<area shape="poly" class="charMap3" coords="55,42,28,70,56,97,83,70" href="#" />
+										<area shape="poly" class="charMap4" coords="27,70,0,98,28,125,55,98" href="#" />
+										<area shape="poly" class="charMap5" coords="70,83,43,111,71,138,98,111" href="#" />
+										<area shape="poly" class="charMap6" coords="42,111,15,139,43,166,70,138" href="#" />
+									</map>
+									<a href="#" class="charCls">캐릭터 정보창 닫기</a>
+								</div>
+								<div class="charWrap" id="char_4">
+									<img src="./images/btn_char_num_1.png" alt="현재 판 케릭터 소개 중" usemap="#num4" />
+									<map name="num4">
+										<area shape="poly" class="charMap1" coords="14,24,42,55,69,28,41,0" href="#" />
+										<area shape="poly" class="charMap2" coords="56,42,84,69,111,42,83,14" href="#" />
+										<area shape="poly" class="charMap3" coords="55,42,28,70,56,97,83,70" href="#" />
+										<area shape="poly" class="charMap4" coords="27,70,0,98,28,125,55,98" href="#" />
+										<area shape="poly" class="charMap5" coords="70,83,43,111,71,138,98,111" href="#" />
+										<area shape="poly" class="charMap6" coords="42,111,15,139,43,166,70,138" href="#" />
+									</map>
+									<a href="#" class="charCls">캐릭터 정보창 닫기</a>
+								</div>
+								<div class="charWrap" id="char_5">
+									<img src="./images/btn_char_num_1.png" alt="현재 판 케릭터 소개 중" usemap="#num5" />
+									<map name="num5">
+										<area shape="poly" class="charMap1" coords="14,24,42,55,69,28,41,0" href="#" />
+										<area shape="poly" class="charMap2" coords="56,42,84,69,111,42,83,14" href="#" />
+										<area shape="poly" class="charMap3" coords="55,42,28,70,56,97,83,70" href="#" />
+										<area shape="poly" class="charMap4" coords="27,70,0,98,28,125,55,98" href="#" />
+										<area shape="poly" class="charMap5" coords="70,83,43,111,71,138,98,111" href="#" />
+										<area shape="poly" class="charMap6" coords="42,111,15,139,43,166,70,138" href="#" />
+									</map>
+									<a href="#" class="charCls">캐릭터 정보창 닫기</a>
+								</div>
+								<div class="charWrap" id="char_6">
+									<img src="./images/btn_char_num_1.png" alt="현재 판 케릭터 소개 중" usemap="#num6" />
+									<map name="num6">
+										<area shape="poly" class="charMap1" coords="14,24,42,55,69,28,41,0" href="#" />
+										<area shape="poly" class="charMap2" coords="56,42,84,69,111,42,83,14" href="#" />
+										<area shape="poly" class="charMap3" coords="55,42,28,70,56,97,83,70" href="#" />
+										<area shape="poly" class="charMap4" coords="27,70,0,98,28,125,55,98" href="#" />
+										<area shape="poly" class="charMap5" coords="70,83,43,111,71,138,98,111" href="#" />
+										<area shape="poly" class="charMap6" coords="42,111,15,139,43,166,70,138" href="#" />
+									</map>
+									<a href="#" class="charCls">캐릭터 정보창 닫기</a>
+								</div>
+							</div>
+						</div>
+						<a href="#" id="next"></a>
 					</div>
 				</section>
 			</div>
@@ -75,6 +158,7 @@
 				<label class="title"><span>제목</span><input type="text" value="제목을 쓰는 곳입니다." /></label>
 				<label class="mail"><span>메일</span><input type="text" value="메일을 쓰는 곳입니다." /></label>
 				<label class="context"><span>내용</span><textarea></textarea></label>
+				<input type="submit" class="confirm" value="등록" />
 			</fieldset>
 		</div>
 		<a href="#" class="cls">문의창 닫기</a>
@@ -86,6 +170,7 @@
 	<script src="./js/teaser.js"></script>
 	<script>
 		// for test code
+		
 	</script>
 </body>
 </html>
