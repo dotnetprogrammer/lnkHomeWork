@@ -221,53 +221,137 @@ var control = (function(){
 		base.charImg6.css({"bottom":"2205px","left":"2559px"});
 		base.chapter1.css({"bottom":"444px"});
 	};
+	/* float 기반의 left 값 조절로 보여주는 함수
 	var viewBlurContent = function(num){
 		$("#blurContent").animate({"left":"-0.1%"}, 2400, "easeOutExpo");
-		$("#blurContent .charWrap .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
 		switch(num){
 			case "1" :
+				$("#blurContent #char_1").css({"visibility":"visible"});
+				$("#blurContent #char_1 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
 				$("#blurContent #char_1 .charImg").animate({"right":"0"}, 3000, "easeOutExpo", function(){
 					viewFuncBtns();
 				});
+				$("#blurContent #char_1 .page").animate({"right":"25px"}, 3300, "easeOutExpo");
 				break;
 			case "2" :
+				$("#blurContent #char_2").css({"visibility":"visible"});
+				$("#blurContent #char_2 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
+				$(".charHolder").animate({"left":initCharWrapWidth}, 1000);
 				$("#blurContent #char_2 .charImg").animate({"right":"46px"}, 3000, "easeOutExpo", function(){
 					viewFuncBtns();
 				});
+				$("#blurContent #char_2 .page").animate({"right":"25px"}, 3300, "easeOutExpo");
 				break;
 			case "3" :
+				$("#blurContent #char_3").css({"visibility":"visible"});
+				$(".charHolder").animate({"left":initCharWrapWidth*2}, 1000);
+				$("#blurContent #char_3 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
 				$("#blurContent #char_3 .charImg").animate({"right":"-59px"}, 3000, "easeOutExpo", function(){
 					viewFuncBtns();
 				});
+				$("#blurContent #char_3 .page").animate({"right":"25px"}, 3300, "easeOutExpo");
 				break;
 			case "4" :
+				$("#blurContent #char_4").css({"visibility":"visible"});
+				$(".charHolder").animate({"left":initCharWrapWidth*3}, 1000);
+				$("#blurContent #char_4 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
 				$("#blurContent #char_4 .charImg").animate({"right":"-64px"}, 3000, "easeOutExpo", function(){
 					viewFuncBtns();
 				});
+				$("#blurContent #char_4 .page").animate({"right":"25px"}, 3300, "easeOutExpo");
 				break;
 			case "5" :
+				$("#blurContent #char_5").css({"visibility":"visible"});
+				$(".charHolder").animate({"left":initCharWrapWidth*4}, 1000);
+				$("#blurContent #char_5 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
 				$("#blurContent #char_5 .charImg").animate({"right":"-51px"}, 3000, "easeOutExpo", function(){
 					viewFuncBtns();
 				});
+				$("#blurContent #char_5 .page").animate({"right":"25px"}, 3300, "easeOutExpo");
 				break;
 			case "6" :
+				$("#blurContent #char_6").css({"visibility":"visible"});
+				$(".charHolder").animate({"left":initCharWrapWidth*5}, 1000);
+				$("#blurContent #char_6 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
 				$("#blurContent #char_6 .charImg").animate({"right":"52px"}, 3000, "easeOutExpo", function(){
 					viewFuncBtns();
-				});				
+				});
+				$("#blurContent #char_6 .page").animate({"right":"25px"}, 3300, "easeOutExpo");			
 				break;
 		}
-		$("#blurContent .charWrap .page").animate({"right":"25px"}, 3300, "easeOutExpo");
+	};
+	*/
+	/* absolute 기반으로 보여주는 함수 */
+	var viewBlurContent = function(num){
+		$("#blurContent").animate({"left":"-0.1%"}, 2400, "easeOutExpo");
+		switch(num){
+			case "1" :
+				$("#blurContent #char_1").css({"visibility":"visible"});
+				$("#blurContent #char_1 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
+				$("#blurContent #char_1 .charImg").animate({"right":"0"}, 3000, "easeOutExpo", function(){
+					viewFuncBtns();
+				});
+				$("#blurContent #char_1 .page").animate({"right":"25px"}, 3300, "easeOutExpo");
+				break;
+			case "2" :
+				$("#blurContent #char_2").css({"visibility":"visible"});
+				$("#blurContent #char_2 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
+				$(".charHolder").animate({"left":initCharWrapWidth}, 1000);
+				$("#blurContent #char_2 .charImg").animate({"right":"46px"}, 3000, "easeOutExpo", function(){
+					viewFuncBtns();
+				});
+				$("#blurContent #char_2 .page").animate({"right":"25px"}, 3300, "easeOutExpo");
+				break;
+			case "3" :
+				$("#blurContent #char_3").css({"visibility":"visible"});
+				$(".charHolder").animate({"left":initCharWrapWidth*2}, 1000);
+				$("#blurContent #char_3 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
+				$("#blurContent #char_3 .charImg").animate({"right":"-59px"}, 3000, "easeOutExpo", function(){
+					viewFuncBtns();
+				});
+				$("#blurContent #char_3 .page").animate({"right":"25px"}, 3300, "easeOutExpo");
+				break;
+			case "4" :
+				$("#blurContent #char_4").css({"visibility":"visible"});
+				$(".charHolder").animate({"left":initCharWrapWidth*3}, 1000);
+				$("#blurContent #char_4 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
+				$("#blurContent #char_4 .charImg").animate({"right":"-64px"}, 3000, "easeOutExpo", function(){
+					viewFuncBtns();
+				});
+				$("#blurContent #char_4 .page").animate({"right":"25px"}, 3300, "easeOutExpo");
+				break;
+			case "5" :
+				$("#blurContent #char_5").css({"visibility":"visible"});
+				$(".charHolder").animate({"left":initCharWrapWidth*4}, 1000);
+				$("#blurContent #char_5 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
+				$("#blurContent #char_5 .charImg").animate({"right":"-51px"}, 3000, "easeOutExpo", function(){
+					viewFuncBtns();
+				});
+				$("#blurContent #char_5 .page").animate({"right":"25px"}, 3300, "easeOutExpo");
+				break;
+			case "6" :
+				$("#blurContent #char_6").css({"visibility":"visible"});
+				$(".charHolder").animate({"left":initCharWrapWidth*5}, 1000);
+				$("#blurContent #char_6 .desc").animate({"left":"80px"}, 2000, "easeOutExpo");
+				$("#blurContent #char_6 .charImg").animate({"right":"52px"}, 3000, "easeOutExpo", function(){
+					viewFuncBtns();
+				});
+				$("#blurContent #char_6 .page").animate({"right":"25px"}, 3300, "easeOutExpo");			
+				break;
+		}
 	};
 	var backBlurContent = function(){
 		$("#blurContent").css("left","100%");
 	};
 	var clsCharLayer = function(){
-		$("#blurContent .charWrap .page").animate({"right":"-1025px"}, 1000, "easeInExpo");
-		$("#blurContent .charWrap .charImg").animate({"right":"-1000px"}, 1500, "easeInExpo");
-		$("#blurContent .charWrap .desc").animate({"left":"1080px"}, 1750, "easeInExpo");
+		$("#blurContent .charWrap .page").animate({"right":"-100%"}, 1000, "easeInExpo");
+		$("#blurContent .charWrap .charImg").animate({"right":"-100%"}, 1500, "easeInExpo");
+		$("#blurContent .charWrap .desc").animate({"left":"120%"}, 1750, "easeInExpo");
 		$("#blurContent").animate({"left":"100%"}, 2000, "easeInExpo", function(){
 			base.charClsBtn.css({"opacity":"0"});
 			base.charNavBtns.css({"opacity":"0"});
+			$(".charHolder").css({"left":"0"});
+			//$("#blurContent .charWrap").css({"visibility":"hidden"});
 		});
 	};
 	var viewFuncBtns = function(){
@@ -293,20 +377,10 @@ var control = (function(){
 
 //초기화 즉시실행기명함수
 var init = (function(){
-	if(base.wWidth <= 1024){
-		$("body").addClass("narrow");
-	}
 	$("section, #blurContent, .charWrap").css("height",base.wHeight);
-	$(window).resize(function(){
-		var wHeight = $(window).height();
-		var wWidth = $(window).width();
-		$("section, #blurContent, .charWrap").css("height",wHeight);
-		if(wWidth <= 1024){
-			$("body").addClass("narrow");
-		} else {
-			$("body").removeClass("narrow");
-		}
-	});
+	$(".charWrap").css("width",base.wWidth);
+	charWrapWidth = $(".charWrap").css("width");
+	initCharWrapWidth = parseInt(charWrapWidth)*(-1);
 	$("#frmFieldWrap").hide();
 	base.notiPanel.css("left",-342);
 	base.scrollBtn.css("opacity",0);
@@ -320,4 +394,25 @@ var init = (function(){
 	base.charImg6.css({"bottom":"2205px","left":"2559px"});
 	base.charClsBtn.css({"opacity":"0"});
 	base.charNavBtns.css({"opacity":"0"});
+	$(".charHolder").css({"left":"0"});
+	//$("#blurContent .charWrap").css({"visibility":"hidden"});
+	return{
+		initCharWrapWidth : initCharWrapWidth
+	}
 }());
+
+$(window).resize(function(){
+	var wHeight = $(window).height();
+	var wWidth = $(window).width();
+	$("section, #blurContent, .charWrap").css("height",wHeight);
+	$(".charWrap").css("width",wWidth);
+	//$(".charHolder").css("width",wWidth);
+	//$(".charHolder").css("left",parseInt(wWidth)*(-1));
+	//charWrapWidth = $(".charWrap").css("width");
+	//initCharWrapWidth = parseInt(charWrapWidth)*(-1);
+	if(wWidth <= 1024){
+		$("body").addClass("narrow");
+	} else {
+		$("body").removeClass("narrow");
+	}
+});
