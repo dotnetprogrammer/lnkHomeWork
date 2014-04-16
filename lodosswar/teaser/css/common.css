@@ -71,8 +71,8 @@ section .wrap {position:relative;width:1024px;height:100%;margin:0 auto;}
 #heros .img6:hover {background:url('../images/char_06_on.png');}
 #heros .imgWrap a {position:absolute;top:55px;left:55px;display:block;width:110px;height:110px;z-index:10000;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
 #heros #blurContent {width:100%;position:absolute;top:0;left:100%;background:url('../images/bg_sect_2_blur.jpg') center center fixed no-repeat;background-size:cover;border-left:1px solid #eee;z-index:10000;}
-#heros #blurContent #prev {position:absolute;top:47%;left:25px;display:block;width:39px;height:75px;background:url('../images/btn_char_prev.png') 0 0 no-repeat;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
-#heros #blurContent #next {position:absolute;top:47%;right:25px;display:block;width:39px;height:75px;background:url('../images/btn_char_next.png') 0 0 no-repeat;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;}
+#heros #blurContent #next {position:absolute;top:47%;left:25px;display:block;width:39px;height:75px;background:url('../images/btn_char_prev.png') 0 0 no-repeat;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;z-index:10000;}
+#heros #blurContent #prev {position:absolute;top:47%;right:25px;display:block;width:39px;height:75px;background:url('../images/btn_char_next.png') 0 0 no-repeat;overflow:hidden;text-indent:-10000em;font:normal 0/0 verdana;z-index:10000;}
 #heros #blurContent .wrap {position:relative;width:600%;height:100%;overflow:hidden;}
 
 #heros #blurContent .wrap .charHolder {position:relative;height:100%;overflow:hidden;}
@@ -80,13 +80,29 @@ section .wrap {position:relative;width:1024px;height:100%;margin:0 auto;}
 /*#heros #blurContent .wrap .charHolder .charWrap {position:absolute;top:0;width:100%;height:100%;overflow:hidden;}*/
 #heros #blurContent .wrap .charHolder .charWrap .inner {position:relative;width:1024px;height:100%;margin:0 auto;}
 
-#heros #blurContent .wrap .charHolder #char_1 .desc {position:absolute;bottom:348px;left:120%;width:419px;height:389px;background:url('../images/txt_char_1.png') 0 0 no-repeat;}
+#heros #blurContent .wrap .charHolder #char_1 .desc {position:absolute;bottom:348px;left:130%;width:419px;height:389px;background:url('../images/txt_char_1.png') 0 0 no-repeat;}
 #heros #blurContent .wrap .charHolder #char_1 .desc h3, #heros #blurContent .wrap #char_1 .desc p {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
 #heros #blurContent .wrap .charHolder #char_1 .charImg {position:absolute;bottom:0;right:-1000px;}
 
-#heros #blurContent .wrap .charHolder #char_2 .desc {position:absolute;bottom:308px;left:120%;width:361px;height:429px;background:url('../images/txt_char_2.png') 0 0 no-repeat;}
+#heros #blurContent .wrap .charHolder #char_2 .desc {position:absolute;bottom:308px;left:130%;width:361px;height:429px;background:url('../images/txt_char_2.png') 0 0 no-repeat;}
 #heros #blurContent .wrap .charHolder #char_2 .desc h3, #heros #blurContent .wrap #char_2 .desc p {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
 #heros #blurContent .wrap .charHolder #char_2 .charImg {position:absolute;bottom:0;right:-1000px;}
+
+#heros #blurContent .wrap .charHolder #char_3 .desc {position:absolute;bottom:337px;left:130%;width:364px;height:400px;background:url('../images/txt_char_3.png') 0 0 no-repeat;}
+#heros #blurContent .wrap .charHolder #char_3 .desc h3, #heros #blurContent .wrap #char_3 .desc p {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+#heros #blurContent .wrap .charHolder #char_3 .charImg {position:absolute;bottom:0;right:-1000px;}
+
+#heros #blurContent .wrap .charHolder #char_4 .desc {position:absolute;bottom:377px;left:130%;width:348px;height:361px;background:url('../images/txt_char_4.png') 0 0 no-repeat;}
+#heros #blurContent .wrap .charHolder #char_4 .desc h3, #heros #blurContent .wrap #char_4 .desc p {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+#heros #blurContent .wrap .charHolder #char_4 .charImg {position:absolute;bottom:0;right:-1000px;}
+
+#heros #blurContent .wrap .charHolder #char_5 .desc {position:absolute;bottom:288px;left:130%;width:469px;height:451px;background:url('../images/txt_char_5.png') 0 0 no-repeat;}
+#heros #blurContent .wrap .charHolder #char_5 .desc h3, #heros #blurContent .wrap #char_5 .desc p {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+#heros #blurContent .wrap .charHolder #char_5 .charImg {position:absolute;bottom:0;right:-1000px;}
+
+#heros #blurContent .wrap .charHolder #char_6 .desc {position:absolute;bottom:327px;left:130%;width:455px;height:410px;background:url('../images/txt_char_6.png') 0 0 no-repeat;}
+#heros #blurContent .wrap .charHolder #char_6 .desc h3, #heros #blurContent .wrap #char_6 .desc p {overflow:hidden;text-indent:-1000em;font:normal 0/0 verdana;}
+#heros #blurContent .wrap .charHolder #char_6 .charImg {position:absolute;bottom:0;right:-1000px;}
 
 #heros #blurContent .wrap .charWrap .page {position:absolute;right:-1025px;bottom:733px;}
 #heros #blurContent .wrap .charWrap .charCls {position:absolute;left:20px;bottom:844px;display:block;width:54px;height:54px;overflow:hidden;background:url('../images/btn_frm_cls.png') 0 0 no-repeat;text-indent:-10000em;font:normal 0/0 verdana;}
