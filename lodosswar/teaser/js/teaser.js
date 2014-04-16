@@ -231,20 +231,20 @@ var control = (function(){
 		var mailData = /^([0-9a-zA-Z_-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/; //RegExp
 		if(field1.val()=="" || field1.val()==base.defTxt1){
 			alert("제목을 입력해주세요");
-			return false;
 			field1.focus();
+			return false;
 		} else if(field2.val()=="" || field2.val()==base.defTxt2){
 			alert("회신받을 이메일을 입력해주세요.");
-			return false;
 			field2.focus();
+			return false;
 		} else if (!mailData.test(field2.val())){
 			alert("올바른 이메일 형식이 아닙니다.");
-			return false;
 			field2.focus();
+			return false;
 		} else if(field3.val()==""){
 			alert("문의하실 내용을 입력해주세요.");
-			return false;
 			field3.focus();
+			return false;
 		} else {
 			alert("미즈노 료 선생님에게 문의가 접수되었습니다.");
 			frmCls();
